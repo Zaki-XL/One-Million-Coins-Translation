@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
@@ -96,7 +97,6 @@ namespace TranslationMod
                     }
                 }
 
-                // YAML形式の辞書を最優先探索（.yaml -> .yml -> .json）
                 string yamlFile = Path.Combine(localesDir, CurrentLanguage + ".yaml");
                 if (!File.Exists(yamlFile)) yamlFile = Path.Combine(localesDir, CurrentLanguage + ".yml");
                 if (!File.Exists(yamlFile)) yamlFile = Path.Combine(localesDir, "ja.yaml");
@@ -124,7 +124,7 @@ namespace TranslationMod
             catch (Exception ex) { Log("設定読込エラー: " + ex); }
         }
 
-        private static string ApplyScale(string text, double scale)
+        public static string ApplyScale(string text, double scale)
         {
             if (string.IsNullOrEmpty(text)) return text;
             if (scale > 0.01 && Math.Abs(scale - 1.0) > 0.001)
@@ -132,6 +132,74 @@ namespace TranslationMod
                 int pct = (int)Math.Round(scale * 100.0);
                 return string.Format("<size={0}%>{1}</size>", pct, text);
             }
+            return text;
+        }
+
+        public static string TranslateUi(string text)
+        {
+            if (string.IsNullOrEmpty(text)) return text;
+            string trimmed = text.Trim();
+            string tr;
+            if (UiTexts.TryGetValue(trimmed, out tr)) return text.Replace(trimmed, tr);
+            return text;
+        }
+
+        public static string TranslateUiOrPattern(string text)
+        {
+            if (string.IsNullOrEmpty(text)) return text;
+            string trimmed = text.Trim();
+
+            string tr;
+            if (UiTexts.TryGetValue(trimmed, out tr)) return text.Replace(trimmed, tr);
+
+            return TranslateDynamicTooltip(text);
+        }
+
+        public static string TranslateDynamicTooltip(string text)
+        {
+            if (string.IsNullOrEmpty(text)) return text;
+
+            // 定型文
+            text = text.Replace("Learn prerequisites to see your stat changes.", "前提スキルを習得するとステータス変化が表示されます。");
+            text = text.Replace("Click node to learn", "クリックして習得");
+            text = text.Replace("Press submit to learn", "決定ボタンで習得");
+            text = text.Replace("NEW MECHANIC", "新機能解放");
+            text = text.Replace("Not learned in this build", "未習得");
+            text = text.Replace("These upgrades are working for you. Explore another route when you are ready.", "習得した強化が適用されています。準備ができたら別のルートも探索しましょう。");
+            text = text.Replace("Route complete", "ルート完了");
+            text = text.Replace("BRANCH ENTRY", "ブランチ入口");
+            text = text.Replace("START HERE", "ここから開始");
+
+            // 列ヘッダー
+            text = text.Replace("Hands <size=16>(Tool)</size>", "素手 <size=16>(ツール)</size>");
+            text = text.Replace("Shovel <size=16>(Tool)</size>", "シャベル <size=16>(ツール)</size>");
+            text = text.Replace("Magnet <size=16>(Tool)</size>", "マグネット <size=16>(ツール)</size>");
+
+            // with your upgrades
+            text = Regex.Replace(text, @"(\bHands\b)\s*·\s*with your upgrades", "素手 · 適用中の強化", RegexOptions.IgnoreCase);
+            text = Regex.Replace(text, @"(\bShovel\b)\s*·\s*with your upgrades", "シャベル · 適用中の強化", RegexOptions.IgnoreCase);
+            text = Regex.Replace(text, @"(\bMagnet\b)\s*·\s*with your upgrades", "マグネット · 適用中の強化", RegexOptions.IgnoreCase);
+            text = text.Replace("with your upgrades", "適用中の強化");
+
+            // スタッツラベル
+            text = text.Replace("Grip coin limit:", "グリップ回収上限:");
+            text = text.Replace("Grip radius:", "グリップ範囲:");
+            text = text.Replace("Sweet spot starts at:", "スイートスポット発生:");
+            text = text.Replace("Sweet spot length:", "スイートスポット持続:");
+            text = text.Replace("Normal pickups resume after:", "通常回収への復帰:");
+            text = text.Replace("Recharge after a miss:", "失敗時リチャージ:");
+            text = text.Replace("Recharge:", "リチャージ時間:");
+            text = text.Replace("All tool speed", "全ツール速度");
+            text = text.Replace("Hands coins per grab", "素手回収量");
+
+            // 要件
+            text = Regex.Replace(text, @"(\d+)\s+points?\s*·\s*Requires\s+", "$1 ポイント · 要 ");
+            text = Regex.Replace(text, @"Requires\s+", "要 ");
+            text = Regex.Replace(text, @"(\d+)\s+points?\s*·\s*Click node to learn", "$1 ポイント · クリックして習得");
+            text = Regex.Replace(text, @"(\d+)\s+points?\s*·\s*", "$1 ポイント · ");
+            text = Regex.Replace(text, @"(\d+)\s+POINT(S)?", "$1 ポイント");
+            text = Regex.Replace(text, @"(\d+)\s+POINTS SPENT", "$1 ポイント消費済み");
+
             return text;
         }
 
@@ -281,7 +349,6 @@ namespace TranslationMod
 
             flushBlock();
 
-            // 辞書へのマージ
             foreach (var kvSec in sectionData)
             {
                 string sec = kvSec.Key;
@@ -290,7 +357,6 @@ namespace TranslationMod
                     string id = kvEnt.Key;
                     ParsedEntry ent = kvEnt.Value;
 
-                    // enabled: false のエントリは辞書登録をスキップ（英語原文を維持）
                     if (!ent.Enabled) continue;
 
                     double nScale = (ent.NameScale != 1.0) ? ent.NameScale : ent.Scale;
@@ -422,6 +488,14 @@ namespace TranslationMod
             {
                 Harmony harmony = new Harmony("com.translator.onemillioncoins");
 
+                // 1. UnityEngine.GUI.Label フック
+                MethodInfo mGuiLabel = AccessTools.Method(typeof(GUI), "Label", new Type[] { typeof(Rect), typeof(string), typeof(GUIStyle) });
+                if (mGuiLabel != null) harmony.Patch(mGuiLabel, new HarmonyMethod(AccessTools.Method(typeof(Loader), "GUILabel_Prefix")), null);
+
+                MethodInfo mGuiLabel2 = AccessTools.Method(typeof(GUI), "Label", new Type[] { typeof(Rect), typeof(string) });
+                if (mGuiLabel2 != null) harmony.Patch(mGuiLabel2, new HarmonyMethod(AccessTools.Method(typeof(Loader), "GUILabel_Prefix")), null);
+
+                // 2. MainMenuUI フック
                 Type mainUiType = asm.GetType("GoldDigger.MainMenuUI");
                 if (mainUiType != null)
                 {
@@ -435,6 +509,7 @@ namespace TranslationMod
                     if (mButton != null) harmony.Patch(mButton, new HarmonyMethod(AccessTools.Method(typeof(Loader), "MenuButton_Prefix")), null);
                 }
 
+                // 3. VaultUI フック
                 Type vaultUiType = asm.GetType("GoldDigger.VaultUI");
                 if (vaultUiType != null)
                 {
@@ -445,6 +520,7 @@ namespace TranslationMod
                     if (mActionBtn != null) harmony.Patch(mActionBtn, new HarmonyMethod(AccessTools.Method(typeof(Loader), "ActionButton_Prefix")), null);
                 }
 
+                // 4. SettingsPanel フック
                 Type settingsType = asm.GetType("GoldDigger.SettingsPanel");
                 if (settingsType != null)
                 {
@@ -455,6 +531,59 @@ namespace TranslationMod
                     if (mVol != null) harmony.Patch(mVol, new HarmonyMethod(AccessTools.Method(typeof(Loader), "Volume_Prefix")), null);
                 }
 
+                // 5. ControlsPanel フック
+                Type controlsType = asm.GetType("GoldDigger.ControlsPanel");
+                if (controlsType != null)
+                {
+                    MethodInfo mCatTab = AccessTools.Method(controlsType, "CategoryTab");
+                    if (mCatTab != null) harmony.Patch(mCatTab, new HarmonyMethod(AccessTools.Method(typeof(Loader), "CategoryTab_Prefix")), null);
+                }
+
+                // 6. InputPrompts フック
+                Type inputPromptsType = asm.GetType("GoldDigger.InputPrompts");
+                if (inputPromptsType != null)
+                {
+                    MethodInfo mBindingLabel = AccessTools.Method(inputPromptsType, "BindingLabel", new Type[] { typeof(string) });
+                    if (mBindingLabel != null) harmony.Patch(mBindingLabel, null, new HarmonyMethod(AccessTools.Method(typeof(Loader), "BindingLabel_Postfix")));
+
+                    MethodInfo mActionLabel = AccessTools.Method(inputPromptsType, "ActionLabel", new Type[] { typeof(Rect), typeof(string), typeof(GUIStyle) });
+                    if (mActionLabel != null) harmony.Patch(mActionLabel, new HarmonyMethod(AccessTools.Method(typeof(Loader), "ActionLabel_Prefix")), null);
+
+                    MethodInfo mGetCaption = AccessTools.Method(inputPromptsType, "GetActionCaption", new Type[] { typeof(string) });
+                    if (mGetCaption != null) harmony.Patch(mGetCaption, null, new HarmonyMethod(AccessTools.Method(typeof(Loader), "GetActionCaption_Postfix")));
+
+                    MethodInfo mLabel = AccessTools.Method(inputPromptsType, "Label", new Type[] { typeof(string) });
+                    if (mLabel != null) harmony.Patch(mLabel, null, new HarmonyMethod(AccessTools.Method(typeof(Loader), "InputLabel_Postfix")));
+                }
+
+                // 7. GoldDiggerHUD フック
+                Type hudType = asm.GetType("GoldDigger.GoldDiggerHUD");
+                if (hudType != null)
+                {
+                    MethodInfo mTreeInput = AccessTools.Method(hudType, "DrawTreeInput", new Type[] { typeof(Rect), typeof(string), typeof(string) });
+                    if (mTreeInput != null) harmony.Patch(mTreeInput, new HarmonyMethod(AccessTools.Method(typeof(Loader), "DrawTreeInput_Prefix")), null);
+                }
+
+                // 8. GameProgressManager (ツールチップ動的スタッツ) フック
+                Type progType = asm.GetType("GoldDigger.GameProgressManager");
+                if (progType != null)
+                {
+                    MethodInfo mClearDesc = AccessTools.Method(progType, "ClearSkillDescription");
+                    if (mClearDesc != null) harmony.Patch(mClearDesc, null, new HarmonyMethod(AccessTools.Method(typeof(Loader), "ClearSkillDescription_Postfix")));
+
+                    MethodInfo mSkillDesc = AccessTools.Method(progType, "SkillDescription");
+                    if (mSkillDesc != null) harmony.Patch(mSkillDesc, null, new HarmonyMethod(AccessTools.Method(typeof(Loader), "SkillDescription_Postfix")));
+                }
+
+                // 9. SkillDefinition.get_MilestoneLabel フック
+                Type skillDefType = asm.GetType("GoldDigger.SkillDefinition");
+                if (skillDefType != null)
+                {
+                    MethodInfo mMilestone = AccessTools.Method(skillDefType, "get_MilestoneLabel");
+                    if (mMilestone != null) harmony.Patch(mMilestone, null, new HarmonyMethod(AccessTools.Method(typeof(Loader), "MilestoneLabel_Postfix")));
+                }
+
+                // 10. ItemCatalog & UpgradeCatalog
                 Type itemCatType = asm.GetType("GoldDigger.ItemCatalog");
                 if (itemCatType != null)
                 {
@@ -542,6 +671,14 @@ namespace TranslationMod
             catch (Exception ex) { Log("SkillCatalog翻訳適用エラー: " + ex); }
         }
 
+        // --- Harmony Patches ---
+
+        public static void GUILabel_Prefix(ref string text)
+        {
+            if (string.IsNullOrEmpty(text)) return;
+            text = TranslateUiOrPattern(text);
+        }
+
         public static void MainMenuUI_Start_Prefix(object __instance)
         {
             if (_engineInitialized) return;
@@ -582,29 +719,78 @@ namespace TranslationMod
         public static void MenuButton_Prefix(ref string label)
         {
             if (string.IsNullOrEmpty(label)) return;
-            string tr;
-            if (UiTexts.TryGetValue(label.Trim(), out tr)) label = tr;
+            label = TranslateUi(label);
         }
 
         public static void ActionButton_Prefix(ref string label)
         {
             if (string.IsNullOrEmpty(label)) return;
-            string tr;
-            if (UiTexts.TryGetValue(label.Trim(), out tr)) label = tr;
+            label = TranslateUi(label);
         }
 
         public static void WindowModeButton_Prefix(ref string label)
         {
             if (string.IsNullOrEmpty(label)) return;
-            string tr;
-            if (UiTexts.TryGetValue(label.Trim(), out tr)) label = tr;
+            label = TranslateUi(label);
         }
 
         public static void Volume_Prefix(ref string label)
         {
             if (string.IsNullOrEmpty(label)) return;
-            string tr;
-            if (UiTexts.TryGetValue(label.Trim(), out tr)) label = tr;
+            label = TranslateUi(label);
+        }
+
+        public static void CategoryTab_Prefix(ref string label)
+        {
+            if (string.IsNullOrEmpty(label)) return;
+            label = TranslateUi(label);
+        }
+
+        public static void BindingLabel_Postfix(ref string __result)
+        {
+            if (string.IsNullOrEmpty(__result)) return;
+            __result = TranslateUi(__result);
+        }
+
+        public static void ActionLabel_Prefix(ref string text)
+        {
+            if (string.IsNullOrEmpty(text)) return;
+            text = TranslateUi(text);
+        }
+
+        public static void GetActionCaption_Postfix(ref string __result)
+        {
+            if (string.IsNullOrEmpty(__result)) return;
+            __result = TranslateUi(__result);
+        }
+
+        public static void InputLabel_Postfix(ref string __result)
+        {
+            if (string.IsNullOrEmpty(__result)) return;
+            __result = TranslateUi(__result);
+        }
+
+        public static void DrawTreeInput_Prefix(ref string label)
+        {
+            if (string.IsNullOrEmpty(label)) return;
+            label = TranslateUi(label);
+        }
+
+        public static void ClearSkillDescription_Postfix(ref string __result)
+        {
+            if (string.IsNullOrEmpty(__result)) return;
+            __result = TranslateDynamicTooltip(__result);
+        }
+
+        public static void SkillDescription_Postfix(ref string __result)
+        {
+            if (string.IsNullOrEmpty(__result)) return;
+            __result = TranslateDynamicTooltip(__result);
+        }
+
+        public static void MilestoneLabel_Postfix(ref string __result)
+        {
+            if (__result == "NEW MECHANIC") __result = "新機能解放";
         }
 
         private static void InitializeFonts()
