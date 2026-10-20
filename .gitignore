@@ -1,11 +1,19 @@
-# デフォルト全拒否（ホワイトリスト型）
-/*
+# OS generated files
+.DS_Store
+Thumbs.db
 
-# 公開許可ファイル・ディレクトリ
-!/.gitignore
-!/README*.md
-!/VERSION_UPDATE_GUIDE.md
-!/src/
-!/src/**
-!/data/
-!/data/**
+# IDEs and editors
+.idea/
+.vscode/
+
+# Local build or cache
+node_modules/
+.cache/
+
+python_embed/
+
+# for AI
+scratch/
+tests/
+progress.md
+doc/
