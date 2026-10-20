@@ -110,11 +110,31 @@ items:
     description: "所持容量+11,000。これまでのバッグと合わせると合計15,000枚の所持が可能です。"
 
 ui:
-  "START": "スタート"
-  "OPTIONS": "設定"
-  "CREDITS": "クレジット"
-  "LEADERBOARDS": "ランキング"
-  "QUIT": "終了"
+  "START":
+    text: "スタート"
+    enabled: true
+    scale: 1.0
+
+  "OPTIONS":
+    text: "設定"
+    enabled: true
+    scale: 1.0
+
+  "CREDITS":
+    text: "クレジット"
+    enabled: true
+    scale: 0.85
+
+  "LEADERBOARDS":
+    text: "ランキング"
+    enabled: true
+    scale: 0.85
+
+  "QUIT":
+    text: "終了"
+    enabled: true
+    scale: 1.0
+
   "BACK": "戻る"
   "CONFIRM": "確認"
   "CANCEL": "キャンセル"
@@ -127,11 +147,31 @@ ui:
   "BANKED": "保管コイン"
   "COLLECT": "回収"
   "LOCKED": "ロック中"
-  "Continue": "コンティニュー"
-  "New Game": "ニューゲーム"
-  "Quit Game": "ゲーム終了"
-  "Credits": "クレジット"
-  "Leaderboards": "ランキング"
+
+  "Continue":
+    text: "コンティニュー"
+    enabled: true
+    scale: 1.0
+
+  "New Game":
+    text: "ニューゲーム"
+    enabled: true
+    scale: 1.0
+
+  "Quit Game":
+    text: "ゲーム終了"
+    enabled: true
+    scale: 1.0
+
+  "Credits":
+    text: "クレジット"
+    enabled: true
+    scale: 0.8
+
+  "Leaderboards":
+    text: "ランキング"
+    enabled: true
+    scale: 0.8"
   "Back": "戻る"
   "Back  [Esc]": "戻る [Esc]"
   "Cancel": "キャンセル"
@@ -158,6 +198,17 @@ ui:
   "COINS BANKED": "保管コイン数"
   "Total banked: ": "保管合計: "
   "YOUR PERSONAL BESTS": "自己ベスト記録"
+  "Loading…": "読み込み中…"
+  "Refreshing…": "更新中…"
+  "Refresh failed": "更新に失敗しました"
+  "Loading rankings...": "ランキングを読み込み中…"
+  "No times yet": "記録がまだありません"
+  "No banked totals yet": "保管記録がまだありません"
+  "Rankings unavailable": "ランキングを利用できません"
+  "Invalid scores hidden": "不正なスコアは非表示"
+  "Rounded down to whole thousands.": "千単位未満は切り捨てて表示されます。"
+  "YOU  ·  Global #{0:N0}": "あなた · 世界順位 #{0:N0}"
+
   "LOCAL PLAY": "ローカルプレイ"
   "Offline player": "オフラインプレイヤー"
   "Version ": "バージョン "

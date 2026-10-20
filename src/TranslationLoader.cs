@@ -44,6 +44,7 @@ namespace TranslationMod
         public static Font CustomFontRegular;
         private static bool _engineInitialized = false;
         private static bool _assemblyHooked = false;
+        private static HashSet<int> _initializedInstances = new HashSet<int>();
 
         public static void EarlyInitialize()
         {
@@ -159,46 +160,158 @@ namespace TranslationMod
         {
             if (string.IsNullOrEmpty(text)) return text;
 
-            // 定型文
-            text = text.Replace("Learn prerequisites to see your stat changes.", "前提スキルを習得するとステータス変化が表示されます。");
-            text = text.Replace("Click node to learn", "クリックして習得");
-            text = text.Replace("Press submit to learn", "決定ボタンで習得");
-            text = text.Replace("NEW MECHANIC", "新機能解放");
-            text = text.Replace("Not learned in this build", "未習得");
-            text = text.Replace("These upgrades are working for you. Explore another route when you are ready.", "習得した強化が適用されています。準備ができたら別のルートも探索しましょう。");
-            text = text.Replace("Route complete", "ルート完了");
-            text = text.Replace("BRANCH ENTRY", "ブランチ入口");
-            text = text.Replace("START HERE", "ここから開始");
+            if (CurrentLanguage == "zh")
+            {
+                text = text.Replace("Learn prerequisites to see your stat changes.", "学习前置技能以查看属性变化。");
+                text = text.Replace("Click node to learn", "点击节点进行学习");
+                text = text.Replace("Press submit to learn", "按确认键学习");
+                text = text.Replace("NEW MECHANIC", "解锁新机制");
+                text = text.Replace("Not learned in this build", "未在当前构筑中学习");
+                text = text.Replace("These upgrades are working for you. Explore another route when you are ready.", "这些强化已生效。准备就绪后请探索其他路线。");
+                text = text.Replace("Route complete", "路线已完成");
+                text = text.Replace("BRANCH ENTRY", "分支入口");
+                text = text.Replace("START HERE", "从这里开始");
 
-            // 列ヘッダー
-            text = text.Replace("Hands <size=16>(Tool)</size>", "素手 <size=16>(ツール)</size>");
-            text = text.Replace("Shovel <size=16>(Tool)</size>", "シャベル <size=16>(ツール)</size>");
-            text = text.Replace("Magnet <size=16>(Tool)</size>", "マグネット <size=16>(ツール)</size>");
+                text = text.Replace("Hands <size=16>(Tool)</size>", "双手 <size=16>(工具)</size>");
+                text = text.Replace("Shovel <size=16>(Tool)</size>", "铁锹 <size=16>(工具)</size>");
+                text = text.Replace("Magnet <size=16>(Tool)</size>", "磁铁 <size=16>(工具)</size>");
 
-            // with your upgrades
-            text = Regex.Replace(text, @"(\bHands\b)\s*·\s*with your upgrades", "素手 · 適用中の強化", RegexOptions.IgnoreCase);
-            text = Regex.Replace(text, @"(\bShovel\b)\s*·\s*with your upgrades", "シャベル · 適用中の強化", RegexOptions.IgnoreCase);
-            text = Regex.Replace(text, @"(\bMagnet\b)\s*·\s*with your upgrades", "マグネット · 適用中の強化", RegexOptions.IgnoreCase);
-            text = text.Replace("with your upgrades", "適用中の強化");
+                text = Regex.Replace(text, @"(\bHands\b)\s*·\s*with your upgrades", "双手 · 生效中的强化", RegexOptions.IgnoreCase);
+                text = Regex.Replace(text, @"(\bShovel\b)\s*·\s*with your upgrades", "铁锹 · 生效中的强化", RegexOptions.IgnoreCase);
+                text = Regex.Replace(text, @"(\bMagnet\b)\s*·\s*with your upgrades", "磁铁 · 生效中的强化", RegexOptions.IgnoreCase);
+                text = text.Replace("with your upgrades", "生效中的强化");
 
-            // スタッツラベル
-            text = text.Replace("Grip coin limit:", "グリップ回収上限:");
-            text = text.Replace("Grip radius:", "グリップ範囲:");
-            text = text.Replace("Sweet spot starts at:", "スイートスポット発生:");
-            text = text.Replace("Sweet spot length:", "スイートスポット持続:");
-            text = text.Replace("Normal pickups resume after:", "通常回収への復帰:");
-            text = text.Replace("Recharge after a miss:", "失敗時リチャージ:");
-            text = text.Replace("Recharge:", "リチャージ時間:");
-            text = text.Replace("All tool speed", "全ツール速度");
-            text = text.Replace("Hands coins per grab", "素手回収量");
+                text = text.Replace("Grip coin limit:", "抓取金币上限:");
+                text = text.Replace("Grip radius:", "抓取范围:");
+                text = text.Replace("Sweet spot starts at:", "甜点触发时机:");
+                text = text.Replace("Sweet spot length:", "甜点持续时间:");
+                text = text.Replace("Normal pickups resume after:", "恢复正常收集时间:");
+                text = text.Replace("Recharge after a miss:", "失误后充能时间:");
+                text = text.Replace("Recharge:", "充能时间:");
+                text = text.Replace("All tool speed", "全部工具速度");
+                text = text.Replace("Hands coins per grab", "双手每次抓取金币数");
 
-            // 要件
-            text = Regex.Replace(text, @"(\d+)\s+points?\s*·\s*Requires\s+", "$1 ポイント · 要 ");
-            text = Regex.Replace(text, @"Requires\s+", "要 ");
-            text = Regex.Replace(text, @"(\d+)\s+points?\s*·\s*Click node to learn", "$1 ポイント · クリックして習得");
-            text = Regex.Replace(text, @"(\d+)\s+points?\s*·\s*", "$1 ポイント · ");
-            text = Regex.Replace(text, @"(\d+)\s+POINT(S)?", "$1 ポイント");
-            text = Regex.Replace(text, @"(\d+)\s+POINTS SPENT", "$1 ポイント消費済み");
+                text = Regex.Replace(text, @"(\d+)\s+points?\s*·\s*Requires\s+", "$1 点 · 需要 ");
+                text = Regex.Replace(text, @"Requires\s+", "需要 ");
+                text = Regex.Replace(text, @"(\d+)\s+points?\s*·\s*Click node to learn", "$1 点 · 点击节点学习");
+                text = Regex.Replace(text, @"(\d+)\s+points?\s*·\s*", "$1 点 · ");
+                text = Regex.Replace(text, @"(\d+)\s+POINT(S)?", "$1 点");
+                text = Regex.Replace(text, @"(\d+)\s+POINTS SPENT", "已花费 $1 点");
+            }
+            else if (CurrentLanguage == "ko")
+            {
+                text = text.Replace("Learn prerequisites to see your stat changes.", "속성 변화를 보려면 선행 스킬을 습득하세요.");
+                text = text.Replace("Click node to learn", "습득하려면 노드 클릭");
+                text = text.Replace("Press submit to learn", "습득하려면 결정 버튼 누르기");
+                text = text.Replace("NEW MECHANIC", "새로운 메커니즘");
+                text = text.Replace("Not learned in this build", "현재 빌드에서 미습득");
+                text = text.Replace("These upgrades are working for you. Explore another route when you are ready.", "습득한 강화가 적용 중입니다. 준비가 되면 다른 경로를 탐색해 보세요.");
+                text = text.Replace("Route complete", "경로 완료");
+                text = text.Replace("BRANCH ENTRY", "분기 입구");
+                text = text.Replace("START HERE", "여기서 시작");
+
+                text = text.Replace("Hands <size=16>(Tool)</size>", "맨손 <size=16>(도구)</size>");
+                text = text.Replace("Shovel <size=16>(Tool)</size>", "삽 <size=16>(도구)</size>");
+                text = text.Replace("Magnet <size=16>(Tool)</size>", "자석 <size=16>(도구)</size>");
+
+                text = Regex.Replace(text, @"(\bHands\b)\s*·\s*with your upgrades", "맨손 · 적용 중인 강화", RegexOptions.IgnoreCase);
+                text = Regex.Replace(text, @"(\bShovel\b)\s*·\s*with your upgrades", "삽 · 적용 중인 강화", RegexOptions.IgnoreCase);
+                text = Regex.Replace(text, @"(\bMagnet\b)\s*·\s*with your upgrades", "자석 · 적용 중인 강화", RegexOptions.IgnoreCase);
+                text = text.Replace("with your upgrades", "적용 중인 강화");
+
+                text = text.Replace("Grip coin limit:", "그립 수집 한도:");
+                text = text.Replace("Grip radius:", "그립 반경:");
+                text = text.Replace("Sweet spot starts at:", "스위트 스폿 시작:");
+                text = text.Replace("Sweet spot length:", "스위트 스폿 지속 시간:");
+                text = text.Replace("Normal pickups resume after:", "일반 수집 복귀 시간:");
+                text = text.Replace("Recharge after a miss:", "실패 후 재충전:");
+                text = text.Replace("Recharge:", "재충전 시간:");
+                text = text.Replace("All tool speed", "모든 도구 속도");
+                text = text.Replace("Hands coins per grab", "맨손 1회당 수집량");
+
+                text = Regex.Replace(text, @"(\d+)\s+points?\s*·\s*Requires\s+", "$1 포인트 · 필요: ");
+                text = Regex.Replace(text, @"Requires\s+", "필요: ");
+                text = Regex.Replace(text, @"(\d+)\s+points?\s*·\s*Click node to learn", "$1 포인트 · 클릭하여 습득");
+                text = Regex.Replace(text, @"(\d+)\s+points?\s*·\s*", "$1 포인트 · ");
+                text = Regex.Replace(text, @"(\d+)\s+POINT(S)?", "$1 포인트");
+                text = Regex.Replace(text, @"(\d+)\s+POINTS SPENT", "$1 포인트 사용됨");
+            }
+            else if (CurrentLanguage == "fr")
+            {
+                text = text.Replace("Learn prerequisites to see your stat changes.", "Apprenez les prérequis pour voir vos changements de stats.");
+                text = text.Replace("Click node to learn", "Cliquez sur le nœud pour apprendre");
+                text = text.Replace("Press submit to learn", "Appuyez sur confirmer pour apprendre");
+                text = text.Replace("NEW MECHANIC", "NOUVELLE MÉCANIQUE");
+                text = text.Replace("Not learned in this build", "Non appris dans ce build");
+                text = text.Replace("These upgrades are working for you. Explore another route when you are ready.", "Ces améliorations fonctionnent pour vous. Explorez une autre voie quand vous serez prêt.");
+                text = text.Replace("Route complete", "Itinéraire terminé");
+                text = text.Replace("BRANCH ENTRY", "ENTRÉE DE BRANCHE");
+                text = text.Replace("START HERE", "COMMENCEZ ICI");
+
+                text = text.Replace("Hands <size=16>(Tool)</size>", "Mains <size=16>(Outil)</size>");
+                text = text.Replace("Shovel <size=16>(Tool)</size>", "Pelle <size=16>(Outil)</size>");
+                text = text.Replace("Magnet <size=16>(Tool)</size>", "Aimant <size=16>(Outil)</size>");
+
+                text = Regex.Replace(text, @"(\bHands\b)\s*·\s*with your upgrades", "Mains · avec vos améliorations", RegexOptions.IgnoreCase);
+                text = Regex.Replace(text, @"(\bShovel\b)\s*·\s*with your upgrades", "Pelle · avec vos améliorations", RegexOptions.IgnoreCase);
+                text = Regex.Replace(text, @"(\bMagnet\b)\s*·\s*with your upgrades", "Aimant · avec vos améliorations", RegexOptions.IgnoreCase);
+                text = text.Replace("with your upgrades", "avec vos améliorations");
+
+                text = text.Replace("Grip coin limit:", "Limite de pièces par prise :");
+                text = text.Replace("Grip radius:", "Rayon de prise :");
+                text = text.Replace("Sweet spot starts at:", "Début de la zone idéale :");
+                text = text.Replace("Sweet spot length:", "Durée de la zone idéale :");
+                text = text.Replace("Normal pickups resume after:", "Reprise des ramassages normaux après :");
+                text = text.Replace("Recharge after a miss:", "Recharge après un échec :");
+                text = text.Replace("Recharge:", "Recharge :");
+                text = text.Replace("All tool speed", "Vitesse de tous les outils");
+                text = text.Replace("Hands coins per grab", "Pièces par prise (mains)");
+
+                text = Regex.Replace(text, @"(\d+)\s+points?\s*·\s*Requires\s+", "$1 points · Requis : ");
+                text = Regex.Replace(text, @"Requires\s+", "Requis : ");
+                text = Regex.Replace(text, @"(\d+)\s+points?\s*·\s*Click node to learn", "$1 points · Cliquez pour apprendre");
+                text = Regex.Replace(text, @"(\d+)\s+points?\s*·\s*", "$1 points · ");
+                text = Regex.Replace(text, @"(\d+)\s+POINT(S)?", "$1 POINT(S)");
+                text = Regex.Replace(text, @"(\d+)\s+POINTS SPENT", "$1 POINTS DÉPENSÉS");
+            }
+            else // ja
+            {
+                text = text.Replace("Learn prerequisites to see your stat changes.", "前提スキルを習得するとステータス変化が表示されます。");
+                text = text.Replace("Click node to learn", "クリックして習得");
+                text = text.Replace("Press submit to learn", "決定ボタンで習得");
+                text = text.Replace("NEW MECHANIC", "新機能解放");
+                text = text.Replace("Not learned in this build", "未習得");
+                text = text.Replace("These upgrades are working for you. Explore another route when you are ready.", "習得した強化が適用されています。準備ができたら別のルートも探索しましょう。");
+                text = text.Replace("Route complete", "ルート完了");
+                text = text.Replace("BRANCH ENTRY", "ブランチ入口");
+                text = text.Replace("START HERE", "ここから開始");
+
+                text = text.Replace("Hands <size=16>(Tool)</size>", "素手 <size=16>(ツール)</size>");
+                text = text.Replace("Shovel <size=16>(Tool)</size>", "シャベル <size=16>(ツール)</size>");
+                text = text.Replace("Magnet <size=16>(Tool)</size>", "マグネット <size=16>(ツール)</size>");
+
+                text = Regex.Replace(text, @"(\bHands\b)\s*·\s*with your upgrades", "素手 · 適用中の強化", RegexOptions.IgnoreCase);
+                text = Regex.Replace(text, @"(\bShovel\b)\s*·\s*with your upgrades", "シャベル · 適用中の強化", RegexOptions.IgnoreCase);
+                text = Regex.Replace(text, @"(\bMagnet\b)\s*·\s*with your upgrades", "マグネット · 適用中の強化", RegexOptions.IgnoreCase);
+                text = text.Replace("with your upgrades", "適用中の強化");
+
+                text = text.Replace("Grip coin limit:", "グリップ回収上限:");
+                text = text.Replace("Grip radius:", "グリップ範囲:");
+                text = text.Replace("Sweet spot starts at:", "スイートスポット発生:");
+                text = text.Replace("Sweet spot length:", "スイートスポット持続:");
+                text = text.Replace("Normal pickups resume after:", "通常回収への復帰:");
+                text = text.Replace("Recharge after a miss:", "失敗時リチャージ:");
+                text = text.Replace("Recharge:", "リチャージ時間:");
+                text = text.Replace("All tool speed", "全ツール速度");
+                text = text.Replace("Hands coins per grab", "素手回収量");
+
+                text = Regex.Replace(text, @"(\d+)\s+points?\s*·\s*Requires\s+", "$1 ポイント · 要 ");
+                text = Regex.Replace(text, @"Requires\s+", "要 ");
+                text = Regex.Replace(text, @"(\d+)\s+points?\s*·\s*Click node to learn", "$1 ポイント · クリックして習得");
+                text = Regex.Replace(text, @"(\d+)\s+points?\s*·\s*", "$1 ポイント · ");
+                text = Regex.Replace(text, @"(\d+)\s+POINT(S)?", "$1 ポイント");
+                text = Regex.Replace(text, @"(\d+)\s+POINTS SPENT", "$1 ポイント消費済み");
+            }
 
             return text;
         }
@@ -599,6 +712,7 @@ namespace TranslationMod
                 }
 
                 TranslateSkillCatalog(asm);
+                MenuInspector2.Inspect(asm, ModDir);
                 Log("全フックおよびスキル翻訳の登録完了");
             }
             catch (Exception ex) { Log("フック適用エラー: " + ex); }
@@ -676,7 +790,10 @@ namespace TranslationMod
         public static void GUILabel_Prefix(ref string text)
         {
             if (string.IsNullOrEmpty(text)) return;
+            string orig = text;
             text = TranslateUiOrPattern(text);
+            if (orig != text && (orig.Contains("Leader") || orig.Contains("Credit") || orig.Contains("Quit") || text.Contains("ゲーム終了")))
+                Log("GUILabel: '" + orig + "' -> '" + text + "'");
         }
 
         public static void MainMenuUI_Start_Prefix(object __instance)
@@ -692,7 +809,7 @@ namespace TranslationMod
             {
                 if (CustomFontRegular != null)
                 {
-                    if (GUI.skin != null)
+                    if (GUI.skin != null && GUI.skin.font != CustomFontRegular)
                     {
                         GUI.skin.font = CustomFontRegular;
                         if (GUI.skin.label != null) GUI.skin.label.richText = true;
@@ -701,13 +818,23 @@ namespace TranslationMod
                     }
                     if (__instance != null)
                     {
-                        Type t = __instance.GetType();
-                        foreach (var f in t.GetFields(BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public))
+                        int hash = __instance.GetHashCode();
+                        if (!_initializedInstances.Contains(hash))
                         {
-                            if (f.FieldType == typeof(GUIStyle))
+                            _initializedInstances.Add(hash);
+                            Type t = __instance.GetType();
+                            foreach (var f in t.GetFields(BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public))
                             {
-                                GUIStyle s = f.GetValue(__instance) as GUIStyle;
-                                if (s != null) { s.font = CustomFontRegular; s.fontStyle = FontStyle.Bold; s.richText = true; }
+                                if (f.FieldType == typeof(GUIStyle))
+                                {
+                                    GUIStyle s = f.GetValue(__instance) as GUIStyle;
+                                    if (s != null && s.font != CustomFontRegular)
+                                    {
+                                        s.font = CustomFontRegular;
+                                        s.fontStyle = FontStyle.Bold;
+                                        s.richText = true;
+                                    }
+                                }
                             }
                         }
                     }
@@ -725,7 +852,9 @@ namespace TranslationMod
         public static void ActionButton_Prefix(ref string label)
         {
             if (string.IsNullOrEmpty(label)) return;
+            string orig = label;
             label = TranslateUi(label);
+            if (orig != label) Log("ActionButton: '" + orig + "' -> '" + label + "'");
         }
 
         public static void WindowModeButton_Prefix(ref string label)
@@ -790,7 +919,13 @@ namespace TranslationMod
 
         public static void MilestoneLabel_Postfix(ref string __result)
         {
-            if (__result == "NEW MECHANIC") __result = "新機能解放";
+            if (__result == "NEW MECHANIC")
+            {
+                if (CurrentLanguage == "zh") __result = "解锁新机制";
+                else if (CurrentLanguage == "ko") __result = "새로운 메커니즘";
+                else if (CurrentLanguage == "fr") __result = "NOUVELLE MÉCANIQUE";
+                else __result = "新機能解放";
+            }
         }
 
         private static void InitializeFonts()
@@ -815,20 +950,61 @@ namespace TranslationMod
                 }
             }
 
-            foreach (var s in new string[] { "Yu Gothic UI Bold", "Yu Gothic UI", "Yu Gothic", "Meiryo Bold", "Meiryo" })
+            if (CurrentLanguage == "zh")
             {
-                if (!candidates.Contains(s)) candidates.Add(s);
+                foreach (var s in new string[] { "Microsoft YaHei Bold", "Microsoft YaHei", "SimHei", "SimSun", "Yu Gothic UI Bold", "Segoe UI Bold" })
+                    if (!candidates.Contains(s)) candidates.Add(s);
+            }
+            else if (CurrentLanguage == "ko")
+            {
+                foreach (var s in new string[] { "Malgun Gothic Bold", "Malgun Gothic", "Gulim", "Dotum", "Yu Gothic UI Bold", "Segoe UI Bold" })
+                    if (!candidates.Contains(s)) candidates.Add(s);
+            }
+            else if (CurrentLanguage == "fr")
+            {
+                foreach (var s in new string[] { "Segoe UI Bold", "Segoe UI", "Arial Bold", "Arial", "Yu Gothic UI Bold" })
+                    if (!candidates.Contains(s)) candidates.Add(s);
+            }
+            else // ja
+            {
+                foreach (var s in new string[] { "Yu Gothic UI Bold", "Yu Gothic UI", "Yu Gothic", "Meiryo Bold", "Meiryo", "Segoe UI Bold" })
+                    if (!candidates.Contains(s)) candidates.Add(s);
             }
 
             CustomFontRegular = Font.CreateDynamicFontFromOSFont(candidates.ToArray(), 18);
-            Log("フォント適用: " + ((CustomFontRegular != null) ? CustomFontRegular.name : "null"));
+            if (CustomFontRegular != null)
+            {
+                try
+                {
+                    StringBuilder sbChars = new StringBuilder(4096);
+                    for (char c = ' '; c <= '~'; c++) sbChars.Append(c);
+                    foreach (var v in UiTexts.Values) if (!string.IsNullOrEmpty(v)) sbChars.Append(v);
+                    foreach (var v in SkillNames.Values) if (!string.IsNullOrEmpty(v)) sbChars.Append(v);
+                    foreach (var v in ItemNames.Values) if (!string.IsNullOrEmpty(v)) sbChars.Append(v);
+                    foreach (var v in BranchNames.Values) if (!string.IsNullOrEmpty(v)) sbChars.Append(v);
+                    string warmup = sbChars.ToString();
+                    CustomFontRegular.RequestCharactersInTexture(warmup, 18, FontStyle.Bold);
+                    CustomFontRegular.RequestCharactersInTexture(warmup, 14, FontStyle.Bold);
+                    CustomFontRegular.RequestCharactersInTexture(warmup, 24, FontStyle.Bold);
+                    Log(string.Format("フォント適用: {0} (事前ウォームアップ {1} 文字)", CustomFontRegular.name, warmup.Length));
+                }
+                catch (Exception ex) { Log("フォントウォームアップエラー: " + ex); }
+            }
+            else
+            {
+                Log("フォント適用: null");
+            }
         }
 
         public static void VaultUI_Ensure_Postfix(object __instance)
         {
             try
             {
-                if (CustomFontRegular == null) return;
+                if (CustomFontRegular == null || __instance == null) return;
+                int hash = __instance.GetHashCode();
+                if (_initializedInstances.Contains(hash)) return;
+                _initializedInstances.Add(hash);
+
                 Type t = __instance.GetType();
                 FieldInfo fReg = t.GetField("_regular", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
                 FieldInfo fBold = t.GetField("_bold", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
@@ -843,7 +1019,7 @@ namespace TranslationMod
                     if (f.FieldType == typeof(GUIStyle))
                     {
                         GUIStyle style = f.GetValue(__instance) as GUIStyle;
-                        if (style != null)
+                        if (style != null && style.font != CustomFontRegular)
                         {
                             style.font = CustomFontRegular;
                             style.fontStyle = FontStyle.Bold;
