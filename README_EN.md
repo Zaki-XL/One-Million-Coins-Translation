@@ -2,7 +2,7 @@ English | [日本語 (Japanese)](README.md)
 
 # One Million Coins Multilingual Translation System (Doorstop-based)
 
-A non-invasive, Doorstop-based multilingual translation system for the Steam game "One Million Coins".  
+A non-invasive, Doorstop-based multilingual translation system for the Steam game **["One Million Coins"](https://store.steampowered.com/app/5258340/One_Million_Coins/)**.  
 Supports Japanese (default), Simplified Chinese, Korean, and French.
 
 ---
@@ -138,3 +138,11 @@ ONE MILLION COINS/
 └── src/
     └── TranslationLoader.cs    # C# Loader Source Code
 ```
+
+---
+
+## License & Credits
+
+- **Game Copyright**: All copyrights, trademarks, assets, and intellectual property related to "One Million Coins" belong entirely to the original developer.
+- **Mod License**: In utmost respect and appreciation for the original creator of *One Million Coins*, the author of this translation mod **waives all rights and claims no ownership** over this project (Public Domain / CC0 / Unlicense equivalent).
+- Anyone is free to use, modify, redistribute, fork, or incorporate these translations and loader code into official localizations without permission or attribution.
