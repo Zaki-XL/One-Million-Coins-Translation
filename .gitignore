@@ -4,6 +4,7 @@
 # 公開許可ファイル・ディレクトリ
 !/.gitignore
 !/README*.md
+!/VERSION_UPDATE_GUIDE.md
 !/src/
 !/src/**
 !/data/
