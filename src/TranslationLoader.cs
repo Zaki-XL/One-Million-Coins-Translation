@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Text;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
@@ -95,17 +96,252 @@ namespace TranslationMod
                     }
                 }
 
-                string langFile = Path.Combine(localesDir, CurrentLanguage + ".json");
-                if (!File.Exists(langFile)) langFile = Path.Combine(localesDir, "ja.json");
+                // YAML形式の辞書を最優先探索（.yaml -> .yml -> .json）
+                string yamlFile = Path.Combine(localesDir, CurrentLanguage + ".yaml");
+                if (!File.Exists(yamlFile)) yamlFile = Path.Combine(localesDir, CurrentLanguage + ".yml");
+                if (!File.Exists(yamlFile)) yamlFile = Path.Combine(localesDir, "ja.yaml");
+                if (!File.Exists(yamlFile)) yamlFile = Path.Combine(localesDir, "ja.yml");
 
-                if (File.Exists(langFile))
+                if (File.Exists(yamlFile))
                 {
-                    ParseDictionary(File.ReadAllText(langFile));
-                    Log(string.Format("辞書読込完了: アイテム({0}), スキル({1}), ブランチ({2}), UI({3})",
-                        ItemNames.Count, SkillNames.Count, BranchNames.Count, UiTexts.Count));
+                    Log("YAML辞書読込: " + Path.GetFileName(yamlFile));
+                    ParseYaml(File.ReadAllText(yamlFile, Encoding.UTF8));
                 }
+                else
+                {
+                    string jsonFile = Path.Combine(localesDir, CurrentLanguage + ".json");
+                    if (!File.Exists(jsonFile)) jsonFile = Path.Combine(localesDir, "ja.json");
+                    if (File.Exists(jsonFile))
+                    {
+                        Log("JSON辞書読込: " + Path.GetFileName(jsonFile));
+                        ParseDictionary(File.ReadAllText(jsonFile, Encoding.UTF8));
+                    }
+                }
+
+                Log(string.Format("辞書読込完了: アイテム({0}), スキル({1}), ブランチ({2}), UI({3})",
+                    ItemNames.Count, SkillNames.Count, BranchNames.Count, UiTexts.Count));
             }
             catch (Exception ex) { Log("設定読込エラー: " + ex); }
+        }
+
+        private static string ApplyScale(string text, double scale)
+        {
+            if (string.IsNullOrEmpty(text)) return text;
+            if (scale > 0.01 && Math.Abs(scale - 1.0) > 0.001)
+            {
+                int pct = (int)Math.Round(scale * 100.0);
+                return string.Format("<size={0}%>{1}</size>", pct, text);
+            }
+            return text;
+        }
+
+        private class ParsedEntry
+        {
+            public string Name;
+            public string Description;
+            public string Text;
+            public bool Enabled = true;
+            public double Scale = 1.0;
+            public double NameScale = 1.0;
+            public double DescScale = 1.0;
+        }
+
+        private static void ParseYaml(string yaml)
+        {
+            string[] lines = yaml.Split(new char[] { '\r', '\n' }, StringSplitOptions.None);
+            string currentSection = null;
+            string currentKey = null;
+            string currentBlockProp = null;
+            int blockIndent = -1;
+            List<string> blockLines = new List<string>();
+
+            Dictionary<string, Dictionary<string, ParsedEntry>> sectionData = new Dictionary<string, Dictionary<string, ParsedEntry>>(StringComparer.OrdinalIgnoreCase);
+
+            Action flushBlock = () => {
+                if (currentSection != null && currentKey != null && currentBlockProp != null && blockLines.Count > 0)
+                {
+                    string joined = string.Join("\n", blockLines.ToArray());
+                    if (sectionData.ContainsKey(currentSection) && sectionData[currentSection].ContainsKey(currentKey))
+                    {
+                        var ent = sectionData[currentSection][currentKey];
+                        if (currentBlockProp == "description") ent.Description = joined;
+                        else if (currentBlockProp == "text") ent.Text = joined;
+                        else if (currentBlockProp == "name") ent.Name = joined;
+                    }
+                }
+                blockLines.Clear();
+                currentBlockProp = null;
+                blockIndent = -1;
+            };
+
+            foreach (var rawLine in lines)
+            {
+                string line = rawLine;
+                string trimmed = line.Trim();
+                if (string.IsNullOrEmpty(trimmed) || trimmed.StartsWith("#")) continue;
+
+                int indent = 0;
+                while (indent < line.Length && line[indent] == ' ') indent++;
+
+                if (blockIndent > 0)
+                {
+                    if (indent >= blockIndent)
+                    {
+                        blockLines.Add(line.Length >= blockIndent ? line.Substring(blockIndent) : line.TrimStart());
+                        continue;
+                    }
+                    else
+                    {
+                        flushBlock();
+                    }
+                }
+
+                if (indent == 0 && trimmed.EndsWith(":"))
+                {
+                    currentSection = trimmed.Substring(0, trimmed.Length - 1).Trim().ToLower();
+                    if (!sectionData.ContainsKey(currentSection)) sectionData[currentSection] = new Dictionary<string, ParsedEntry>(StringComparer.OrdinalIgnoreCase);
+                    currentKey = null;
+                    continue;
+                }
+
+                if (indent == 2 && currentSection != null)
+                {
+                    int colon = trimmed.IndexOf(':');
+                    if (colon != -1)
+                    {
+                        string k = trimmed.Substring(0, colon).Trim().Trim('"', '\'');
+                        string val = trimmed.Substring(colon + 1).Trim();
+                        currentKey = k;
+                        if (!sectionData[currentSection].ContainsKey(currentKey)) sectionData[currentSection][currentKey] = new ParsedEntry();
+
+                        if (!string.IsNullOrEmpty(val))
+                        {
+                            if (val == "|")
+                            {
+                                currentBlockProp = "text";
+                                blockIndent = 4;
+                            }
+                            else
+                            {
+                                string unquoted = Unquote(val);
+                                sectionData[currentSection][currentKey].Text = unquoted;
+                            }
+                        }
+                    }
+                    continue;
+                }
+
+                if (indent == 4 && currentSection != null && currentKey != null)
+                {
+                    int colon = trimmed.IndexOf(':');
+                    if (colon != -1)
+                    {
+                        string prop = trimmed.Substring(0, colon).Trim().ToLower();
+                        string val = trimmed.Substring(colon + 1).Trim();
+
+                        if (!sectionData[currentSection].ContainsKey(currentKey)) sectionData[currentSection][currentKey] = new ParsedEntry();
+                        var ent = sectionData[currentSection][currentKey];
+
+                        if (val == "|")
+                        {
+                            currentBlockProp = prop;
+                            blockIndent = 6;
+                        }
+                        else
+                        {
+                            string unquoted = Unquote(val);
+                            if (prop == "name") ent.Name = unquoted;
+                            else if (prop == "description") ent.Description = unquoted;
+                            else if (prop == "text") ent.Text = unquoted;
+                            else if (prop == "enabled")
+                            {
+                                bool b;
+                                if (bool.TryParse(unquoted, out b)) ent.Enabled = b;
+                            }
+                            else if (prop == "scale")
+                            {
+                                double s;
+                                if (double.TryParse(unquoted, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out s)) ent.Scale = s;
+                            }
+                            else if (prop == "name_scale")
+                            {
+                                double s;
+                                if (double.TryParse(unquoted, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out s)) ent.NameScale = s;
+                            }
+                            else if (prop == "desc_scale")
+                            {
+                                double s;
+                                if (double.TryParse(unquoted, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out s)) ent.DescScale = s;
+                            }
+                        }
+                    }
+                    continue;
+                }
+            }
+
+            flushBlock();
+
+            // 辞書へのマージ
+            foreach (var kvSec in sectionData)
+            {
+                string sec = kvSec.Key;
+                foreach (var kvEnt in kvSec.Value)
+                {
+                    string id = kvEnt.Key;
+                    ParsedEntry ent = kvEnt.Value;
+
+                    // enabled: false のエントリは辞書登録をスキップ（英語原文を維持）
+                    if (!ent.Enabled) continue;
+
+                    double nScale = (ent.NameScale != 1.0) ? ent.NameScale : ent.Scale;
+                    double dScale = (ent.DescScale != 1.0) ? ent.DescScale : ent.Scale;
+
+                    string finalName = ApplyScale(ent.Name, nScale);
+                    string finalDesc = ApplyScale(ent.Description, dScale);
+                    string finalText = ApplyScale(ent.Text, ent.Scale);
+
+                    if (sec == "skills")
+                    {
+                        if (finalName != null) SkillNames[id] = finalName;
+                        if (finalDesc != null) SkillDescriptions[id] = finalDesc;
+                    }
+                    else if (sec == "items")
+                    {
+                        if (finalName != null) ItemNames[id] = finalName;
+                        if (finalDesc != null) ItemDescriptions[id] = finalDesc;
+                    }
+                    else if (sec == "upgrades")
+                    {
+                        if (finalDesc != null) UpgradeDescriptions[id] = finalDesc;
+                        else if (finalText != null) UpgradeDescriptions[id] = finalText;
+                    }
+                    else if (sec == "branches")
+                    {
+                        if (finalName != null) BranchNames[id] = finalName;
+                        if (finalDesc != null) BranchDescriptions[id] = finalDesc;
+                    }
+                    else if (sec == "ui")
+                    {
+                        if (finalText != null) UiTexts[id] = finalText;
+                        else if (finalName != null) UiTexts[id] = finalName;
+                    }
+                }
+            }
+        }
+
+        private static string Unquote(string s)
+        {
+            if (string.IsNullOrEmpty(s)) return s;
+            s = s.Trim();
+            if (s.StartsWith("\"") && s.EndsWith("\"") && s.Length >= 2)
+            {
+                return s.Substring(1, s.Length - 2).Replace("\\\"", "\"").Replace("\\n", "\n").Replace("\\r", "");
+            }
+            if (s.StartsWith("'") && s.EndsWith("'") && s.Length >= 2)
+            {
+                return s.Substring(1, s.Length - 2).Replace("''", "'");
+            }
+            return s;
         }
 
         private static void ParseDictionary(string json)
@@ -172,7 +408,6 @@ namespace TranslationMod
             if (q1 != -1 && q2 > q1)
             {
                 string s = line.Substring(q1 + 1, q2 - q1 - 1);
-                // 改行コード（\n）およびエスケープを完全に展開
                 return s.Replace("\\r\\n", "\n").Replace("\\n", "\n").Replace("\\r", "\r").Replace("\\\"", "\"").Replace("\\\\", "\\");
             }
             return null;
@@ -200,7 +435,6 @@ namespace TranslationMod
                     if (mButton != null) harmony.Patch(mButton, new HarmonyMethod(AccessTools.Method(typeof(Loader), "MenuButton_Prefix")), null);
                 }
 
-                // VaultUI の ActionButton フック (Learn, Buy, Upgrade などのボタン)
                 Type vaultUiType = asm.GetType("GoldDigger.VaultUI");
                 if (vaultUiType != null)
                 {
@@ -211,7 +445,6 @@ namespace TranslationMod
                     if (mActionBtn != null) harmony.Patch(mActionBtn, new HarmonyMethod(AccessTools.Method(typeof(Loader), "ActionButton_Prefix")), null);
                 }
 
-                // SettingsPanel の WindowModeButton と Volume フック
                 Type settingsType = asm.GetType("GoldDigger.SettingsPanel");
                 if (settingsType != null)
                 {
@@ -299,7 +532,6 @@ namespace TranslationMod
                                 if (SkillNames.TryGetValue(id, out trN) && fName != null) fName.SetValue(skill, trN);
                                 if (SkillDescriptions.TryGetValue(id, out trD) && fDesc != null)
                                 {
-                                    // 改行コードを本物の改行に置換
                                     fDesc.SetValue(skill, trD.Replace("\\n", "\n").Replace("\\r", ""));
                                 }
                             }
@@ -323,7 +555,13 @@ namespace TranslationMod
             {
                 if (CustomFontRegular != null)
                 {
-                    if (GUI.skin != null) GUI.skin.font = CustomFontRegular;
+                    if (GUI.skin != null)
+                    {
+                        GUI.skin.font = CustomFontRegular;
+                        if (GUI.skin.label != null) GUI.skin.label.richText = true;
+                        if (GUI.skin.button != null) GUI.skin.button.richText = true;
+                        if (GUI.skin.box != null) GUI.skin.box.richText = true;
+                    }
                     if (__instance != null)
                     {
                         Type t = __instance.GetType();
@@ -332,7 +570,7 @@ namespace TranslationMod
                             if (f.FieldType == typeof(GUIStyle))
                             {
                                 GUIStyle s = f.GetValue(__instance) as GUIStyle;
-                                if (s != null) { s.font = CustomFontRegular; s.fontStyle = FontStyle.Bold; }
+                                if (s != null) { s.font = CustomFontRegular; s.fontStyle = FontStyle.Bold; s.richText = true; }
                             }
                         }
                     }
@@ -419,7 +657,12 @@ namespace TranslationMod
                     if (f.FieldType == typeof(GUIStyle))
                     {
                         GUIStyle style = f.GetValue(__instance) as GUIStyle;
-                        if (style != null) { style.font = CustomFontRegular; style.fontStyle = FontStyle.Bold; }
+                        if (style != null)
+                        {
+                            style.font = CustomFontRegular;
+                            style.fontStyle = FontStyle.Bold;
+                            style.richText = true;
+                        }
                     }
                 }
             }
