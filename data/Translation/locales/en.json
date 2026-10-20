@@ -1,0 +1,224 @@
+{
+  "upgrades": {
+    "PickupRadius": {
+      "name": null,
+      "description": "Gather coins across a wider area."
+    },
+    "ToolSpeed": {
+      "name": null,
+      "description": "Make every tool cycle faster."
+    },
+    "ToolCapacity": {
+      "name": null,
+      "description": "Move more coins with every tool cycle."
+    },
+    "ToolRange": {
+      "name": null,
+      "description": "Reach deeper gold from farther away."
+    },
+    "DepositSpeed": {
+      "name": null,
+      "description": "Feed carried gold into the bank faster."
+    },
+    "MovementSpeed": {
+      "name": null,
+      "description": "Walk faster through the vault."
+    },
+    "CarryCapacity": {
+      "name": null,
+      "description": "Improve your pockets and all owned bags."
+    }
+  },
+  "ui": {
+    "UPGRADE": "UPGRADE",
+    "LOCKED": "LOCKED",
+    "COST": "COST",
+    "BANKED": "BANKED",
+    "COLLECT": "COLLECT",
+    "MAX_LEVEL": "MAX LEVEL",
+    "BACK": "BACK",
+    "CANCEL": "CANCEL",
+    "SOLD_OUT": "SOLD OUT",
+    "QUIT": "QUIT",
+    "CREDITS": "CREDITS",
+    "PRICE": "PRICE",
+    "OPTIONS": "OPTIONS",
+    "START": "START",
+    "CONFIRM": "CONFIRM",
+    "BUY": "BUY",
+    "LEADERBOARDS": "LEADERBOARDS",
+    "Continue": "Continue",
+    "New Game": "New Game",
+    "Settings": "Settings",
+    "Quit Game": "Quit Game",
+    "Credits": "Credits",
+    "Leaderboards": "Leaderboards",
+    "Back": "Back",
+    "Back  [Esc]": "Back  [Esc]",
+    "Cancel": "Cancel",
+    "Cancel  [Esc]": "Cancel  [Esc]",
+    "Refresh": "Refresh",
+    "Confirm": "Confirm",
+    "Lifetime coins banked across all runs": "Lifetime coins banked across all runs",
+    "Offline · saved locally": "Offline · saved locally",
+    "Loading banking history…": "Loading banking history…",
+    "Banking history needs recovery": "Banking history needs recovery",
+    "Start a new game?": "Start a new game?",
+    "This replaces your saved progress for ": "This replaces your saved progress for ",
+    "SKILL TREE · NEW GAME": "SKILL TREE · NEW GAME",
+    "Top hoarders": "Top hoarders",
+    "Fastest runs": "Fastest runs",
+    "GLOBAL": "GLOBAL",
+    "FRIENDS": "FRIENDS",
+    "TOP 10": "TOP 10",
+    "TOP 100": "TOP 100",
+    "TOP 1,000": "TOP 1,000",
+    "RANK": "RANK",
+    "PLAYER": "PLAYER",
+    "TIME": "TIME",
+    "COINS BANKED": "COINS BANKED",
+    "Total banked: ": "Total banked: ",
+    "YOUR PERSONAL BESTS": "YOUR PERSONAL BESTS",
+    "LOCAL PLAY": "LOCAL PLAY",
+    "Offline player": "Offline player",
+    "Version ": "Version "
+  },
+  "items": {
+    "RecallCoil": {
+      "name": "WORMHOLE COIL",
+      "description": "Right-click recalls your deployed vacuum grenade from anywhere, even through walls. No earlier utility purchases required."
+    },
+    "Singularity": {
+      "name": "SINGULARITY",
+      "description": "3,000 coins/sec and a 5m sweep. Gather the final scattered gold."
+    },
+    "Shovel": {
+      "name": "SHOVEL",
+      "description": "Hold left mouse for close directional scoops through dense gold. Learn Jackhammer for a charged right-mouse slam where you aim. Unlock for 1 point after collecting 1,500 coins."
+    },
+    "Vortex": {
+      "name": "GOLD WINCH",
+      "description": "Press LMB to hook a seam, then hold to reel in gold. If the cable breaks or the seam runs dry, release and click again to recast."
+    },
+    "GravityCoupler": {
+      "name": "GRAVITY COUPLER",
+      "description": "600x base deposit speed. A fast final cash-in at any hopper."
+    },
+    "CoinRailgun": {
+      "name": "COIN RAILGUN",
+      "description": "Click or hold to punch a crisp 90-coin line through gold every 0.45 seconds. A 12m beam; walls stop it."
+    },
+    "HydraulicCoupler": {
+      "name": "HYDRAULIC COUPLER",
+      "description": "240x base deposit speed. Keeps unloading brief as hauls grow."
+    },
+    "DrillVac": {
+      "name": "DRILLVAC",
+      "description": "Hold to bore straight down: 100 coins per pulse while you move freely. Watch the heat gauge and release to cool. Pushing past 2 seconds of heat overheats the drill for 3 seconds."
+    },
+    "HopperPack": {
+      "name": "HOPPER PACK",
+      "description": "+11,000 carry. 15,000 total with earlier bags, before skill bonuses."
+    },
+    "CoinRake": {
+      "name": "COIN RAKE",
+      "description": "Hold LMB and walk to rake up gold. Each moving stroke sweeps up to 16 coins; standing still stops collection."
+    },
+    "SpringBoots": {
+      "name": "SPRING BOOTS",
+      "description": "Jump 65% higher. Passive; no fuel, no slot, no prerequisites."
+    },
+    "SeismicThumper": {
+      "name": "SEISMIC THUMPER",
+      "description": "Click on the ground or in midair to slam down. Bigger drops unleash wider shockwaves and far bigger harvests, up to 82,000 coins. Bag overflow banks automatically. 3-second recovery after landing."
+    },
+    "PressureCoupler": {
+      "name": "PRESSURE COUPLER",
+      "description": "30x base deposit speed. Replaces the liner's 8x bonus."
+    },
+    "VaultPack": {
+      "name": "VAULT PACK",
+      "description": "+90,000 carry. 180,000 total with earlier bags, before skill bonuses."
+    },
+    "PrismRail": {
+      "name": "RICOCHET PRISM",
+      "description": "Click or hold to launch fast, growing orbs. Direct hits scoop up to 900 coins; wall bounces widen the blast and raise it to 1,800."
+    },
+    "Vacuum": {
+      "name": "PRESSURE VACUUM",
+      "description": "Click to start suction. Hold LMB to raise pressure, release to lower it. Track the moving green zone; strain recovers slowly. Losing control spills your bag and triggers an 8-second repair."
+    },
+    "CoinShotgun": {
+      "name": "COIN BLUNDERBUSS",
+      "description": "Click or hold for a chunky 280-coin spread every 0.6 seconds. A quick pump and a recoil hop keep you moving."
+    },
+    "Pouch": {
+      "name": "POUCH",
+      "description": "+500 carry and 3x base deposit speed. Longer trips, quicker unloading."
+    },
+    "TeslaFork": {
+      "name": "TESLA STORMFORK",
+      "description": "Hold to crack lightning into gold. Each strike automatically chains across up to four nearby patches, 180 coins each. No marking or charging."
+    },
+    "VacuumGrenade": {
+      "name": "VACUUM GRENADE",
+      "description": "G throws it with any tool equipped. Stores up to 1,200 coins. Walk over to collect, or right-click to recall through a clear path."
+    },
+    "HoverRig": {
+      "name": "BALLOON RIG",
+      "description": "Hold jump while falling to float gently down. Steer across gaps; release to drop normally."
+    },
+    "DoubleJumpJets": {
+      "name": "POP-JET BELT",
+      "description": "Press jump again in mid-air for one extra jump. Recharges on landing. Works without spring boots."
+    },
+    "MagneticBoots": {
+      "name": "MAGNETIC BOOTS",
+      "description": "Walking over gold sweeps up to 6 nearby coins every half second. Stops when your bag is full."
+    },
+    "HaulFrame": {
+      "name": "HAUL FRAME",
+      "description": "+25,000 carry. 40,000 total with earlier bags, before skill bonuses."
+    },
+    "TurbineCoupler": {
+      "name": "TURBINE COUPLER",
+      "description": "90x base deposit speed. Pour large hauls into any hopper."
+    },
+    "Magnet": {
+      "name": "MAGNET",
+      "description": "Hold left mouse for surface pulls at long reach. Purchase Magnetic Pulse  to unlock a right-mouse burst. Unlock for 1 point after collecting 3,000 coins; shovel optional."
+    },
+    "Backpack": {
+      "name": "BACKPACK",
+      "description": "+3,250 carry. 4,000 total with the pouch, before skill bonuses."
+    },
+    "QuickDump": {
+      "name": "QUICK-DUMP LINER",
+      "description": "8x base deposit speed at every hopper. Strongest coupler applies."
+    },
+    "SprintSoles": {
+      "name": "ROCKET SOLES",
+      "description": "Move 25% faster. Shorten bank trips or race along the galleries. Always active."
+    },
+    "Cyclone": {
+      "name": "POCKET BANK",
+      "description": "Hold LMB to preview; release on green to place. Collects visible gold within 12 m; Local branch extends this to 16 m. Banks 30 coins/sec plus 3 per 1,000 bag capacity, up to 150/sec. Hold F nearby to relocate."
+    },
+    "CargoHarness": {
+      "name": "CARGO HARNESS",
+      "description": "+50,000 carry. 90,000 total with earlier bags, before skill bonuses."
+    },
+    "TinyMagnet": {
+      "name": "TINY MAGNET",
+      "description": "Click for a snappy 12-coin pull. Hold to keep snapping gold into your hand. No charging."
+    },
+    "GravityAnchor": {
+      "name": "GOLD TRANSMITTER",
+      "description": "Click to open a rift in aimed gold up to 18m away and pull up to 720 coins into your bag. Hold to repeat every 0.65 seconds. A broad 3m scoop, with no charge or player teleport."
+    }
+  },
+  "meta": {
+    "name": "English",
+    "language": "en"
+  }
+}

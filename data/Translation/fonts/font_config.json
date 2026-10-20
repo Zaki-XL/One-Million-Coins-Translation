@@ -1,0 +1,10 @@
+{
+  "default_font": "system",
+  "system_font_candidates": [
+    "Meiryo",
+    "Yu Gothic",
+    "MS Gothic",
+    "Arial Unicode MS"
+  ],
+  "custom_font_file": ""
+}

@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "language": "ja",
+    "name": "日本語"
+  },
+  "upgrades": {
+    "PickupRadius": {
+      "name": "収集範囲",
+      "description": "より広い範囲のコインを集められるようになります。"
+    },
+    "ToolSpeed": {
+      "name": "ツール速度",
+      "description": "すべてのツールの動作サイクルを高速化します。"
+    },
+    "ToolCapacity": {
+      "name": "ツール容量",
+      "description": "各ツール動作ごとに移動・回収できるコインの量を増加させます。"
+    },
+    "ToolRange": {
+      "name": "ツール射程",
+      "description": "より離れた場所から奥深くのコインに届くようになります。"
+    },
+    "DepositSpeed": {
+      "name": "換金速度",
+      "description": "持ち運んでいるコインを金庫へ納める速度を高速化します。"
+    },
+    "MovementSpeed": {
+      "name": "移動速度",
+      "description": "金庫内をより素早く移動できるようになります。"
+    },
+    "CarryCapacity": {
+      "name": "所持容量",
+      "description": "ポケットやすべての所持バッグのコイン保持容量を向上させます。"
+    }
+  },
+  "items": {
+    "Shovel": {
+      "name": "シャベル",
+      "description": "左クリックを押し続けることで、密集したコインを近距離ですくい取ります。"
+    },
+    "Pouch": {
+      "name": "ポーチ",
+      "description": "所持容量+500、基本換金速度が3倍になります。より長く探索し、素早く荷降ろしできます。"
+    },
+    "TinyMagnet": {
+      "name": "小型マグネット",
+      "description": "クリックで素早く12枚のコインを引き寄せます。長押しで連続吸着が可能です。"
+    },
+    "CoinRake": {
+      "name": "コインレーキ",
+      "description": "左クリックを押しながら歩くことでコインをかき集めます。移動中最大16枚を回収します。"
+    },
+    "SpringBoots": {
+      "name": "スプリングブーツ",
+      "description": "ジャンプ力が65%上昇します。パッシブ装備のため燃料やスロットは不要です。"
+    },
+    "MagneticBoots": {
+      "name": "マグネットブーツ",
+      "description": "コインの上を歩くだけで、0.5秒ごとに周囲のコインを最大6枚自動で回収します。"
+    },
+    "Magnet": {
+      "name": "強力マグネット",
+      "description": "左クリックを押し続けることで、遠距離から表面のコインを強力に引き寄せます。"
+    },
+    "Backpack": {
+      "name": "バックパック",
+      "description": "所持容量+3,250。ポーチと合わせると合計4,000枚まで所持可能になります。"
+    },
+    "QuickDump": {
+      "name": "高速排出ライナー",
+      "description": "すべてのホッパーでの基本換金速度が8倍になります。"
+    },
+    "SprintSoles": {
+      "name": "ロケットソール",
+      "description": "移動速度が25%向上します。金庫との往復時間を大幅に短縮できます。"
+    },
+    "RecallCoil": {
+      "name": "ワームホールコイル",
+      "description": "右クリックで展開中のバキュームグレネードを壁越しでも即座に手元へ回収します。"
+    },
+    "Singularity": {
+      "name": "シンギュラリティ",
+      "description": "毎秒3,000枚の回収速度と5mの広域吸引。散らばった最後のコインまで吸い寄せます。"
+    },
+    "Vortex": {
+      "name": "ゴールドウインチ",
+      "description": "左クリックで鉱脈にワイヤーを射出し、長押しでコインを一気に巻き取ります。"
+    },
+    "GravityCoupler": {
+      "name": "重力カプラー",
+      "description": "基本換金速度が600倍になります。どのホッパーでも一瞬で換金が完了します。"
+    },
+    "CoinRailgun": {
+      "name": "コインレールガン",
+      "description": "クリックまたは長押しで、0.45秒ごとに90枚のコインを一直線に撃ち抜いて回収します。"
+    },
+    "HydraulicCoupler": {
+      "name": "油圧カプラー",
+      "description": "基本換金速度が240倍になります。大量のコインも短時間で換金可能です。"
+    },
+    "DrillVac": {
+      "name": "ドリルバキューム",
+      "description": "長押しで真下のコインを採掘：移動しながら1パルスあたり100枚を回収します。"
+    },
+    "HopperPack": {
+      "name": "ホッパーパック",
+      "description": "所持容量+11,000。これまでのバッグと合わせると合計15,000枚の所持が可能です。"
+    }
+  },
+  "ui": {
+    "START": "スタート",
+    "OPTIONS": "設定",
+    "CREDITS": "クレジット",
+    "LEADERBOARDS": "ランキング",
+    "QUIT": "終了",
+    "BACK": "戻る",
+    "CONFIRM": "確認",
+    "CANCEL": "キャンセル",
+    "BUY": "購入",
+    "UPGRADE": "強化",
+    "PRICE": "価格",
+    "COST": "コスト",
+    "SOLD_OUT": "完売",
+    "MAX_LEVEL": "最大レベル",
+    "BANKED": "保管済みコイン",
+    "COLLECT": "回収",
+    "LOCKED": "ロック中",
+    "Continue": "コンティニュー",
+    "New Game": "ニューゲーム",
+    "Settings": "設定",
+    "Quit Game": "ゲーム終了",
+    "Credits": "クレジット",
+    "Leaderboards": "ランキング",
+    "Back": "戻る",
+    "Back  [Esc]": "戻る [Esc]",
+    "Cancel": "キャンセル",
+    "Cancel  [Esc]": "キャンセル [Esc]",
+    "Refresh": "更新",
+    "Confirm": "確認",
+    "Lifetime coins banked across all runs": "全プレイでの累計保管コイン数",
+    "Offline · saved locally": "オフライン · ローカル保存済み",
+    "Loading banking history…": "保管履歴を読み込み中…",
+    "Banking history needs recovery": "保管履歴の修復が必要です",
+    "Start a new game?": "新しいゲームを開始しますか？",
+    "This replaces your saved progress for ": "以下のセーブデータが上書きされます: ",
+    "SKILL TREE · NEW GAME": "スキルツリー · ニューゲーム",
+    "Top hoarders": "収集ランキング",
+    "Fastest runs": "スピードラン",
+    "GLOBAL": "グローバル",
+    "FRIENDS": "フレンド",
+    "TOP 10": "トップ 10",
+    "TOP 100": "トップ 100",
+    "TOP 1,000": "トップ 1,000",
+    "RANK": "順位",
+    "PLAYER": "プレイヤー",
+    "TIME": "タイム",
+    "COINS BANKED": "保管コイン数",
+    "Total banked: ": "保管合計: ",
+    "YOUR PERSONAL BESTS": "自己ベスト記録",
+    "LOCAL PLAY": "ローカルプレイ",
+    "Offline player": "オフラインプレイヤー",
+    "Version ": "バージョン "
+  }
+}
