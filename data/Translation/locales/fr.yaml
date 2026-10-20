@@ -1,5 +1,6 @@
 meta:
   language: "fr"
+  fonts: "Segoe UI Bold, Segoe UI, Arial Bold, Arial, Yu Gothic UI Bold"
   display_name: "Français"
 
 branches:
@@ -105,6 +106,9 @@ items:
     description: "Capacité +11 000. Permet de transporter jusqu'à 15 000 pièces au total avec les sacs précédents."
 
 ui:
+  "IMPROVEMENT": "AMÉLIORATION"
+  "MASTERY": "MAÎTRISE"
+  "NEW MECHANIC": "NOUVELLE MÉCANIQUE"
   "START": "DÉMARRER"
   "OPTIONS": "OPTIONS"
   "CREDITS":
@@ -989,3 +993,97 @@ skills:
   1217:
     name: "Vault valet"
     description: "Automatic depositing near uncovered, unlocked stations. Keep using your tool while unloading.\nDeposit speed +2.3%.\nUnload from 0.13 m farther away."
+tooltip_regex:
+  '(\bHands\b)\s*[^a-zA-Z0-9\s]\s*with your upgrades': 'Mains · avec vos améliorations'
+  '(\bShovel\b)\s*[^a-zA-Z0-9\s]\s*with your upgrades': 'Pelle · avec vos améliorations'
+  '(\bMagnet\b)\s*[^a-zA-Z0-9\s]\s*with your upgrades': 'Aimant · avec vos améliorations'
+  '(\b[a-zA-Z]+\b)\s*[^a-zA-Z0-9\s]\s*with your upgrades': '$1 · avec vos améliorations'
+  '[^a-zA-Z0-9\s]\s*with your upgrades': ' · avec vos améliorations'
+  '(\d+)\s+points?\s*·\s*Requires\s+': '$1 points · Requis : '
+  'Requires\s+': 'Requis : '
+  '(\d+)\s+points?\s*·\s*Click node to learn': '$1 points · Cliquez pour apprendre'
+  '(\d+)\s+points?\s*·\s*': '$1 points · '
+  '(\d+)\s+POINT(S)?': '$1 POINT(S)'
+  '(\d+)\s+POINTS SPENT': '$1 POINTS DÉPENSÉS'
+
+tooltip_strings:
+  "Learn prerequisites to see your stat changes.": "Apprenez les prérequis pour voir vos changements de stats."
+  "Click node to learn": "Cliquez sur le nœud pour apprendre"
+  "Press submit to learn": "Appuyez sur confirmer pour apprendre"
+  "NEW MECHANIC": "NOUVELLE MÉCANIQUE"
+  "MASTERY": "MAÎTRISE"
+  "IMPROVEMENT": "AMÉLIORATION"
+  "Not learned in this build": "Non appris dans ce build"
+  "These upgrades are working for you. Explore another route when you are ready.": "Ces améliorations fonctionnent pour vous. Explorez une autre voie quand vous serez prêt."
+  "Route complete": "Itinéraire terminé"
+  "BRANCH ENTRY": "ENTRÉE DE BRANCHE"
+  "START HERE": "COMMENCEZ ICI"
+  "Hands <size=16>(Tool)</size>": "Mains <size=16>(Outil)</size>"
+  "Shovel <size=16>(Tool)</size>": "Pelle <size=16>(Outil)</size>"
+  "Magnet <size=16>(Tool)</size>": "Aimant <size=16>(Outil)</size>"
+  "With your upgrades": "avec vos améliorations"
+  " • with your upgrades": " • avec vos améliorations"
+  "with your upgrades": "avec vos améliorations"
+  "Scoop coin limit:": "Limite de pièces par coup de pelle :"
+  "Scoop radius:": "Rayon de coup de pelle :"
+  "Normal scoops resume after 1s": "Reprise des coups normaux après 1s"
+  "Normal scoops resume after:": "Reprise des coups normaux après :"
+  "Slam coin limit:": "Limite de pièces du slam :"
+  "Slam radius:": "Rayon du slam :"
+  "Digging depth:": "Profondeur de creusement :"
+  "Leap range: 25 m": "Portée du saut : 25 m"
+  "Coins per scoop:": "Pièces par coup de pelle :"
+  "Time between scoops:": "Intervalle entre les coups :"
+  "Coins per bounce (shared):": "Pièces par rebond (partagé) :"
+  "Coins per bounce:": "Pièces par rebond :"
+  "Strike coin limit:": "Limite de pièces de frappe :"
+  "Collection radius:": "Rayon de collecte :"
+  "Chance per ready pickup:": "Chance par ramassage prêt :"
+  "Guaranteed within:": "Garanti dans les :"
+  " ready pickups": " ramassages prêts"
+  "Starting bounces:": "Rebonds initiaux :"
+  "Chance of another bounce:": "Chance d'un autre rebond :"
+  "Jump distance:": "Distance de saut :"
+  "Chains:": "Chaînes :"
+  "Gold Rush duration:": "Durée de la Ruée vers l'or :"
+  "Automatic collection rate:": "Taux de collecte automatique :"
+  "Automatic rate cap:": "Limite de taux automatique :"
+  "Manual unload speed:": "Vitesse de déchargement manuel :"
+  "% of station": "% de la station"
+  "Minimum manual deposit:": "Dépôt manuel minimum :"
+  "During Cash flow:": "Pendant le flux de trésorerie :"
+  " coins/s": " pièces/s"
+  "Coins per ghost grab:": "Pièces par prise de fantôme :"
+  "Time between grabs:": "Intervalle entre les prises :"
+  "Full Flow: 6 hands, one grab every 0.1s": "Flow max : 6 mains, une prise toutes les 0.1s"
+  "Hands radius (grip excluded):": "Rayon des mains (hors prise) :"
+  "Shovel/Magnet helpers: 30% fewer coins": "Aides Pelle/Aimant : 30% de pièces en moins"
+  "Coin limit at max levels:": "Limite de pièces au niveau max :"
+  "Radius at max levels:": "Rayon au niveau max :"
+  "Maximum levels:": "Niveaux maximum :"
+  "Per level: +20% base coins, +5% base radius": "Par niveau : +20% pièces de base, +5% rayon de base"
+  "Sweet spot: 0.01s shorter per level": "Zone idéale : 0.01s de moins par niveau"
+  "Sweet spot at level 0:": "Zone idéale au niveau 0 :"
+  "Grip coin limit:": "Limite de pièces par prise :"
+  "Grip radius:": "Rayon de prise :"
+  "Sweet spot starts at:": "Début de la zone idéale :"
+  "Sweet spot length:": "Durée de la zone idéale :"
+  "Normal pickups resume after:": "Reprise des ramassages normaux après :"
+  "Recharge after a miss:": "Recharge après un échec :"
+  "Recharge:": "Recharge :"
+  "Cooldown: 40s": "Temps de recharge : 40s"
+  "Cooldown: 4s": "Temps de recharge : 4s"
+  "Cooldown: 3s": "Temps de recharge : 3s"
+  "Cooldown:": "Temps de recharge :"
+  "All tool coins per pickup": "Pièces par ramassage pour tous les outils"
+  "All tool pickup radius": "Rayon de ramassage pour tous les outils"
+  "All tool speed": "Vitesse de tous les outils"
+  "Hands coins per grab": "Pièces par prise des mains"
+  "Heavy Strike coin limit": "Limite de pièces de frappe lourde"
+  "Lightning coin limit": "Limite de pièces de l'éclair"
+  "Lightning jump distance": "Distance de saut de l'éclair"
+  "Tool reach +": "Portée de l'outil +"
+  "Tool reach": "Portée de l'outil"
+  "% of base": "% de la base"
+  "Deposit speed": "Vitesse de dépôt"
+  "Bag capacity": "Capacité du sac"

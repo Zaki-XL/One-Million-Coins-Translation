@@ -1,5 +1,6 @@
 meta:
   language: "zh"
+  fonts: "Microsoft YaHei Bold, Microsoft YaHei, SimHei, SimSun, Yu Gothic UI Bold, Segoe UI Bold"
   display_name: "简体中文"
 
 branches:
@@ -105,6 +106,9 @@ items:
     description: "携带容量+11,000。与之前所有背包结合最高可携带15,000枚。"
 
 ui:
+  "IMPROVEMENT": "能力提升"
+  "MASTERY": "精通"
+  "NEW MECHANIC": "解锁新机制"
   "START": "开始"
   "OPTIONS": "设置"
   "CREDITS":
@@ -989,3 +993,97 @@ skills:
   1217:
     name: "Vault valet"
     description: "Automatic depositing near uncovered, unlocked stations. Keep using your tool while unloading.\nDeposit speed +2.3%.\nUnload from 0.13 m farther away."
+tooltip_regex:
+  '(\bHands\b)\s*[^a-zA-Z0-9\s]\s*with your upgrades': '双手 · 生效中的强化'
+  '(\bShovel\b)\s*[^a-zA-Z0-9\s]\s*with your upgrades': '铁锹 · 生效中的强化'
+  '(\bMagnet\b)\s*[^a-zA-Z0-9\s]\s*with your upgrades': '磁铁 · 生效中的强化'
+  '(\b[a-zA-Z]+\b)\s*[^a-zA-Z0-9\s]\s*with your upgrades': '$1 · 生效中的强化'
+  '[^a-zA-Z0-9\s]\s*with your upgrades': ' · 生效中的强化'
+  '(\d+)\s+points?\s*·\s*Requires\s+': '$1 点 · 需要 '
+  'Requires\s+': '需要 '
+  '(\d+)\s+points?\s*·\s*Click node to learn': '$1 点 · 点击节点学习'
+  '(\d+)\s+points?\s*·\s*': '$1 点 · '
+  '(\d+)\s+POINT(S)?': '$1 点'
+  '(\d+)\s+POINTS SPENT': '已花费 $1 点'
+
+tooltip_strings:
+  "Learn prerequisites to see your stat changes.": "学习前置技能以查看属性变化。"
+  "Click node to learn": "点击节点进行学习"
+  "Press submit to learn": "按确认键学习"
+  "NEW MECHANIC": "解锁新机制"
+  "MASTERY": "精通"
+  "IMPROVEMENT": "能力提升"
+  "Not learned in this build": "未在当前构筑中学习"
+  "These upgrades are working for you. Explore another route when you are ready.": "这些强化已生效。准备就绪后请探索其他路线。"
+  "Route complete": "路线已完成"
+  "BRANCH ENTRY": "分支入口"
+  "START HERE": "从这里开始"
+  "Hands <size=16>(Tool)</size>": "双手 <size=16>(工具)</size>"
+  "Shovel <size=16>(Tool)</size>": "铁锹 <size=16>(工具)</size>"
+  "Magnet <size=16>(Tool)</size>": "磁铁 <size=16>(工具)</size>"
+  "With your upgrades": "生效中的强化"
+  " • with your upgrades": " • 生效中的强化"
+  "with your upgrades": "生效中的强化"
+  "Scoop coin limit:": "强力收集金币上限:"
+  "Scoop radius:": "强力收集范围:"
+  "Normal scoops resume after 1s": "1秒后恢复普通收集"
+  "Normal scoops resume after:": "恢复普通收集时间:"
+  "Slam coin limit:": "猛砸金币上限:"
+  "Slam radius:": "猛砸范围:"
+  "Digging depth:": "挖掘深度:"
+  "Leap range: 25 m": "跳跃距离: 25米"
+  "Coins per scoop:": "每次铁锹收集金币数:"
+  "Time between scoops:": "铁锹收集间隔:"
+  "Coins per bounce (shared):": "每次弹跳金币 (共享):"
+  "Coins per bounce:": "每次弹跳金币:"
+  "Strike coin limit:": "重击金币上限:"
+  "Collection radius:": "收集范围:"
+  "Chance per ready pickup:": "每次就绪收集的触发几率:"
+  "Guaranteed within:": "保底次数:"
+  " ready pickups": "次就绪收集"
+  "Starting bounces:": "初始弹跳次数:"
+  "Chance of another bounce:": "额外弹跳几率:"
+  "Jump distance:": "弹跳距离:"
+  "Chains:": "连锁数:"
+  "Gold Rush duration:": "淘金热持续时间:"
+  "Automatic collection rate:": "自动收集速率:"
+  "Automatic rate cap:": "自动速率上限:"
+  "Manual unload speed:": "手动卸载速度:"
+  "% of station": "% (相比投递站)"
+  "Minimum manual deposit:": "最低手动投递量:"
+  "During Cash flow:": "现金流期间:"
+  " coins/s": " 金币/秒"
+  "Coins per ghost grab:": "幽灵每次抓取金币数:"
+  "Time between grabs:": "抓取间隔:"
+  "Full Flow: 6 hands, one grab every 0.1s": "满额流动: 6只手，每0.1秒抓取一次"
+  "Hands radius (grip excluded):": "双手范围 (不含抓取):"
+  "Shovel/Magnet helpers: 30% fewer coins": "铁锹/磁铁助手: 金币减少30%"
+  "Coin limit at max levels:": "最高等级金币上限:"
+  "Radius at max levels:": "最高等级范围:"
+  "Maximum levels:": "最高等级:"
+  "Per level: +20% base coins, +5% base radius": "每级: 基础金币+20%，基础范围+5%"
+  "Sweet spot: 0.01s shorter per level": "每级甜点时间缩短0.01秒"
+  "Sweet spot at level 0:": "0级时的甜点持续时间:"
+  "Grip coin limit:": "抓取金币上限:"
+  "Grip radius:": "抓取范围:"
+  "Sweet spot starts at:": "甜点触发时机:"
+  "Sweet spot length:": "甜点持续时间:"
+  "Normal pickups resume after:": "恢复正常收集时间:"
+  "Recharge after a miss:": "失误后充能时间:"
+  "Recharge:": "充能时间:"
+  "Cooldown: 40s": "冷却时间: 40秒"
+  "Cooldown: 4s": "冷却时间: 4秒"
+  "Cooldown: 3s": "冷却时间: 3秒"
+  "Cooldown:": "冷却时间:"
+  "All tool coins per pickup": "全部工具每次收集金币数"
+  "All tool pickup radius": "全部工具收集范围"
+  "All tool speed": "全部工具速度"
+  "Hands coins per grab": "双手每次抓取金币数"
+  "Heavy Strike coin limit": "重击金币上限"
+  "Lightning coin limit": "闪电金币上限"
+  "Lightning jump distance": "闪电弹跳距离"
+  "Tool reach +": "工具攻击范围 +"
+  "Tool reach": "工具攻击范围"
+  "% of base": "% (基础值)"
+  "Deposit speed": "投递速度"
+  "Bag capacity": "背包容量"

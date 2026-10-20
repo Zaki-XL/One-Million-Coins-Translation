@@ -1,5 +1,6 @@
 meta:
   language: "ko"
+  fonts: "Malgun Gothic Bold, Malgun Gothic, Gulim, Dotum, Yu Gothic UI Bold, Segoe UI Bold"
   display_name: "한국어"
 
 branches:
@@ -105,6 +106,9 @@ items:
     description: "소지 용량 +11,000. 이전 가방들과 합쳐 총 15,000개까지 소지 가능합니다."
 
 ui:
+  "IMPROVEMENT": "능력 강화"
+  "MASTERY": "마스터리"
+  "NEW MECHANIC": "새로운 메커니즘"
   "START": "시작"
   "OPTIONS": "설정"
   "CREDITS":
@@ -989,3 +993,97 @@ skills:
   1217:
     name: "Vault valet"
     description: "Automatic depositing near uncovered, unlocked stations. Keep using your tool while unloading.\nDeposit speed +2.3%.\nUnload from 0.13 m farther away."
+tooltip_regex:
+  '(\bHands\b)\s*[^a-zA-Z0-9\s]\s*with your upgrades': '맨손 · 적용 중인 강화'
+  '(\bShovel\b)\s*[^a-zA-Z0-9\s]\s*with your upgrades': '삽 · 적용 중인 강화'
+  '(\bMagnet\b)\s*[^a-zA-Z0-9\s]\s*with your upgrades': '자석 · 적용 중인 강화'
+  '(\b[a-zA-Z]+\b)\s*[^a-zA-Z0-9\s]\s*with your upgrades': '$1 · 적용 중인 강화'
+  '[^a-zA-Z0-9\s]\s*with your upgrades': ' · 적용 중인 강화'
+  '(\d+)\s+points?\s*·\s*Requires\s+': '$1 포인트 · 필요: '
+  'Requires\s+': '필요: '
+  '(\d+)\s+points?\s*·\s*Click node to learn': '$1 포인트 · 클릭하여 습득'
+  '(\d+)\s+points?\s*·\s*': '$1 포인트 · '
+  '(\d+)\s+POINT(S)?': '$1 포인트'
+  '(\d+)\s+POINTS SPENT': '$1 포인트 사용됨'
+
+tooltip_strings:
+  "Learn prerequisites to see your stat changes.": "속성 변화를 보려면 선행 스킬을 습득하세요."
+  "Click node to learn": "습득하려면 노드 클릭"
+  "Press submit to learn": "습득하려면 결정 버튼 누르기"
+  "NEW MECHANIC": "새로운 메커니즘"
+  "MASTERY": "마스터리"
+  "IMPROVEMENT": "능력 강화"
+  "Not learned in this build": "현재 빌드에서 미습득"
+  "These upgrades are working for you. Explore another route when you are ready.": "습득한 강화가 적용 중입니다. 준비가 되면 다른 경로를 탐색해 보세요."
+  "Route complete": "경로 완료"
+  "BRANCH ENTRY": "분기 입구"
+  "START HERE": "여기서 시작"
+  "Hands <size=16>(Tool)</size>": "맨손 <size=16>(도구)</size>"
+  "Shovel <size=16>(Tool)</size>": "삽 <size=16>(도구)</size>"
+  "Magnet <size=16>(Tool)</size>": "자석 <size=16>(도구)</size>"
+  "With your upgrades": "적용 중인 강화"
+  " • with your upgrades": " • 적용 중인 강화"
+  "with your upgrades": "적용 중인 강화"
+  "Scoop coin limit:": "삽 수집 한도:"
+  "Scoop radius:": "삽 수집 반경:"
+  "Normal scoops resume after 1s": "1초 후 일반 삽 수집 복귀"
+  "Normal scoops resume after:": "일반 삽 수집 복귀 시간:"
+  "Slam coin limit:": "슬램 수집 한도:"
+  "Slam radius:": "슬램 반경:"
+  "Digging depth:": "굴착 깊이:"
+  "Leap range: 25 m": "도약 거리: 25m"
+  "Coins per scoop:": "1회당 삽 수집량:"
+  "Time between scoops:": "삽 수집 간격:"
+  "Coins per bounce (shared):": "바운스당 코인 (공유):"
+  "Coins per bounce:": "바운스당 코인:"
+  "Strike coin limit:": "강타 수집 한도:"
+  "Collection radius:": "수집 반경:"
+  "Chance per ready pickup:": "준비된 수집당 발동 확률:"
+  "Guaranteed within:": "확정 발동까지:"
+  " ready pickups": "회 준비된 수집"
+  "Starting bounces:": "시작 바운스 횟수:"
+  "Chance of another bounce:": "추가 바운스 확률:"
+  "Jump distance:": "점프 거리:"
+  "Chains:": "연쇄 수:"
+  "Gold Rush duration:": "골드 러시 지속 시간:"
+  "Automatic collection rate:": "자동 수집 속도:"
+  "Automatic rate cap:": "자동 속도 상한:"
+  "Manual unload speed:": "수동 하역 속도:"
+  "% of station": "% (투입소 대비)"
+  "Minimum manual deposit:": "최소 수동 투입량:"
+  "During Cash flow:": "캐시 플로우 중:"
+  " coins/s": " 코인/초"
+  "Coins per ghost grab:": "고스트 1회당 수집량:"
+  "Time between grabs:": "수집 간격:"
+  "Full Flow: 6 hands, one grab every 0.1s": "최대 Flow: 손 6개, 0.1초마다 1회 수집"
+  "Hands radius (grip excluded):": "맨손 반경 (그립 제외):"
+  "Shovel/Magnet helpers: 30% fewer coins": "삽/자석 조수: 코인 30% 감소"
+  "Coin limit at max levels:": "최대 레벨 시 수집 한도:"
+  "Radius at max levels:": "최대 레벨 시 반경:"
+  "Maximum levels:": "최대 레벨:"
+  "Per level: +20% base coins, +5% base radius": "레벨당: 기본 코인 +20%, 기본 반경 +5%"
+  "Sweet spot: 0.01s shorter per level": "레벨당 스위트 스폿 -0.01초"
+  "Sweet spot at level 0:": "레벨 0 스위트 스폿:"
+  "Grip coin limit:": "그립 수집 한도:"
+  "Grip radius:": "그립 반경:"
+  "Sweet spot starts at:": "스위트 스폿 시작:"
+  "Sweet spot length:": "스위트 스폿 지속 시간:"
+  "Normal pickups resume after:": "일반 수집 복귀 시간:"
+  "Recharge after a miss:": "실패 후 재충전:"
+  "Recharge:": "재충전 시간:"
+  "Cooldown: 40s": "재사용 대기시간: 40초"
+  "Cooldown: 4s": "재사용 대기시간: 4초"
+  "Cooldown: 3s": "재사용 대기시간: 3초"
+  "Cooldown:": "재사용 대기시간:"
+  "All tool coins per pickup": "모든 도구 1회당 수집량"
+  "All tool pickup radius": "모든 도구 수집 반경"
+  "All tool speed": "모든 도구 속도"
+  "Hands coins per grab": "맨손 1회당 수집량"
+  "Heavy Strike coin limit": "강타 수집 한도"
+  "Lightning coin limit": "번개 수집 한도"
+  "Lightning jump distance": "번개 점프 거리"
+  "Tool reach +": "도구 사거리 +"
+  "Tool reach": "도구 사거리"
+  "% of base": "% (기본값 기준)"
+  "Deposit speed": "투입 속도"
+  "Bag capacity": "가방 용량"

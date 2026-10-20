@@ -5,6 +5,7 @@
 
 meta:
   language: "ja"
+  fonts: "Yu Gothic UI Bold, Yu Gothic UI, Yu Gothic, Meiryo Bold, Meiryo, Segoe UI Bold"
   name: "日本語"
 
 branches:
@@ -110,6 +111,8 @@ items:
     description: "所持容量+11,000。これまでのバッグと合わせると合計15,000枚の所持が可能です。"
 
 ui:
+  "IMPROVEMENT": "能力強化"
+  "MASTERY": "マスタリー"
   "START":
     text: "スタート"
     enabled: true
@@ -1349,3 +1352,97 @@ skills:
       露出・解放された納入所の付近で自動的に納入が行われます。
       荷降ろし中もツールの使用が可能です。
       換金速度+2.3%、納入可能距離+0.13m。
+tooltip_regex:
+  '(\bHands\b)\s*[^a-zA-Z0-9\s]\s*with your upgrades': '素手 · 適用中の強化'
+  '(\bShovel\b)\s*[^a-zA-Z0-9\s]\s*with your upgrades': 'シャベル · 適用中の強化'
+  '(\bMagnet\b)\s*[^a-zA-Z0-9\s]\s*with your upgrades': 'マグネット · 適用中の強化'
+  '(\b[a-zA-Z]+\b)\s*[^a-zA-Z0-9\s]\s*with your upgrades': '$1 · 適用中の強化'
+  '[^a-zA-Z0-9\s]\s*with your upgrades': ' · 適用中の強化'
+  '(\d+)\s+points?\s*·\s*Requires\s+': '$1 ポイント · 要 '
+  'Requires\s+': '要 '
+  '(\d+)\s+points?\s*·\s*Click node to learn': '$1 ポイント · クリックして習得'
+  '(\d+)\s+points?\s*·\s*': '$1 ポイント · '
+  '(\d+)\s+POINT(S)?': '$1 ポイント'
+  '(\d+)\s+POINTS SPENT': '$1 ポイント消費済み'
+
+tooltip_strings:
+  "Learn prerequisites to see your stat changes.": "前提スキルを習得するとステータス変化が表示されます。"
+  "Click node to learn": "クリックして習得"
+  "Press submit to learn": "決定ボタンで習得"
+  "NEW MECHANIC": "新機能解放"
+  "MASTERY": "マスタリー"
+  "IMPROVEMENT": "能力強化"
+  "Not learned in this build": "未習得"
+  "These upgrades are working for you. Explore another route when you are ready.": "習得した強化が適用されています。準備ができたら別のルートも探索しましょう。"
+  "Route complete": "ルート完了"
+  "BRANCH ENTRY": "ブランチ入口"
+  "START HERE": "ここから開始"
+  "Hands <size=16>(Tool)</size>": "素手 <size=16>(ツール)</size>"
+  "Shovel <size=16>(Tool)</size>": "シャベル <size=16>(ツール)</size>"
+  "Magnet <size=16>(Tool)</size>": "マグネット <size=16>(ツール)</size>"
+  "With your upgrades": "適用中の強化"
+  " • with your upgrades": " • 適用中の強化"
+  "with your upgrades": "適用中の強化"
+  "Scoop coin limit:": "すくい取り回収上限:"
+  "Scoop radius:": "すくい取り範囲:"
+  "Normal scoops resume after 1s": "通常すくい取りへの復帰: 1秒後"
+  "Normal scoops resume after:": "通常すくい取りへの復帰:"
+  "Slam coin limit:": "スラム回収上限:"
+  "Slam radius:": "スラム範囲:"
+  "Digging depth:": "掘削深度:"
+  "Leap range: 25 m": "跳躍距離: 25m"
+  "Coins per scoop:": "すくい取り回収量:"
+  "Time between scoops:": "すくい取り間隔:"
+  "Coins per bounce (shared):": "バウンスごとのコイン上限 (共有):"
+  "Coins per bounce:": "バウンスごとのコイン上限:"
+  "Strike coin limit:": "ストライク回収上限:"
+  "Collection radius:": "回収範囲:"
+  "Chance per ready pickup:": "準備完了時の発動率:"
+  "Guaranteed within:": "確定発動まで:"
+  " ready pickups": "回の準備完了回収"
+  "Starting bounces:": "初期バウンス回数:"
+  "Chance of another bounce:": "追加バウンス確率:"
+  "Jump distance:": "ジャンプ距離:"
+  "Chains:": "連鎖数:"
+  "Gold Rush duration:": "ゴールドラッシュ持続時間:"
+  "Automatic collection rate:": "自動換金レート:"
+  "Automatic rate cap:": "自動換金レート上限:"
+  "Manual unload speed:": "手動搬入速度:"
+  "% of station": "% (納入所比)"
+  "Minimum manual deposit:": "手動納入の最小必要量:"
+  "During Cash flow:": "キャッシュフロー中:"
+  " coins/s": " コイン/秒"
+  "Coins per ghost grab:": "ゴースト回収量:"
+  "Time between grabs:": "回収間隔:"
+  "Full Flow: 6 hands, one grab every 0.1s": "フルFlow: 手6本、0.1秒ごとに1回回収"
+  "Hands radius (grip excluded):": "素手範囲 (グリップ除外):"
+  "Shovel/Magnet helpers: 30% fewer coins": "シャベル/マグネット時の助手: コイン量-30%"
+  "Coin limit at max levels:": "最大レベル時の回収上限:"
+  "Radius at max levels:": "最大レベル時の範囲:"
+  "Maximum levels:": "最大レベル:"
+  "Per level: +20% base coins, +5% base radius": "レベルごと: 基本コイン+20%、基本範囲+5%"
+  "Sweet spot: 0.01s shorter per level": "レベルごとにスイートスポット-0.01秒"
+  "Sweet spot at level 0:": "レベル0時のスイートスポット:"
+  "Grip coin limit:": "グリップ回収上限:"
+  "Grip radius:": "グリップ範囲:"
+  "Sweet spot starts at:": "スイートスポット発生:"
+  "Sweet spot length:": "スイートスポット持続:"
+  "Normal pickups resume after:": "通常回収への復帰:"
+  "Recharge after a miss:": "失敗時リチャージ:"
+  "Recharge:": "リチャージ時間:"
+  "Cooldown: 40s": "クールダウン: 40秒"
+  "Cooldown: 4s": "クールダウン: 4秒"
+  "Cooldown: 3s": "クールダウン: 3秒"
+  "Cooldown:": "クールダウン:"
+  "All tool coins per pickup": "全ツールの回収ごとコイン数"
+  "All tool pickup radius": "全ツールの回収範囲"
+  "All tool speed": "全ツール速度"
+  "Hands coins per grab": "素手回収量"
+  "Heavy Strike coin limit": "ヘビーストライク回収上限"
+  "Lightning coin limit": "稲妻回収上限"
+  "Lightning jump distance": "稲妻跳躍距離"
+  "Tool reach +": "ツールリーチ +"
+  "Tool reach": "ツールリーチ"
+  "% of base": "% (基本値比)"
+  "Deposit speed": "納入速度"
+  "Bag capacity": "バッグ容量"
