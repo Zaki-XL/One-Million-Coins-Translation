@@ -220,5 +220,1465 @@
   "meta": {
     "name": "English",
     "language": "en"
+  },
+  "branches": {
+    "3": {
+      "name": "SALVAGE",
+      "description": "Support gloves, coverage and automatic bag unloading."
+    },
+    "4": {
+      "name": "EXCAVATION",
+      "description": "Teach every tool to shatter coin piles."
+    },
+    "2": {
+      "name": "DEPOSITS",
+      "description": "Unload in a heartbeat."
+    },
+    "1": {
+      "name": "BAGS",
+      "description": "Build a walking vault."
+    },
+    "0": {
+      "name": "MOMENTUM",
+      "description": "Build momentum with every tool."
+    },
+    "6": {
+      "name": "CHUTES",
+      "description": "Automatic banking."
+    },
+    "5": {
+      "name": "ATTRACTION",
+      "description": "Teach every tool to unleash chain lightning."
+    }
+  },
+  "skills": {
+    "1325": {
+      "branch": 3,
+      "cost": 2,
+      "description": "Pump interval -3 seconds.",
+      "name": "Rapid pump"
+    },
+    "1607": {
+      "branch": 6,
+      "cost": 1,
+      "description": "Chute drainage +25%.",
+      "name": "Flow regulator"
+    },
+    "1323": {
+      "branch": 3,
+      "cost": 2,
+      "description": "Pump interval -3 seconds.",
+      "name": "Quick pump"
+    },
+    "30322": {
+      "branch": 3,
+      "cost": 2,
+      "description": "Pump interval -3s.",
+      "name": "Rapid pump"
+    },
+    "30312": {
+      "branch": 3,
+      "cost": 3,
+      "description": "Pickup radius +35%. Reach +30% of base.",
+      "name": "Full coverage"
+    },
+    "1226": {
+      "branch": 2,
+      "cost": 3,
+      "description": "Unload into Pocket Bank at 75% of normal station speed.",
+      "name": "Express counter"
+    },
+    "30511": {
+      "branch": 5,
+      "cost": 3,
+      "description": "Lightning collects 50% more coins at each hit.",
+      "name": "Live wire"
+    },
+    "1107": {
+      "branch": 1,
+      "cost": 1,
+      "description": "Bag capacity +21.5%.",
+      "name": "Deeper bag 7"
+    },
+    "30023": {
+      "branch": 0,
+      "cost": 3,
+      "description": "Perfect grips make later grips stronger and wider, but harder to time. A mistimed release resets the bonuses. Can overfill your bag to 150%; start below full.",
+      "name": "Master grip"
+    },
+    "30222": {
+      "branch": 2,
+      "cost": 3,
+      "description": "Pocket Bank's automatic collection rate +100%, including its maximum rate. Bank radius: 9 → 12 m. Bag capacity +33.11%.",
+      "name": "Branch manager"
+    },
+    "11219": {
+      "branch": 1,
+      "cost": 1,
+      "description": "Bag capacity +9.32%.\nUnload from 0.11 m farther away.",
+      "name": "Ready to unload"
+    },
+    "1208": {
+      "branch": 2,
+      "cost": 3,
+      "description": "Empty your bag at a station after depositing at least 10% of its capacity. During Gold Rush, uncovered, unlocked stations gather gold and chutes collect twice as fast.",
+      "name": "Gold Rush"
+    },
+    "1108": {
+      "branch": 1,
+      "cost": 3,
+      "description": "Bag capacity +182.99%.\nDeposit speed -20%.",
+      "name": "Walking vault"
+    },
+    "1525": {
+      "branch": 5,
+      "cost": 2,
+      "description": "Pickup radius +12%.\nTool reach +15% of base.",
+      "name": "Wider field 3"
+    },
+    "1024": {
+      "branch": 0,
+      "cost": 2,
+      "description": "Grip sweet spot starts 0.12s sooner.",
+      "name": "Quick clasp"
+    },
+    "10119": {
+      "branch": 0,
+      "cost": 1,
+      "description": "Tool speed +3.9%.\nHands coins per grab +8.18%.",
+      "name": "Golden touch"
+    },
+    "1526": {
+      "branch": 5,
+      "cost": 2,
+      "description": "Heavy Strike and lightning cooldowns -7.84%. Empty your bag at a station after depositing at least 10% capacity: lightning cooldown is halved for 8s.",
+      "name": "Banked charge"
+    },
+    "11119": {
+      "branch": 1,
+      "cost": 1,
+      "description": "Bag capacity +18.21%.\nDeposit speed +7.5%.",
+      "name": "Packed for delivery"
+    },
+    "1203": {
+      "branch": 2,
+      "cost": 2,
+      "description": "Deposit speed +100%.\nUnload from 1.5 m farther away.",
+      "name": "Station upgrade I"
+    },
+    "1018": {
+      "branch": 0,
+      "cost": 2,
+      "description": "At full Flow, a sixth ghost hand joins in and the crew grabs faster. Keep holding {Primary} to collect.",
+      "name": "All hands on deck"
+    },
+    "30201": {
+      "branch": 2,
+      "cost": 2,
+      "description": "Deposit speed +15.61%.\nGold Rush duration +5 seconds.",
+      "name": "Longer rush"
+    },
+    "1224": {
+      "branch": 2,
+      "cost": 2,
+      "description": "Pocket Bank collects from farther away. Hold {Interact} within 3 m to unload at half normal speed.",
+      "name": "Local branch"
+    },
+    "30101": {
+      "branch": 1,
+      "cost": 2,
+      "description": "Bag capacity +33.11%.",
+      "name": "Vault liner"
+    },
+    "30522": {
+      "branch": 5,
+      "cost": 3,
+      "description": "Increase how much Magnetic Pulse can collect at each bounce. Its chains share the coin limit.",
+      "name": "Pulse overload"
+    },
+    "12115": {
+      "branch": 2,
+      "cost": 1,
+      "description": "Deposit speed +7.05%.\nUnload from 0.38 m farther away.",
+      "name": "Extended intake"
+    },
+    "1113": {
+      "branch": 1,
+      "cost": 2,
+      "description": "Bag capacity +30%.\nDeposit speed +16%.",
+      "name": "Tight packing 3"
+    },
+    "1402": {
+      "branch": 4,
+      "cost": 1,
+      "description": "Your pickups can trigger a strike that collects extra nearby gold. It triggers more often and collects more coins with the Shovel.",
+      "name": "Heavy strike"
+    },
+    "1127": {
+      "branch": 1,
+      "cost": 1,
+      "description": "Bag capacity +9.32%.\nUnload from 0.11 m farther away.",
+      "name": "Easy unloading 7"
+    },
+    "1012": {
+      "branch": 0,
+      "cost": 1,
+      "description": "Hold {Primary} to collect with a ghost hand. Stronger and faster tools improve its grabs. It can trigger your learned Heavy Strike and lightning effects.",
+      "name": "Helping hand"
+    },
+    "11015": {
+      "branch": 1,
+      "cost": 3,
+      "description": "Bag capacity +79.34%.",
+      "name": "Deep reserves"
+    },
+    "1026": {
+      "branch": 0,
+      "cost": 1,
+      "description": "Collect 25% faster with Flow active and a bag at least half full. Grips become easier to time, and normal pickups resume sooner afterward.",
+      "name": "Rhythm grip"
+    },
+    "1422": {
+      "branch": 4,
+      "cost": 1,
+      "description": "Pickup radius +25%.\nMaximum Shovel radius +0.05 m.",
+      "name": "Broad shovel 2"
+    },
+    "12215": {
+      "branch": 2,
+      "cost": 1,
+      "description": "Bag capacity +6.26%.\nDeposit speed +7.05%.",
+      "name": "Bulk delivery"
+    },
+    "1008": {
+      "branch": 0,
+      "cost": 3,
+      "description": "Flow increases coins per pickup and pickup radius, reaching +100% coins and +20% radius at full Flow.",
+      "name": "In the zone"
+    },
+    "13015": {
+      "branch": 3,
+      "cost": 3,
+      "description": "Tool speed +36.6%.",
+      "name": "Fast reflexes"
+    },
+    "10019": {
+      "branch": 0,
+      "cost": 1,
+      "description": "Tool speed +6.81%.",
+      "name": "Perfect rhythm"
+    },
+    "15115": {
+      "branch": 5,
+      "cost": 1,
+      "description": "Lightning coins per bounce +7.41%.",
+      "name": "Charged harvest"
+    },
+    "12019": {
+      "branch": 2,
+      "cost": 3,
+      "description": "Deposit speed +84.18%.",
+      "name": "Rapid transfer"
+    },
+    "13119": {
+      "branch": 3,
+      "cost": 2,
+      "description": "Pickup radius +21.75%.\nTool reach +6% of base.",
+      "name": "Open span"
+    },
+    "1322": {
+      "branch": 3,
+      "cost": 1,
+      "description": "Each pump cycle transfers an extra 5% of bag capacity from your bag to the bank.",
+      "name": "Large pump chamber"
+    },
+    "1502": {
+      "branch": 5,
+      "cost": 1,
+      "description": "Your pickups can release lightning that jumps between coin patches, collecting extra gold. It collects more gold with the Magnet.",
+      "name": "Static discharge"
+    },
+    "14219": {
+      "branch": 4,
+      "cost": 2,
+      "description": "Pickup radius +18.22%.\nMaximum Shovel radius +0.1 m.",
+      "name": "Full sweep"
+    },
+    "20402": {
+      "branch": 4,
+      "cost": 3,
+      "description": "Coins per pickup +41.15%.\nHeavy Strike coins +31.95%.",
+      "name": "Earth mover"
+    },
+    "1312": {
+      "branch": 3,
+      "cost": 1,
+      "description": "Tool reach +8% of base.",
+      "name": "Long reach 1"
+    },
+    "1517": {
+      "branch": 5,
+      "cost": 1,
+      "description": "Lightning base chance +8 percentage points (when learned).\nLightning coins per bounce +2.41%.",
+      "name": "Conductive current 7"
+    },
+    "1424": {
+      "branch": 4,
+      "cost": 2,
+      "description": "Pickup radius +25%.\nMaximum Shovel radius +0.1 m.",
+      "name": "Broad shovel 4"
+    },
+    "1122": {
+      "branch": 1,
+      "cost": 1,
+      "description": "Bag capacity +15%.\nUnload from 0.15 m farther away.",
+      "name": "Easy unloading 2"
+    },
+    "1417": {
+      "branch": 4,
+      "cost": 1,
+      "description": "Coins per pickup +13.52%.",
+      "name": "Heaped blade 3"
+    },
+    "1006": {
+      "branch": 0,
+      "cost": 3,
+      "description": "Keep Flow through missed grabs and pauses up to 1.5s after your tool is ready. Tool reach +40% of base.",
+      "name": "Keep rolling"
+    },
+    "1621": {
+      "branch": 6,
+      "cost": 2,
+      "description": "Permanent chute drainage +12.5%. Press [R] to triple drainage for 8s. Cooldown: 45s.",
+      "name": "Chute overdrive"
+    },
+    "1128": {
+      "branch": 1,
+      "cost": 2,
+      "description": "Deposit speed +30.15%.\nUnload from 0.04 m farther away.",
+      "name": "Express bag"
+    },
+    "30311": {
+      "branch": 3,
+      "cost": 2,
+      "description": "Pickup radius +20%. Reach +20% of base.",
+      "name": "Spacious grip"
+    },
+    "30412": {
+      "branch": 4,
+      "cost": 3,
+      "description": "Jackhammer can collect 50% more coins, digs deeper and recharges faster. Limited by reachable gold and bag space.",
+      "name": "Seismic slam"
+    },
+    "20502": {
+      "branch": 5,
+      "cost": 3,
+      "description": "Lightning chains: 6 → 8, sharing +25% more coins per bounce. Chance to keep bouncing: 65% → 80%.",
+      "name": "Domino storm"
+    },
+    "1001": {
+      "branch": 0,
+      "cost": 1,
+      "description": "Tool speed +20.02%.\nTool reach +15% of base.",
+      "name": "Handling basics"
+    },
+    "12119": {
+      "branch": 2,
+      "cost": 1,
+      "description": "Deposit speed +7.05%.\nUnload from 0.38 m farther away.",
+      "name": "Smooth handoff"
+    },
+    "1106": {
+      "branch": 1,
+      "cost": 2,
+      "description": "Bag capacity +53.06%.",
+      "name": "Deeper bag 6"
+    },
+    "1515": {
+      "branch": 5,
+      "cost": 2,
+      "description": "Lightning base chance +8 percentage points (when learned).\nLightning coins per bounce +10%.",
+      "name": "Conductive current 5"
+    },
+    "1314": {
+      "branch": 3,
+      "cost": 1,
+      "description": "Tool reach +8% of base.",
+      "name": "Long reach 2"
+    },
+    "1016": {
+      "branch": 0,
+      "cost": 3,
+      "description": "Five ghost hands search nearby gold, even when you are not aiming directly at it. Keep holding {Primary} to collect.",
+      "name": "Busy hands"
+    },
+    "1608": {
+      "branch": 6,
+      "cost": 3,
+      "description": "Chute drainage +100%.",
+      "name": "Suction turbines"
+    },
+    "1408": {
+      "branch": 4,
+      "cost": 3,
+      "description": "Heavy Strikes collect more gold and reach at least 4 m around the impact. They also trigger more reliably and recharge faster.",
+      "name": "World breaker"
+    },
+    "12219": {
+      "branch": 2,
+      "cost": 1,
+      "description": "Bag capacity +6.26%.\nDeposit speed +7.05%.",
+      "name": "Streamlined cargo"
+    },
+    "1025": {
+      "branch": 0,
+      "cost": 2,
+      "description": "Grip collection radius +50%.",
+      "name": "Wide grip"
+    },
+    "30121": {
+      "branch": 1,
+      "cost": 2,
+      "description": "Bag capacity +20.89%.\nDeposit speed +24.45%.",
+      "name": "Quick release"
+    },
+    "20002": {
+      "branch": 0,
+      "cost": 3,
+      "description": "Hands coins per grab +30.89%.",
+      "name": "A handful of gold"
+    },
+    "UnlockMagnet": {
+      "branch": 5,
+      "cost": 1,
+      "description": "Magnet [3]: pull up to 3 surface coins every 0.7s, within 5.5 m.",
+      "name": "Unlock magnet"
+    },
+    "30102": {
+      "branch": 1,
+      "cost": 2,
+      "description": "Bag capacity +49.11%.",
+      "name": "Bottomless hold"
+    },
+    "1104": {
+      "branch": 1,
+      "cost": 2,
+      "description": "Bag capacity +53.06%.",
+      "name": "Deeper bag 4"
+    },
+    "1508": {
+      "branch": 5,
+      "cost": 3,
+      "description": "Lightning spreads through six chains, with more bounces and faster recharge. It triggers more reliably. The chains share each bounce's coin limit.",
+      "name": "Chain storm"
+    },
+    "30122": {
+      "branch": 1,
+      "cost": 2,
+      "description": "Deposit speed +35.73%.",
+      "name": "Rapid unloading"
+    },
+    "1112": {
+      "branch": 1,
+      "cost": 1,
+      "description": "Bag capacity +30%.\nDeposit speed +16%.",
+      "name": "Tight packing 2"
+    },
+    "1403": {
+      "branch": 4,
+      "cost": 2,
+      "description": "Coins per pickup +16.76%.\nHeavy Strike radius +15%.",
+      "name": "Impact spread 1"
+    },
+    "1406": {
+      "branch": 4,
+      "cost": 3,
+      "description": "Heavy Strikes collect more gold across a larger area, with a higher minimum coin limit.",
+      "name": "Deep impact"
+    },
+    "1506": {
+      "branch": 5,
+      "cost": 3,
+      "description": "Lightning splits into three chains and collects more gold over a wider area. The chains share each bounce's coin limit.",
+      "name": "Superconductor"
+    },
+    "1027": {
+      "branch": 0,
+      "cost": 1,
+      "description": "Increase how much a perfect grip can collect. The haul still depends on nearby gold and available bag space.",
+      "name": "Heavy haul"
+    },
+    "30021": {
+      "branch": 0,
+      "cost": 2,
+      "description": "Increase how much a perfect grip can collect. The haul still depends on nearby gold and available bag space.",
+      "name": "Goldbreaker"
+    },
+    "1007": {
+      "branch": 0,
+      "cost": 1,
+      "description": "Tool speed +8.55%.",
+      "name": "Quick fingers 3"
+    },
+    "1425": {
+      "branch": 4,
+      "cost": 2,
+      "description": "Pickup radius +25%.\nHeavy Strike base chance +3 percentage points (when learned).",
+      "name": "Broad shovel 5"
+    },
+    "1017": {
+      "branch": 0,
+      "cost": 1,
+      "description": "Tool speed +5.23%.\nHands coins per grab +11.05%.",
+      "name": "Flurry 4"
+    },
+    "14015": {
+      "branch": 4,
+      "cost": 3,
+      "description": "Coins per pickup +23.92%.\nHeavy Strike radius +11.05%.",
+      "name": "Weight behind it"
+    },
+    "14215": {
+      "branch": 4,
+      "cost": 2,
+      "description": "Pickup radius +18.22%.\nMaximum Shovel radius +0.1 m.",
+      "name": "Wide arc"
+    },
+    "1501": {
+      "branch": 5,
+      "cost": 1,
+      "description": "Tool speed +8.55%.",
+      "name": "Coil tuning"
+    },
+    "14119": {
+      "branch": 4,
+      "cost": 1,
+      "description": "Coins per pickup +13.52%.",
+      "name": "Bountiful haul"
+    },
+    "1326": {
+      "branch": 3,
+      "cost": 1,
+      "description": "Each pump cycle transfers an extra 10% of bag capacity from your bag to the bank.",
+      "name": "High-capacity pump"
+    },
+    "1324": {
+      "branch": 3,
+      "cost": 1,
+      "description": "Each pump cycle transfers an extra 5% of bag capacity from your bag to the bank.",
+      "name": "Deep pump chamber"
+    },
+    "16015": {
+      "branch": 6,
+      "cost": 1,
+      "description": "Chute overdrive drains five times the normal rate.",
+      "name": "Overdrive boost"
+    },
+    "11215": {
+      "branch": 1,
+      "cost": 1,
+      "description": "Bag capacity +9.32%.\nUnload from 0.11 m farther away.",
+      "name": "Room to spare"
+    },
+    "30022": {
+      "branch": 0,
+      "cost": 2,
+      "description": "Master grip can reach six bonus levels. Its sweet spot arrives sooner, but becomes slightly shorter. A mistimed release still resets the bonuses.",
+      "name": "Perfect form"
+    },
+    "1401": {
+      "branch": 4,
+      "cost": 1,
+      "description": "Tool speed +8.55%.",
+      "name": "Scoop rhythm"
+    },
+    "13215": {
+      "branch": 3,
+      "cost": 2,
+      "description": "Pump interval -2.25 seconds.",
+      "name": "Short cycle"
+    },
+    "1212": {
+      "branch": 2,
+      "cost": 1,
+      "description": "Deposit speed +15%.\nUnload from 0.5 m farther away.",
+      "name": "Hopper access"
+    },
+    "1513": {
+      "branch": 5,
+      "cost": 2,
+      "description": "Lightning base chance +8 percentage points (when learned).\nLightning coins per bounce +10%.",
+      "name": "Conductive current 3"
+    },
+    "1123": {
+      "branch": 1,
+      "cost": 1,
+      "description": "Bag capacity +15%.\nUnload from 0.15 m farther away.",
+      "name": "Easy unloading 3"
+    },
+    "1414": {
+      "branch": 4,
+      "cost": 2,
+      "description": "Jackhammer collects more gold, digs deeper and recharges faster. Limited by reachable gold and bag space.",
+      "name": "Heavy piston"
+    },
+    "BagTraining": {
+      "branch": 1,
+      "cost": 1,
+      "description": "Bag capacity +100%.",
+      "name": "Your first bag"
+    },
+    "1005": {
+      "branch": 0,
+      "cost": 1,
+      "description": "Tool speed +8.55%.",
+      "name": "Quick fingers 2"
+    },
+    "1327": {
+      "branch": 3,
+      "cost": 1,
+      "description": "Pump interval -0.75 seconds.",
+      "name": "Fast pump cycle"
+    },
+    "1211": {
+      "branch": 2,
+      "cost": 1,
+      "description": "Unlock the deposit station on floor 01. Use it once you uncover the area.\nDeposit speed +15%.\nUnload from 0.5 m farther away.",
+      "name": "Lower hopper 01"
+    },
+    "1321": {
+      "branch": 3,
+      "cost": 1,
+      "description": "Automatically transfer carried coins to your bank: 5% of bag capacity every 20s (minimum 1 coin). Transfer takes 1s. Does not trigger station bonuses.",
+      "name": "Bag pump"
+    },
+    "1416": {
+      "branch": 4,
+      "cost": 3,
+      "description": "Increase Jackhammer's collection radius. Heavy Strike builds benefit too. The total radius cannot exceed 15 m, including falls.",
+      "name": "Hammer sweep"
+    },
+    "1305": {
+      "branch": 3,
+      "cost": 2,
+      "description": "Coins per pickup +12.61%.\nThen +1 coin per pickup.",
+      "name": "Reinforced gloves"
+    },
+    "30411": {
+      "branch": 4,
+      "cost": 3,
+      "description": "Jackhammer can collect twice as many coins and digs deeper. Limited by reachable gold and bag space.",
+      "name": "Pile driver"
+    },
+    "30011": {
+      "branch": 0,
+      "cost": 2,
+      "description": "Ghost hands collect 25% more coins.",
+      "name": "Helping crew"
+    },
+    "1105": {
+      "branch": 1,
+      "cost": 3,
+      "description": "Bag capacity +117.9%.",
+      "name": "Deeper bag 5"
+    },
+    "1514": {
+      "branch": 5,
+      "cost": 1,
+      "description": "Lightning coins per bounce +10%.",
+      "name": "Conductive current 4"
+    },
+    "1205": {
+      "branch": 2,
+      "cost": 3,
+      "description": "Deposit speed +86.09%.",
+      "name": "Fast unloading 4"
+    },
+    "1118": {
+      "branch": 1,
+      "cost": 1,
+      "description": "Bag capacity +18.21%.\nDeposit speed +7.5%.",
+      "name": "Tight packing 8"
+    },
+    "30012": {
+      "branch": 0,
+      "cost": 3,
+      "description": "Ghost hands collect 40% more coins.",
+      "name": "Golden helpers"
+    },
+    "1003": {
+      "branch": 0,
+      "cost": 1,
+      "description": "Tool speed +8.55%.",
+      "name": "Quick fingers 1"
+    },
+    "1522": {
+      "branch": 5,
+      "cost": 1,
+      "description": "With Magnet, press {Secondary} to launch lightning through nearby gold. Stronger pickups and lightning upgrades improve the haul. The chains share each bounce's coin limit.",
+      "name": "Magnetic Pulse"
+    },
+    "1218": {
+      "branch": 2,
+      "cost": 1,
+      "description": "Deposit speed +7.05%.\nUnload from 0.38 m farther away.",
+      "name": "Hopper mastery"
+    },
+    "10215": {
+      "branch": 0,
+      "cost": 2,
+      "description": "Increase how much a perfect grip can collect. The haul still depends on nearby gold and available bag space.",
+      "name": "Palm brace"
+    },
+    "14019": {
+      "branch": 4,
+      "cost": 1,
+      "description": "Heavy Strike coins +12.12%.",
+      "name": "Crushing force"
+    },
+    "30212": {
+      "branch": 2,
+      "cost": 2,
+      "description": "Deposit speed +35.73%.\nUnload from 1 m farther away.",
+      "name": "Hopper express"
+    },
+    "30601": {
+      "branch": 6,
+      "cost": 2,
+      "description": "Chute drainage +60%.",
+      "name": "Heavy flow"
+    },
+    "1307": {
+      "branch": 3,
+      "cost": 1,
+      "description": "Tool speed +10.96%.",
+      "name": "Swift gloves"
+    },
+    "1222": {
+      "branch": 2,
+      "cost": 1,
+      "description": "Equip Pocket Bank with {Tool4}. Hold and release {Primary} to place it; hold {Relocate} nearby to pack it. Automatically banks visible nearby gold. A bigger bag improves its rate.",
+      "name": "Pocket Bank"
+    },
+    "30221": {
+      "branch": 2,
+      "cost": 3,
+      "description": "Pocket Bank's automatic collection rate +100%, including its maximum rate. Limited by visible gold within range.",
+      "name": "Double returns"
+    },
+    "1311": {
+      "branch": 3,
+      "cost": 1,
+      "description": "Pickup radius +15%.\nTool reach +8% of base.",
+      "name": "Wider grip 1"
+    },
+    "1507": {
+      "branch": 5,
+      "cost": 1,
+      "description": "Coins per pickup +10.5%.\nLightning jump distance +3.56%.",
+      "name": "Arcing current 3"
+    },
+    "1207": {
+      "branch": 2,
+      "cost": 1,
+      "description": "Deposit speed +22.58%.",
+      "name": "Fast unloading 5"
+    },
+    "1111": {
+      "branch": 1,
+      "cost": 1,
+      "description": "Bag capacity +30%.\nDeposit speed +16%.",
+      "name": "Tight packing 1"
+    },
+    "1116": {
+      "branch": 1,
+      "cost": 2,
+      "description": "Bag capacity +24.98%.\nDeposit speed +10.13%.",
+      "name": "Tight packing 6"
+    },
+    "1407": {
+      "branch": 4,
+      "cost": 1,
+      "description": "Coins per pickup +7.41%.\nHeavy Strike radius +3.56%.",
+      "name": "Impact spread 3"
+    },
+    "1028": {
+      "branch": 0,
+      "cost": 1,
+      "description": "Increase how much a perfect grip can collect. The haul still depends on nearby gold and available bag space.",
+      "name": "Locked grip"
+    },
+    "10115": {
+      "branch": 0,
+      "cost": 1,
+      "description": "Tool speed +3.9%.\nHands coins per grab +8.18%.",
+      "name": "Practiced grip"
+    },
+    "1204": {
+      "branch": 2,
+      "cost": 2,
+      "description": "Deposit speed +71.84%.",
+      "name": "Fast unloading 3"
+    },
+    "1125": {
+      "branch": 1,
+      "cost": 1,
+      "description": "Bag capacity +12.61%.\nUnload from 0.15 m farther away.",
+      "name": "Easy unloading 5"
+    },
+    "1412": {
+      "branch": 4,
+      "cost": 1,
+      "description": "With Shovel, hold {Secondary} for 0.65s to leap toward your aim and slam on landing. Bigger falls strengthen the impact. Replaces Power scoop. Maximum radius: 15 m, including falls.",
+      "name": "Jackhammer"
+    },
+    "1418": {
+      "branch": 4,
+      "cost": 3,
+      "description": "Tool speed -22.78%.\nCoins per pickup +88.03%.",
+      "name": "Excavator"
+    },
+    "30512": {
+      "branch": 5,
+      "cost": 3,
+      "description": "Lightning collects 75% more coins at each hit.",
+      "name": "Overcharged chain"
+    },
+    "DepositTraining": {
+      "branch": 2,
+      "cost": 1,
+      "description": "Deposit speed +100%.",
+      "name": "Quick deposit"
+    },
+    "1101": {
+      "branch": 1,
+      "cost": 1,
+      "description": "Bag capacity +65%.",
+      "name": "Deeper bag 1"
+    },
+    "1228": {
+      "branch": 2,
+      "cost": 1,
+      "description": "Bag capacity +6.26%.\nDeposit speed +7.05%.",
+      "name": "Efficient delivery 4"
+    },
+    "1313": {
+      "branch": 3,
+      "cost": 2,
+      "description": "Pickup radius +15%.\nTool reach +8% of base.",
+      "name": "Wider grip 2"
+    },
+    "1505": {
+      "branch": 5,
+      "cost": 3,
+      "description": "Coins per pickup +33.11%.\nLightning jump distance +15%.",
+      "name": "Arcing current 2"
+    },
+    "1213": {
+      "branch": 2,
+      "cost": 2,
+      "description": "Deposit speed +15%.\nUnload from 0.5 m farther away.\nUnlock the deposit station on floor 02. Usable once uncovered.",
+      "name": "Lower hopper 02"
+    },
+    "1405": {
+      "branch": 4,
+      "cost": 3,
+      "description": "Coins per pickup +24.98%.\nHeavy Strike radius +15%.",
+      "name": "Impact spread 2"
+    },
+    "1603": {
+      "branch": 6,
+      "cost": 1,
+      "description": "Chute drainage +25%.",
+      "name": "Smooth lining"
+    },
+    "1004": {
+      "branch": 0,
+      "cost": 1,
+      "description": "Tool speed +5%. Learned Heavy Strike and lightning: base chance +4 percentage points.",
+      "name": "Lucky touch"
+    },
+    "1426": {
+      "branch": 4,
+      "cost": 1,
+      "description": "Learned Heavy Strikes collect 7.92% more coins, including their minimum. Another +50% while your bag is at least half full.",
+      "name": "Heavy load scoop"
+    },
+    "1521": {
+      "branch": 5,
+      "cost": 1,
+      "description": "Tool reach +15% of base; pickup radius +12%.",
+      "name": "Wider field 1"
+    },
+    "12015": {
+      "branch": 2,
+      "cost": 3,
+      "description": "Deposit speed +84.18%.",
+      "name": "Open floodgates"
+    },
+    "30602": {
+      "branch": 6,
+      "cost": 3,
+      "description": "Chute drainage +100%.",
+      "name": "Gold river"
+    },
+    "14115": {
+      "branch": 4,
+      "cost": 1,
+      "description": "Coins per pickup +13.52%.",
+      "name": "Loaded scoop"
+    },
+    "11115": {
+      "branch": 1,
+      "cost": 1,
+      "description": "Bag capacity +18.21%.\nDeposit speed +7.5%.",
+      "name": "Neat stacks"
+    },
+    "1304": {
+      "branch": 3,
+      "cost": 3,
+      "description": "Tool speed +39.9%.",
+      "name": "Quick gloves"
+    },
+    "1512": {
+      "branch": 5,
+      "cost": 1,
+      "description": "Lightning coins per bounce +10%.",
+      "name": "Conductive current 2"
+    },
+    "1301": {
+      "branch": 3,
+      "cost": 1,
+      "description": "Tool speed +27.54%.",
+      "name": "Light gloves"
+    },
+    "1223": {
+      "branch": 2,
+      "cost": 1,
+      "description": "Bag capacity +10%.\nDeposit speed +15%.",
+      "name": "Efficient delivery 2"
+    },
+    "1206": {
+      "branch": 2,
+      "cost": 3,
+      "description": "Deposit speed +104.23%.\nUnload from 1.5 m farther away.",
+      "name": "Station upgrade II"
+    },
+    "1117": {
+      "branch": 1,
+      "cost": 1,
+      "description": "Bag capacity +18.21%.\nDeposit speed +7.5%.",
+      "name": "Tight packing 7"
+    },
+    "15015": {
+      "branch": 5,
+      "cost": 3,
+      "description": "Coins per pickup +34.94%.\nLightning jump distance +11.05%.",
+      "name": "Spreading current"
+    },
+    "1002": {
+      "branch": 0,
+      "cost": 1,
+      "description": "Collect steadily to build Flow: up to +60% Hands speed or +30% with other tools. Tool speed +20.02%; Hands coins per grab +108.14%.",
+      "name": "Find your rhythm"
+    },
+    "1428": {
+      "branch": 4,
+      "cost": 1,
+      "description": "Pickup radius +5.74%.\nMaximum Shovel radius +0.05 m.",
+      "name": "Broad shovel 7"
+    },
+    "15219": {
+      "branch": 5,
+      "cost": 1,
+      "description": "Tool reach +11.25% of base.",
+      "name": "Far attraction"
+    },
+    "30211": {
+      "branch": 2,
+      "cost": 2,
+      "description": "Deposit speed +24.45%.\nUnload from 1 m farther away.",
+      "name": "Fast hoppers"
+    },
+    "1528": {
+      "branch": 5,
+      "cost": 3,
+      "description": "Pickup radius +100%. Tool reach gains +3.75% of base, then total reach is reduced by 35%.",
+      "name": "Maelstrom"
+    },
+    "30111": {
+      "branch": 1,
+      "cost": 3,
+      "description": "Bag capacity +49.11%.\nDeposit speed +15.61%.",
+      "name": "Perfect packing"
+    },
+    "13019": {
+      "branch": 3,
+      "cost": 1,
+      "description": "Tool speed +9.18%.",
+      "name": "Light touch"
+    },
+    "10015": {
+      "branch": 0,
+      "cost": 1,
+      "description": "Tool speed +6.35%.",
+      "name": "Quick wrists"
+    },
+    "15119": {
+      "branch": 5,
+      "cost": 1,
+      "description": "Lightning coins per bounce +7.41%.",
+      "name": "Concentrated charge"
+    },
+    "1221": {
+      "branch": 2,
+      "cost": 1,
+      "description": "Deposit speed +15%.\nBag capacity +10%.",
+      "name": "Efficient delivery 1"
+    },
+    "1306": {
+      "branch": 3,
+      "cost": 1,
+      "description": "Tool speed +5%. Learned Heavy Strike and lightning: base chance +3 percentage points.",
+      "name": "Fortune gloves"
+    },
+    "1315": {
+      "branch": 3,
+      "cost": 2,
+      "description": "Pickup radius +15%.\nTool reach +8% of base.",
+      "name": "Wider grip 3"
+    },
+    "1523": {
+      "branch": 5,
+      "cost": 2,
+      "description": "Pickup radius +12%.\nTool reach +15% of base.",
+      "name": "Wider field 2"
+    },
+    "1115": {
+      "branch": 1,
+      "cost": 2,
+      "description": "Bag capacity +24.98%.\nDeposit speed +10.13%.",
+      "name": "Tight packing 5"
+    },
+    "1404": {
+      "branch": 4,
+      "cost": 2,
+      "description": "Heavy strikes hit a second coin patch.\nHeavy Strike radius +10%.",
+      "name": "Aftershock"
+    },
+    "1318": {
+      "branch": 3,
+      "cost": 1,
+      "description": "Pickup radius +15%.\nTool reach +8% of base.",
+      "name": "Wide coverage"
+    },
+    "1215": {
+      "branch": 2,
+      "cost": 2,
+      "description": "Unlock the deposit station on floor 04, usable once uncovered.\nDeposit speed +9.51%.\nUnload from 0.5 m farther away.",
+      "name": "Lower hopper 04"
+    },
+    "1303": {
+      "branch": 3,
+      "cost": 1,
+      "description": "Tool speed +5%. Learned Heavy Strike and lightning: base chance +3 percentage points.",
+      "name": "Lucky gloves"
+    },
+    "30202": {
+      "branch": 2,
+      "cost": 2,
+      "description": "Deposit speed +30.15%.\nGold Rush duration +5 seconds.",
+      "name": "Lasting rush"
+    },
+    "1126": {
+      "branch": 1,
+      "cost": 1,
+      "description": "Bag capacity +12.61%.\nUnload from 0.15 m farther away.",
+      "name": "Easy unloading 6"
+    },
+    "1413": {
+      "branch": 4,
+      "cost": 2,
+      "description": "Coins per pickup +18.41%.",
+      "name": "Heaped blade 1"
+    },
+    "30112": {
+      "branch": 1,
+      "cost": 3,
+      "description": "Bag capacity +80.25%.\nDeposit speed +15.61%.",
+      "name": "Every inch counts"
+    },
+    "20001": {
+      "branch": 0,
+      "cost": 2,
+      "description": "Hands coins per grab +19.54%.",
+      "name": "Golden grip"
+    },
+    "15215": {
+      "branch": 5,
+      "cost": 1,
+      "description": "Pickup radius +8.87%.\nTool reach +11.25% of base.",
+      "name": "Field expansion"
+    },
+    "1308": {
+      "branch": 3,
+      "cost": 2,
+      "description": "Walking over gold adds 20% of your tool's coin collection rate. Goes into your bag every 0.75s (minimum 1 coin). Stops when stationary or full.",
+      "name": "Magnetic footsteps"
+    },
+    "13219": {
+      "branch": 3,
+      "cost": 1,
+      "description": "Pump interval -1.5 seconds.",
+      "name": "Primed pump"
+    },
+    "1504": {
+      "branch": 5,
+      "cost": 2,
+      "description": "Lightning bounces: 5 → 7. Chance to keep bouncing: 25% → 45%. Jump distance +10%.",
+      "name": "Longer chain"
+    },
+    "1317": {
+      "branch": 3,
+      "cost": 1,
+      "description": "Pickup radius +11.05%.\nTool reach +6% of base.",
+      "name": "Wider grip 4"
+    },
+    "1606": {
+      "branch": 6,
+      "cost": 3,
+      "description": "Chute drainage +80%.",
+      "name": "Powered pumps"
+    },
+    "1124": {
+      "branch": 1,
+      "cost": 1,
+      "description": "Bag capacity +12.61%.\nUnload from 0.15 m farther away.",
+      "name": "Easy unloading 4"
+    },
+    "1102": {
+      "branch": 1,
+      "cost": 1,
+      "description": "Bag capacity +65%.",
+      "name": "Deeper bag 2"
+    },
+    "1511": {
+      "branch": 5,
+      "cost": 1,
+      "description": "Lightning base chance +8 percentage points (when learned).\nLightning coins per bounce +10%.",
+      "name": "Conductive current 1"
+    },
+    "1503": {
+      "branch": 5,
+      "cost": 2,
+      "description": "Coins per pickup +20.89%.\nLightning jump distance +15%.",
+      "name": "Arcing current 1"
+    },
+    "10219": {
+      "branch": 0,
+      "cost": 1,
+      "description": "Increase how much a perfect grip can collect. The haul still depends on nearby gold and available bag space.",
+      "name": "Knuckle lock"
+    },
+    "1411": {
+      "branch": 4,
+      "cost": 1,
+      "description": "With Shovel, hold {Secondary} for 0.65s, then release a stronger, wider scoop. Limited by nearby gold and bag space.",
+      "name": "Power scoop"
+    },
+    "30321": {
+      "branch": 3,
+      "cost": 1,
+      "description": "Each pump cycle transfers an extra 5% of bag capacity from your bag to the bank.",
+      "name": "Deep pump"
+    },
+    "1021": {
+      "branch": 0,
+      "cost": 1,
+      "description": "With Hands, hold {Secondary} and release in the sweet spot for a large haul. Stronger grabs and a bigger bag increase the coin limit. Needs nearby gold and bag space.",
+      "name": "Two-handed technique"
+    },
+    "30423": {
+      "branch": 4,
+      "cost": 2,
+      "description": "Pickup radius +25%.\nHeavy Strike coins +14.41%.",
+      "name": "Rolling thunder"
+    },
+    "30301": {
+      "branch": 3,
+      "cost": 2,
+      "description": "Tool speed +14.33%.",
+      "name": "Expert gloves"
+    },
+    "1227": {
+      "branch": 2,
+      "cost": 1,
+      "description": "Bag capacity +6.26%.\nDeposit speed +7.05%.",
+      "name": "Efficient delivery 3"
+    },
+    "1328": {
+      "branch": 3,
+      "cost": 2,
+      "description": "A full bag triggers an extra pump cycle. Cooldown: 60 seconds.",
+      "name": "Overflow pump"
+    },
+    "1202": {
+      "branch": 2,
+      "cost": 1,
+      "description": "Deposit speed +80%.",
+      "name": "Fast unloading 2"
+    },
+    "30422": {
+      "branch": 4,
+      "cost": 1,
+      "description": "Heavy Strike base chance +4 percentage points (when learned).\nHeavy Strike coins +9.34%.",
+      "name": "Crushing sweep"
+    },
+    "30302": {
+      "branch": 3,
+      "cost": 2,
+      "description": "Tool speed +22.37%.",
+      "name": "Masterwork gloves"
+    },
+    "1214": {
+      "branch": 2,
+      "cost": 2,
+      "description": "Unlock the deposit station on floor 03, usable once uncovered.\nDeposit speed +9.51%.\nUnload from 0.5 m farther away.",
+      "name": "Lower hopper 03"
+    },
+    "30421": {
+      "branch": 4,
+      "cost": 2,
+      "description": "Pickup radius +20%.\nMaximum Shovel radius +0.1 m.",
+      "name": "Wider swing"
+    },
+    "1602": {
+      "branch": 6,
+      "cost": 2,
+      "description": "Chute drainage +50%.",
+      "name": "Wider intakes"
+    },
+    "1524": {
+      "branch": 5,
+      "cost": 2,
+      "description": "Magnetic Pulse collects more gold and hits a wider area. Its chains share each bounce's coin limit.",
+      "name": "Powerful pulse"
+    },
+    "1023": {
+      "branch": 0,
+      "cost": 2,
+      "description": "Increase how much a perfect grip can collect. The haul still depends on nearby gold and available bag space.",
+      "name": "Deep grip"
+    },
+    "1421": {
+      "branch": 4,
+      "cost": 1,
+      "description": "Pickup radius +25%. Heavy strikes also inherit the wider pickup area.\nHeavy Strike base chance +3 percentage points (when learned).",
+      "name": "Broad shovel 1"
+    },
+    "MovementTraining": {
+      "branch": 3,
+      "cost": 1,
+      "description": "Tool speed +5.89%.",
+      "name": "Work gloves"
+    },
+    "1600": {
+      "branch": 6,
+      "cost": 1,
+      "description": "Automatically drain 1 coin per second into your bank, shared across all wall chutes.",
+      "name": "Wall chutes"
+    },
+    "1302": {
+      "branch": 3,
+      "cost": 1,
+      "description": "Coins per pickup +12.61%.\nThen +1 coin per pickup.",
+      "name": "Grippy gloves"
+    },
+    "1518": {
+      "branch": 5,
+      "cost": 3,
+      "description": "Lightning coins per bounce +53.62%. Tool reach +70%; pickup radius -55%.",
+      "name": "Gold lance"
+    },
+    "1601": {
+      "branch": 6,
+      "cost": 1,
+      "description": "Chute drainage +20%.",
+      "name": "Flow channels"
+    },
+    "1225": {
+      "branch": 2,
+      "cost": 3,
+      "description": "Manually empty a bag with at least 25% capacity, capped at 10,000 coins, to boost Pocket Bank collection by 50% for 8 seconds.",
+      "name": "Cash flow"
+    },
+    "1605": {
+      "branch": 6,
+      "cost": 2,
+      "description": "Chute drainage +40%.",
+      "name": "Pressure valves"
+    },
+    "1527": {
+      "branch": 5,
+      "cost": 1,
+      "description": "Magnetic Pulse cooldown: 4s instead of 6s.\nPickup radius +2.87%.\nTool reach +3.75% of base.",
+      "name": "Rapid recharge"
+    },
+    "1114": {
+      "branch": 1,
+      "cost": 2,
+      "description": "Bag capacity +24.98%.\nDeposit speed +10.13%.",
+      "name": "Tight packing 4"
+    },
+    "1014": {
+      "branch": 0,
+      "cost": 3,
+      "description": "Three ghost hands take turns gathering gold while you hold {Primary} to collect.",
+      "name": "Extra pair"
+    },
+    "1015": {
+      "branch": 0,
+      "cost": 1,
+      "description": "Tool speed +5.23%.\nHands coins per grab +11.05%.",
+      "name": "Flurry 3"
+    },
+    "1216": {
+      "branch": 2,
+      "cost": 2,
+      "description": "Unlock the deposit station on floor 05, usable once uncovered.\nDeposit speed +9.51%.\nUnload from 0.5 m farther away.",
+      "name": "Lower hopper 05"
+    },
+    "30523": {
+      "branch": 5,
+      "cost": 3,
+      "description": "Magnetic Pulse collects more gold at each bounce and recharges faster. Its chains share the coin limit.",
+      "name": "Magnetic surge"
+    },
+    "30521": {
+      "branch": 5,
+      "cost": 2,
+      "description": "Magnetic Pulse radius +25%. Its final radius cap rises from 4.5 m to 5.625 m.",
+      "name": "Pulse spread"
+    },
+    "1013": {
+      "branch": 0,
+      "cost": 1,
+      "description": "Tool speed +5.23%.\nHands coins per grab +11.05%.",
+      "name": "Flurry 2"
+    },
+    "1604": {
+      "branch": 6,
+      "cost": 3,
+      "description": "Chute drainage +80%.",
+      "name": "Reinforced ducts"
+    },
+    "15019": {
+      "branch": 5,
+      "cost": 2,
+      "description": "Lightning coins per bounce +25.97%.",
+      "name": "Surge capacity"
+    },
+    "1423": {
+      "branch": 4,
+      "cost": 2,
+      "description": "Pickup radius +25%.\nHeavy Strike base chance +3 percentage points (when learned).",
+      "name": "Broad shovel 3"
+    },
+    "1103": {
+      "branch": 1,
+      "cost": 2,
+      "description": "Bag capacity +150%.",
+      "name": "Deeper bag 3"
+    },
+    "1415": {
+      "branch": 4,
+      "cost": 2,
+      "description": "Coins per pickup +18.41%.",
+      "name": "Heaped blade 2"
+    },
+    "20501": {
+      "branch": 5,
+      "cost": 3,
+      "description": "Coins per pickup +29.06%.",
+      "name": "High voltage"
+    },
+    "1316": {
+      "branch": 3,
+      "cost": 1,
+      "description": "Tool reach +8% of base.",
+      "name": "Long reach 3"
+    },
+    "UnlockShovel": {
+      "branch": 4,
+      "cost": 1,
+      "description": "Equip Shovel with {Tool2} to scoop gold. Learned Heavy Strikes are stronger and trigger more often with this tool.",
+      "name": "Unlock shovel"
+    },
+    "1427": {
+      "branch": 4,
+      "cost": 1,
+      "description": "Pickup radius +5.74%.\nHeavy Strike base chance +3 percentage points (when learned).",
+      "name": "Broad shovel 6"
+    },
+    "20401": {
+      "branch": 4,
+      "cost": 2,
+      "description": "Heavy Strike coins +31.95%.",
+      "name": "Fault line"
+    },
+    "1201": {
+      "branch": 2,
+      "cost": 1,
+      "description": "Deposit speed +80%.",
+      "name": "Fast unloading 1"
+    },
+    "13115": {
+      "branch": 3,
+      "cost": 1,
+      "description": "Pickup radius +11.05%.\nTool reach +6% of base.",
+      "name": "Sweeping reach"
+    },
+    "1011": {
+      "branch": 0,
+      "cost": 1,
+      "description": "Tool speed +5.23%.\nHands coins per grab +11.05%.",
+      "name": "Flurry 1"
+    },
+    "1516": {
+      "branch": 5,
+      "cost": 1,
+      "description": "Lightning coins per bounce +10%.",
+      "name": "Conductive current 6"
+    },
+    "HandTraining": {
+      "branch": 0,
+      "cost": 1,
+      "description": "Hands collect 2 coins per grab instead of 1.",
+      "name": "Two at a time"
+    },
+    "1121": {
+      "branch": 1,
+      "cost": 1,
+      "description": "Bag capacity +15%.\nUnload from 0.15 m farther away.",
+      "name": "Easy unloading 1"
+    },
+    "11019": {
+      "branch": 1,
+      "cost": 2,
+      "description": "Bag capacity +37.61%.",
+      "name": "Reinforced lining"
+    },
+    "1022": {
+      "branch": 0,
+      "cost": 1,
+      "description": "Grip sweet spot lasts 0.015s longer.",
+      "name": "Steady hands"
+    },
+    "1217": {
+      "branch": 2,
+      "cost": 1,
+      "description": "Automatic depositing near uncovered, unlocked stations. Keep using your tool while unloading.\nDeposit speed +2.3%.\nUnload from 0.13 m farther away.",
+      "name": "Vault valet"
+    }
   }
 }

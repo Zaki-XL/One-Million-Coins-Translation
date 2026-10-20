@@ -1,10 +1,11 @@
 {
   "default_font": "system",
   "system_font_candidates": [
-    "Meiryo",
+    "Yu Gothic UI",
+    "Yu Gothic UI Bold",
     "Yu Gothic",
-    "MS Gothic",
-    "Arial Unicode MS"
+    "Meiryo"
   ],
+  "font_style": "Bold",
   "custom_font_file": ""
 }

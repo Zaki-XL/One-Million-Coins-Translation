@@ -160,5 +160,989 @@
     "LOCAL PLAY": "ローカルプレイ",
     "Offline player": "オフラインプレイヤー",
     "Version ": "バージョン "
+  },
+  "branches": {
+    "0": {
+      "name": "モメンタム",
+      "description": "あらゆるツールで勢いを加速させる。"
+    },
+    "1": {
+      "name": "バッグ",
+      "description": "歩く金庫を作り上げる。"
+    },
+    "2": {
+      "name": "換金",
+      "description": "一瞬でコインを納金する。"
+    },
+    "3": {
+      "name": "サルベージ",
+      "description": "グローブ、収集範囲、自動納金を強化する。"
+    },
+    "4": {
+      "name": "発掘",
+      "description": "すべてのツールにコイン山を粉砕する力を付与する。"
+    },
+    "5": {
+      "name": "吸引",
+      "description": "すべてのツールから連鎖雷を放てるようにする。"
+    },
+    "6": {
+      "name": "シュート",
+      "description": "金庫への完全自動納金を実現する。"
+    }
+  },
+  "skills": {
+    "1325": {
+      "name": "Rapid pump",
+      "description": "Pump interval -3 seconds."
+    },
+    "1607": {
+      "name": "Flow regulator",
+      "description": "Chute drainage +25%."
+    },
+    "1323": {
+      "name": "Quick pump",
+      "description": "Pump interval -3 seconds."
+    },
+    "30322": {
+      "name": "Rapid pump",
+      "description": "Pump interval -3s."
+    },
+    "30312": {
+      "name": "Full coverage",
+      "description": "収集半径 +35%. Reach +30% of base."
+    },
+    "1226": {
+      "name": "Express counter",
+      "description": "Unload into Pocket Bank at 75% of normal station speed."
+    },
+    "30511": {
+      "name": "Live wire",
+      "description": "Lightning collects 50% more coins at each hit."
+    },
+    "1107": {
+      "name": "Deeper bag 7",
+      "description": "Bag capacity +21.5%."
+    },
+    "30023": {
+      "name": "Master grip",
+      "description": "Perfect grips make later grips stronger and wider, but harder to time. A mistimed release resets the bonuses. Can overfill your bag to 150%; start below full."
+    },
+    "30222": {
+      "name": "Branch manager",
+      "description": "Pocket Bank's automatic collection rate +100%, including its maximum rate. Bank radius: 9 → 12 m. Bag capacity +33.11%."
+    },
+    "11219": {
+      "name": "Ready to unload",
+      "description": "Bag capacity +9.32%.\nUnload from 0.11 m farther away."
+    },
+    "1208": {
+      "name": "Gold Rush",
+      "description": "Empty your bag at a station after depositing at least 10% of its capacity. During Gold Rush, uncovered, unlocked stations gather gold and chutes collect twice as fast."
+    },
+    "1108": {
+      "name": "Walking vault",
+      "description": "Bag capacity +182.99%.\nDeposit speed -20%."
+    },
+    "1525": {
+      "name": "Wider field 3",
+      "description": "収集半径 +12%.\nツール射程 +基本値の15%."
+    },
+    "1024": {
+      "name": "Quick clasp",
+      "description": "Grip sweet spot starts 0.12s sooner."
+    },
+    "10119": {
+      "name": "Golden touch",
+      "description": "ツール速度 +3.9%.\n素手のコイン回収量 +8.18%."
+    },
+    "1526": {
+      "name": "Banked charge",
+      "description": "Heavy Strike and lightning cooldowns -7.84%. Empty your bag at a station after depositing at least 10% capacity: lightning cooldown is halved for 8s."
+    },
+    "11119": {
+      "name": "Packed for delivery",
+      "description": "Bag capacity +18.21%.\n換金速度 +7.5%."
+    },
+    "1203": {
+      "name": "Station upgrade I",
+      "description": "換金速度 +100%.\nUnload from 1.5 m farther away."
+    },
+    "1018": {
+      "name": "All hands on deck",
+      "description": "At full Flow, a sixth ghost hand joins in and the crew grabs faster. Keep holding {Primary} to collect."
+    },
+    "30201": {
+      "name": "Longer rush",
+      "description": "換金速度 +15.61%.\nGold Rush duration +5 seconds."
+    },
+    "1224": {
+      "name": "Local branch",
+      "description": "Pocket Bank collects from farther away. Hold {Interact} within 3 m to unload at half normal speed."
+    },
+    "30101": {
+      "name": "Vault liner",
+      "description": "Bag capacity +33.11%."
+    },
+    "30522": {
+      "name": "Pulse overload",
+      "description": "Increase how much Magnetic Pulse can collect at each bounce. Its chains share the coin limit."
+    },
+    "12115": {
+      "name": "Extended intake",
+      "description": "換金速度 +7.05%.\nUnload from 0.38 m farther away."
+    },
+    "1113": {
+      "name": "Tight packing 3",
+      "description": "Bag capacity +30%.\n換金速度 +16%."
+    },
+    "1402": {
+      "name": "Heavy strike",
+      "description": "Your pickups can trigger a strike that collects extra nearby gold. It triggers more often and collects more coins with the Shovel."
+    },
+    "1127": {
+      "name": "Easy unloading 7",
+      "description": "Bag capacity +9.32%.\nUnload from 0.11 m farther away."
+    },
+    "1012": {
+      "name": "助けの手",
+      "description": "Hold {Primary} to collect with a ghost hand. Stronger and faster tools improve its grabs. It can trigger your learned Heavy Strike and lightning effects."
+    },
+    "11015": {
+      "name": "Deep reserves",
+      "description": "Bag capacity +79.34%."
+    },
+    "1026": {
+      "name": "Rhythm grip",
+      "description": "Collect 25% faster with Flow active and a bag at least half full. Grips become easier to time, and normal pickups resume sooner afterward."
+    },
+    "1422": {
+      "name": "Broad shovel 2",
+      "description": "収集半径 +25%.\nMaximum Shovel radius +0.05 m."
+    },
+    "12215": {
+      "name": "Bulk delivery",
+      "description": "Bag capacity +6.26%.\n換金速度 +7.05%."
+    },
+    "1008": {
+      "name": "ゾーン突入",
+      "description": "Flow increases coins per pickup and pickup radius, reaching +100% coins and +20% radius at full Flow."
+    },
+    "13015": {
+      "name": "Fast reflexes",
+      "description": "ツール速度 +36.6%."
+    },
+    "10019": {
+      "name": "Perfect rhythm",
+      "description": "ツール速度 +6.81%."
+    },
+    "15115": {
+      "name": "Charged harvest",
+      "description": "Lightning coins per bounce +7.41%."
+    },
+    "12019": {
+      "name": "Rapid transfer",
+      "description": "換金速度 +84.18%."
+    },
+    "13119": {
+      "name": "Open span",
+      "description": "収集半径 +21.75%.\nツール射程 +基本値の6%."
+    },
+    "1322": {
+      "name": "Large pump chamber",
+      "description": "Each pump cycle transfers an extra 5% of bag capacity from your bag to the bank."
+    },
+    "1502": {
+      "name": "Static discharge",
+      "description": "Your pickups can release lightning that jumps between coin patches, collecting extra gold. It collects more gold with the Magnet."
+    },
+    "14219": {
+      "name": "Full sweep",
+      "description": "収集半径 +18.22%.\nMaximum Shovel radius +0.1 m."
+    },
+    "20402": {
+      "name": "Earth mover",
+      "description": "Coins per pickup +41.15%.\nHeavy Strike coins +31.95%."
+    },
+    "1312": {
+      "name": "Long reach 1",
+      "description": "ツール射程 +基本値の8%."
+    },
+    "1517": {
+      "name": "Conductive current 7",
+      "description": "Lightning base chance +8 percentage points (when learned).\nLightning coins per bounce +2.41%."
+    },
+    "1424": {
+      "name": "Broad shovel 4",
+      "description": "収集半径 +25%.\nMaximum Shovel radius +0.1 m."
+    },
+    "1122": {
+      "name": "Easy unloading 2",
+      "description": "Bag capacity +15%.\nUnload from 0.15 m farther away."
+    },
+    "1417": {
+      "name": "Heaped blade 3",
+      "description": "Coins per pickup +13.52%."
+    },
+    "1006": {
+      "name": "勢いを維持",
+      "description": "Keep Flow through missed grabs and pauses up to 1.5s after your tool is ready. ツール射程 +基本値の40%."
+    },
+    "1621": {
+      "name": "Chute overdrive",
+      "description": "Permanent chute drainage +12.5%. Press [R] to triple drainage for 8s. Cooldown: 45s."
+    },
+    "1128": {
+      "name": "Express bag",
+      "description": "換金速度 +30.15%.\nUnload from 0.04 m farther away."
+    },
+    "30311": {
+      "name": "Spacious grip",
+      "description": "収集半径 +20%. Reach +20% of base."
+    },
+    "30412": {
+      "name": "Seismic slam",
+      "description": "Jackhammer can collect 50% more coins, digs deeper and recharges faster. Limited by reachable gold and bag space."
+    },
+    "20502": {
+      "name": "Domino storm",
+      "description": "Lightning chains: 6 → 8, sharing +25% more coins per bounce. Chance to keep bouncing: 65% → 80%."
+    },
+    "1001": {
+      "name": "ハンドリングの基本",
+      "description": "ツール速度 +20.02%.\nツール射程 +基本値の15%."
+    },
+    "12119": {
+      "name": "Smooth handoff",
+      "description": "換金速度 +7.05%.\nUnload from 0.38 m farther away."
+    },
+    "1106": {
+      "name": "Deeper bag 6",
+      "description": "Bag capacity +53.06%."
+    },
+    "1515": {
+      "name": "Conductive current 5",
+      "description": "Lightning base chance +8 percentage points (when learned).\nLightning coins per bounce +10%."
+    },
+    "1314": {
+      "name": "Long reach 2",
+      "description": "ツール射程 +基本値の8%."
+    },
+    "1016": {
+      "name": "Busy hands",
+      "description": "Five ghost hands search nearby gold, even when you are not aiming directly at it. Keep holding {Primary} to collect."
+    },
+    "1608": {
+      "name": "Suction turbines",
+      "description": "Chute drainage +100%."
+    },
+    "1408": {
+      "name": "World breaker",
+      "description": "Heavy Strikes collect more gold and reach at least 4 m around the impact. They also trigger more reliably and recharge faster."
+    },
+    "12219": {
+      "name": "Streamlined cargo",
+      "description": "Bag capacity +6.26%.\n換金速度 +7.05%."
+    },
+    "1025": {
+      "name": "Wide grip",
+      "description": "Grip collection radius +50%."
+    },
+    "30121": {
+      "name": "Quick release",
+      "description": "Bag capacity +20.89%.\n換金速度 +24.45%."
+    },
+    "20002": {
+      "name": "A handful of gold",
+      "description": "素手のコイン回収量 +30.89%."
+    },
+    "UnlockMagnet": {
+      "name": "Unlock magnet",
+      "description": "Magnet [3]: pull up to 3 surface coins every 0.7s, within 5.5 m."
+    },
+    "30102": {
+      "name": "Bottomless hold",
+      "description": "Bag capacity +49.11%."
+    },
+    "1104": {
+      "name": "Deeper bag 4",
+      "description": "Bag capacity +53.06%."
+    },
+    "1508": {
+      "name": "Chain storm",
+      "description": "Lightning spreads through six chains, with more bounces and faster recharge. It triggers more reliably. The chains share each bounce's coin limit."
+    },
+    "30122": {
+      "name": "Rapid unloading",
+      "description": "換金速度 +35.73%."
+    },
+    "1112": {
+      "name": "Tight packing 2",
+      "description": "Bag capacity +30%.\n換金速度 +16%."
+    },
+    "1403": {
+      "name": "Impact spread 1",
+      "description": "Coins per pickup +16.76%.\nHeavy Strike radius +15%."
+    },
+    "1406": {
+      "name": "Deep impact",
+      "description": "Heavy Strikes collect more gold across a larger area, with a higher minimum coin limit."
+    },
+    "1506": {
+      "name": "Superconductor",
+      "description": "Lightning splits into three chains and collects more gold over a wider area. The chains share each bounce's coin limit."
+    },
+    "1027": {
+      "name": "Heavy haul",
+      "description": "Increase how much a perfect grip can collect. The haul still depends on nearby gold and available bag space."
+    },
+    "30021": {
+      "name": "Goldbreaker",
+      "description": "Increase how much a perfect grip can collect. The haul still depends on nearby gold and available bag space."
+    },
+    "1007": {
+      "name": "素早い指先 3",
+      "description": "ツール速度 +8.55%."
+    },
+    "1425": {
+      "name": "Broad shovel 5",
+      "description": "収集半径 +25%.\nHeavy Strike base chance +3 percentage points (when learned)."
+    },
+    "1017": {
+      "name": "ラッシュ 4",
+      "description": "ツール速度 +5.23%.\n素手のコイン回収量 +11.05%."
+    },
+    "14015": {
+      "name": "Weight behind it",
+      "description": "Coins per pickup +23.92%.\nHeavy Strike radius +11.05%."
+    },
+    "14215": {
+      "name": "Wide arc",
+      "description": "収集半径 +18.22%.\nMaximum Shovel radius +0.1 m."
+    },
+    "1501": {
+      "name": "Coil tuning",
+      "description": "ツール速度 +8.55%."
+    },
+    "14119": {
+      "name": "Bountiful haul",
+      "description": "Coins per pickup +13.52%."
+    },
+    "1326": {
+      "name": "High-capacity pump",
+      "description": "Each pump cycle transfers an extra 10% of bag capacity from your bag to the bank."
+    },
+    "1324": {
+      "name": "Deep pump chamber",
+      "description": "Each pump cycle transfers an extra 5% of bag capacity from your bag to the bank."
+    },
+    "16015": {
+      "name": "Overdrive boost",
+      "description": "Chute overdrive drains five times the normal rate."
+    },
+    "11215": {
+      "name": "Room to spare",
+      "description": "Bag capacity +9.32%.\nUnload from 0.11 m farther away."
+    },
+    "30022": {
+      "name": "Perfect form",
+      "description": "Master grip can reach six bonus levels. Its sweet spot arrives sooner, but becomes slightly shorter. A mistimed release still resets the bonuses."
+    },
+    "1401": {
+      "name": "Scoop rhythm",
+      "description": "ツール速度 +8.55%."
+    },
+    "13215": {
+      "name": "Short cycle",
+      "description": "Pump interval -2.25 seconds."
+    },
+    "1212": {
+      "name": "Hopper access",
+      "description": "換金速度 +15%.\nUnload from 0.5 m farther away."
+    },
+    "1513": {
+      "name": "Conductive current 3",
+      "description": "Lightning base chance +8 percentage points (when learned).\nLightning coins per bounce +10%."
+    },
+    "1123": {
+      "name": "Easy unloading 3",
+      "description": "Bag capacity +15%.\nUnload from 0.15 m farther away."
+    },
+    "1414": {
+      "name": "Heavy piston",
+      "description": "Jackhammer collects more gold, digs deeper and recharges faster. Limited by reachable gold and bag space."
+    },
+    "BagTraining": {
+      "name": "Your first bag",
+      "description": "Bag capacity +100%."
+    },
+    "1005": {
+      "name": "素早い指先 2",
+      "description": "ツール速度 +8.55%."
+    },
+    "1327": {
+      "name": "Fast pump cycle",
+      "description": "Pump interval -0.75 seconds."
+    },
+    "1211": {
+      "name": "Lower hopper 01",
+      "description": "Unlock the deposit station on floor 01. Use it once you uncover the area.\n換金速度 +15%.\nUnload from 0.5 m farther away."
+    },
+    "1321": {
+      "name": "Bag pump",
+      "description": "Automatically transfer carried coins to your bank: 5% of bag capacity every 20s (minimum 1 coin). Transfer takes 1s. Does not trigger station bonuses."
+    },
+    "1416": {
+      "name": "Hammer sweep",
+      "description": "Increase Jackhammer's collection radius. Heavy Strike builds benefit too. The total radius cannot exceed 15 m, including falls."
+    },
+    "1305": {
+      "name": "Reinforced gloves",
+      "description": "Coins per pickup +12.61%.\nThen +1 coin per pickup."
+    },
+    "30411": {
+      "name": "Pile driver",
+      "description": "Jackhammer can collect twice as many coins and digs deeper. Limited by reachable gold and bag space."
+    },
+    "30011": {
+      "name": "Helping crew",
+      "description": "Ghost hands collect 25% more coins."
+    },
+    "1105": {
+      "name": "Deeper bag 5",
+      "description": "Bag capacity +117.9%."
+    },
+    "1514": {
+      "name": "Conductive current 4",
+      "description": "Lightning coins per bounce +10%."
+    },
+    "1205": {
+      "name": "Fast unloading 4",
+      "description": "換金速度 +86.09%."
+    },
+    "1118": {
+      "name": "Tight packing 8",
+      "description": "Bag capacity +18.21%.\n換金速度 +7.5%."
+    },
+    "30012": {
+      "name": "Golden helpers",
+      "description": "Ghost hands collect 40% more coins."
+    },
+    "1003": {
+      "name": "素早い指先 1",
+      "description": "ツール速度 +8.55%."
+    },
+    "1522": {
+      "name": "Magnetic Pulse",
+      "description": "With Magnet, press {Secondary} to launch lightning through nearby gold. Stronger pickups and lightning upgrades improve the haul. The chains share each bounce's coin limit."
+    },
+    "1218": {
+      "name": "Hopper mastery",
+      "description": "換金速度 +7.05%.\nUnload from 0.38 m farther away."
+    },
+    "10215": {
+      "name": "Palm brace",
+      "description": "Increase how much a perfect grip can collect. The haul still depends on nearby gold and available bag space."
+    },
+    "14019": {
+      "name": "Crushing force",
+      "description": "Heavy Strike coins +12.12%."
+    },
+    "30212": {
+      "name": "Hopper express",
+      "description": "換金速度 +35.73%.\nUnload from 1 m farther away."
+    },
+    "30601": {
+      "name": "Heavy flow",
+      "description": "Chute drainage +60%."
+    },
+    "1307": {
+      "name": "Swift gloves",
+      "description": "ツール速度 +10.96%."
+    },
+    "1222": {
+      "name": "Pocket Bank",
+      "description": "Equip Pocket Bank with {Tool4}. Hold and release {Primary} to place it; hold {Relocate} nearby to pack it. Automatically banks visible nearby gold. A bigger bag improves its rate."
+    },
+    "30221": {
+      "name": "Double returns",
+      "description": "Pocket Bank's automatic collection rate +100%, including its maximum rate. Limited by visible gold within range."
+    },
+    "1311": {
+      "name": "Wider grip 1",
+      "description": "収集半径 +15%.\nツール射程 +基本値の8%."
+    },
+    "1507": {
+      "name": "Arcing current 3",
+      "description": "Coins per pickup +10.5%.\nLightning jump distance +3.56%."
+    },
+    "1207": {
+      "name": "Fast unloading 5",
+      "description": "換金速度 +22.58%."
+    },
+    "1111": {
+      "name": "Tight packing 1",
+      "description": "Bag capacity +30%.\n換金速度 +16%."
+    },
+    "1116": {
+      "name": "Tight packing 6",
+      "description": "Bag capacity +24.98%.\n換金速度 +10.13%."
+    },
+    "1407": {
+      "name": "Impact spread 3",
+      "description": "Coins per pickup +7.41%.\nHeavy Strike radius +3.56%."
+    },
+    "1028": {
+      "name": "Locked grip",
+      "description": "Increase how much a perfect grip can collect. The haul still depends on nearby gold and available bag space."
+    },
+    "10115": {
+      "name": "Practiced grip",
+      "description": "ツール速度 +3.9%.\n素手のコイン回収量 +8.18%."
+    },
+    "1204": {
+      "name": "Fast unloading 3",
+      "description": "換金速度 +71.84%."
+    },
+    "1125": {
+      "name": "Easy unloading 5",
+      "description": "Bag capacity +12.61%.\nUnload from 0.15 m farther away."
+    },
+    "1412": {
+      "name": "Jackhammer",
+      "description": "With Shovel, hold {Secondary} for 0.65s to leap toward your aim and slam on landing. Bigger falls strengthen the impact. Replaces Power scoop. Maximum radius: 15 m, including falls."
+    },
+    "1418": {
+      "name": "Excavator",
+      "description": "Tool speed -22.78%.\nCoins per pickup +88.03%."
+    },
+    "30512": {
+      "name": "Overcharged chain",
+      "description": "Lightning collects 75% more coins at each hit."
+    },
+    "DepositTraining": {
+      "name": "Quick deposit",
+      "description": "換金速度 +100%."
+    },
+    "1101": {
+      "name": "Deeper bag 1",
+      "description": "Bag capacity +65%."
+    },
+    "1228": {
+      "name": "Efficient delivery 4",
+      "description": "Bag capacity +6.26%.\n換金速度 +7.05%."
+    },
+    "1313": {
+      "name": "Wider grip 2",
+      "description": "収集半径 +15%.\nツール射程 +基本値の8%."
+    },
+    "1505": {
+      "name": "Arcing current 2",
+      "description": "Coins per pickup +33.11%.\nLightning jump distance +15%."
+    },
+    "1213": {
+      "name": "Lower hopper 02",
+      "description": "換金速度 +15%.\nUnload from 0.5 m farther away.\nUnlock the deposit station on floor 02. Usable once uncovered."
+    },
+    "1405": {
+      "name": "Impact spread 2",
+      "description": "Coins per pickup +24.98%.\nHeavy Strike radius +15%."
+    },
+    "1603": {
+      "name": "Smooth lining",
+      "description": "Chute drainage +25%."
+    },
+    "1004": {
+      "name": "Lucky touch",
+      "description": "ツール速度 +5%. Learned Heavy Strike and lightning: base chance +4 percentage points."
+    },
+    "1426": {
+      "name": "Heavy load scoop",
+      "description": "Learned Heavy Strikes collect 7.92% more coins, including their minimum. Another +50% while your bag is at least half full."
+    },
+    "1521": {
+      "name": "Wider field 1",
+      "description": "ツール射程 +基本値の15%; pickup radius +12%."
+    },
+    "12015": {
+      "name": "Open floodgates",
+      "description": "換金速度 +84.18%."
+    },
+    "30602": {
+      "name": "Gold river",
+      "description": "Chute drainage +100%."
+    },
+    "14115": {
+      "name": "Loaded scoop",
+      "description": "Coins per pickup +13.52%."
+    },
+    "11115": {
+      "name": "Neat stacks",
+      "description": "Bag capacity +18.21%.\n換金速度 +7.5%."
+    },
+    "1304": {
+      "name": "Quick gloves",
+      "description": "ツール速度 +39.9%."
+    },
+    "1512": {
+      "name": "Conductive current 2",
+      "description": "Lightning coins per bounce +10%."
+    },
+    "1301": {
+      "name": "Light gloves",
+      "description": "ツール速度 +27.54%."
+    },
+    "1223": {
+      "name": "Efficient delivery 2",
+      "description": "Bag capacity +10%.\n換金速度 +15%."
+    },
+    "1206": {
+      "name": "Station upgrade II",
+      "description": "換金速度 +104.23%.\nUnload from 1.5 m farther away."
+    },
+    "1117": {
+      "name": "Tight packing 7",
+      "description": "Bag capacity +18.21%.\n換金速度 +7.5%."
+    },
+    "15015": {
+      "name": "Spreading current",
+      "description": "Coins per pickup +34.94%.\nLightning jump distance +11.05%."
+    },
+    "1002": {
+      "name": "リズムを掴む",
+      "description": "Collect steadily to build Flow: up to +60% Hands speed or +30% with other tools. ツール速度 +20.02%; 素手のコイン回収量 +108.14%."
+    },
+    "1428": {
+      "name": "Broad shovel 7",
+      "description": "収集半径 +5.74%.\nMaximum Shovel radius +0.05 m."
+    },
+    "15219": {
+      "name": "Far attraction",
+      "description": "ツール射程 +基本値の11.25%."
+    },
+    "30211": {
+      "name": "Fast hoppers",
+      "description": "換金速度 +24.45%.\nUnload from 1 m farther away."
+    },
+    "1528": {
+      "name": "Maelstrom",
+      "description": "収集半径 +100%. Tool reach gains +3.75% of base, then total reach is reduced by 35%."
+    },
+    "30111": {
+      "name": "Perfect packing",
+      "description": "Bag capacity +49.11%.\n換金速度 +15.61%."
+    },
+    "13019": {
+      "name": "Light touch",
+      "description": "ツール速度 +9.18%."
+    },
+    "10015": {
+      "name": "Quick wrists",
+      "description": "ツール速度 +6.35%."
+    },
+    "15119": {
+      "name": "Concentrated charge",
+      "description": "Lightning coins per bounce +7.41%."
+    },
+    "1221": {
+      "name": "Efficient delivery 1",
+      "description": "換金速度 +15%.\nBag capacity +10%."
+    },
+    "1306": {
+      "name": "Fortune gloves",
+      "description": "ツール速度 +5%. Learned Heavy Strike and lightning: base chance +3 percentage points."
+    },
+    "1315": {
+      "name": "Wider grip 3",
+      "description": "収集半径 +15%.\nツール射程 +基本値の8%."
+    },
+    "1523": {
+      "name": "Wider field 2",
+      "description": "収集半径 +12%.\nツール射程 +基本値の15%."
+    },
+    "1115": {
+      "name": "Tight packing 5",
+      "description": "Bag capacity +24.98%.\n換金速度 +10.13%."
+    },
+    "1404": {
+      "name": "Aftershock",
+      "description": "Heavy strikes hit a second coin patch.\nHeavy Strike radius +10%."
+    },
+    "1318": {
+      "name": "Wide coverage",
+      "description": "収集半径 +15%.\nツール射程 +基本値の8%."
+    },
+    "1215": {
+      "name": "Lower hopper 04",
+      "description": "Unlock the deposit station on floor 04, usable once uncovered.\n換金速度 +9.51%.\nUnload from 0.5 m farther away."
+    },
+    "1303": {
+      "name": "Lucky gloves",
+      "description": "ツール速度 +5%. Learned Heavy Strike and lightning: base chance +3 percentage points."
+    },
+    "30202": {
+      "name": "Lasting rush",
+      "description": "換金速度 +30.15%.\nGold Rush duration +5 seconds."
+    },
+    "1126": {
+      "name": "Easy unloading 6",
+      "description": "Bag capacity +12.61%.\nUnload from 0.15 m farther away."
+    },
+    "1413": {
+      "name": "Heaped blade 1",
+      "description": "Coins per pickup +18.41%."
+    },
+    "30112": {
+      "name": "Every inch counts",
+      "description": "Bag capacity +80.25%.\n換金速度 +15.61%."
+    },
+    "20001": {
+      "name": "Golden grip",
+      "description": "素手のコイン回収量 +19.54%."
+    },
+    "15215": {
+      "name": "Field expansion",
+      "description": "収集半径 +8.87%.\nツール射程 +基本値の11.25%."
+    },
+    "1308": {
+      "name": "Magnetic footsteps",
+      "description": "Walking over gold adds 20% of your tool's coin collection rate. Goes into your bag every 0.75s (minimum 1 coin). Stops when stationary or full."
+    },
+    "13219": {
+      "name": "Primed pump",
+      "description": "Pump interval -1.5 seconds."
+    },
+    "1504": {
+      "name": "Longer chain",
+      "description": "Lightning bounces: 5 → 7. Chance to keep bouncing: 25% → 45%. Jump distance +10%."
+    },
+    "1317": {
+      "name": "Wider grip 4",
+      "description": "収集半径 +11.05%.\nツール射程 +基本値の6%."
+    },
+    "1606": {
+      "name": "Powered pumps",
+      "description": "Chute drainage +80%."
+    },
+    "1124": {
+      "name": "Easy unloading 4",
+      "description": "Bag capacity +12.61%.\nUnload from 0.15 m farther away."
+    },
+    "1102": {
+      "name": "Deeper bag 2",
+      "description": "Bag capacity +65%."
+    },
+    "1511": {
+      "name": "Conductive current 1",
+      "description": "Lightning base chance +8 percentage points (when learned).\nLightning coins per bounce +10%."
+    },
+    "1503": {
+      "name": "Arcing current 1",
+      "description": "Coins per pickup +20.89%.\nLightning jump distance +15%."
+    },
+    "10219": {
+      "name": "Knuckle lock",
+      "description": "Increase how much a perfect grip can collect. The haul still depends on nearby gold and available bag space."
+    },
+    "1411": {
+      "name": "Power scoop",
+      "description": "With Shovel, hold {Secondary} for 0.65s, then release a stronger, wider scoop. Limited by nearby gold and bag space."
+    },
+    "30321": {
+      "name": "Deep pump",
+      "description": "Each pump cycle transfers an extra 5% of bag capacity from your bag to the bank."
+    },
+    "1021": {
+      "name": "Two-handed technique",
+      "description": "With Hands, hold {Secondary} and release in the sweet spot for a large haul. Stronger grabs and a bigger bag increase the coin limit. Needs nearby gold and bag space."
+    },
+    "30423": {
+      "name": "Rolling thunder",
+      "description": "収集半径 +25%.\nHeavy Strike coins +14.41%."
+    },
+    "30301": {
+      "name": "Expert gloves",
+      "description": "ツール速度 +14.33%."
+    },
+    "1227": {
+      "name": "Efficient delivery 3",
+      "description": "Bag capacity +6.26%.\n換金速度 +7.05%."
+    },
+    "1328": {
+      "name": "Overflow pump",
+      "description": "A full bag triggers an extra pump cycle. Cooldown: 60 seconds."
+    },
+    "1202": {
+      "name": "Fast unloading 2",
+      "description": "換金速度 +80%."
+    },
+    "30422": {
+      "name": "Crushing sweep",
+      "description": "Heavy Strike base chance +4 percentage points (when learned).\nHeavy Strike coins +9.34%."
+    },
+    "30302": {
+      "name": "Masterwork gloves",
+      "description": "ツール速度 +22.37%."
+    },
+    "1214": {
+      "name": "Lower hopper 03",
+      "description": "Unlock the deposit station on floor 03, usable once uncovered.\n換金速度 +9.51%.\nUnload from 0.5 m farther away."
+    },
+    "30421": {
+      "name": "Wider swing",
+      "description": "収集半径 +20%.\nMaximum Shovel radius +0.1 m."
+    },
+    "1602": {
+      "name": "Wider intakes",
+      "description": "Chute drainage +50%."
+    },
+    "1524": {
+      "name": "Powerful pulse",
+      "description": "Magnetic Pulse collects more gold and hits a wider area. Its chains share each bounce's coin limit."
+    },
+    "1023": {
+      "name": "Deep grip",
+      "description": "Increase how much a perfect grip can collect. The haul still depends on nearby gold and available bag space."
+    },
+    "1421": {
+      "name": "Broad shovel 1",
+      "description": "収集半径 +25%. Heavy strikes also inherit the wider pickup area.\nHeavy Strike base chance +3 percentage points (when learned)."
+    },
+    "MovementTraining": {
+      "name": "Work gloves",
+      "description": "ツール速度 +5.89%."
+    },
+    "1600": {
+      "name": "Wall chutes",
+      "description": "Automatically drain 1 coin per second into your bank, shared across all wall chutes."
+    },
+    "1302": {
+      "name": "Grippy gloves",
+      "description": "Coins per pickup +12.61%.\nThen +1 coin per pickup."
+    },
+    "1518": {
+      "name": "Gold lance",
+      "description": "Lightning coins per bounce +53.62%. ツール射程 +70%; pickup radius -55%."
+    },
+    "1601": {
+      "name": "Flow channels",
+      "description": "Chute drainage +20%."
+    },
+    "1225": {
+      "name": "Cash flow",
+      "description": "Manually empty a bag with at least 25% capacity, capped at 10,000 coins, to boost Pocket Bank collection by 50% for 8 seconds."
+    },
+    "1605": {
+      "name": "Pressure valves",
+      "description": "Chute drainage +40%."
+    },
+    "1527": {
+      "name": "Rapid recharge",
+      "description": "Magnetic Pulse cooldown: 4s instead of 6s.\n収集半径 +2.87%.\nツール射程 +基本値の3.75%."
+    },
+    "1114": {
+      "name": "Tight packing 4",
+      "description": "Bag capacity +24.98%.\n換金速度 +10.13%."
+    },
+    "1014": {
+      "name": "追加の手",
+      "description": "Three ghost hands take turns gathering gold while you hold {Primary} to collect."
+    },
+    "1015": {
+      "name": "ラッシュ 3",
+      "description": "ツール速度 +5.23%.\n素手のコイン回収量 +11.05%."
+    },
+    "1216": {
+      "name": "Lower hopper 05",
+      "description": "Unlock the deposit station on floor 05, usable once uncovered.\n換金速度 +9.51%.\nUnload from 0.5 m farther away."
+    },
+    "30523": {
+      "name": "Magnetic surge",
+      "description": "Magnetic Pulse collects more gold at each bounce and recharges faster. Its chains share the coin limit."
+    },
+    "30521": {
+      "name": "Pulse spread",
+      "description": "Magnetic Pulse radius +25%. Its final radius cap rises from 4.5 m to 5.625 m."
+    },
+    "1013": {
+      "name": "ラッシュ 2",
+      "description": "ツール速度 +5.23%.\n素手のコイン回収量 +11.05%."
+    },
+    "1604": {
+      "name": "Reinforced ducts",
+      "description": "Chute drainage +80%."
+    },
+    "15019": {
+      "name": "Surge capacity",
+      "description": "Lightning coins per bounce +25.97%."
+    },
+    "1423": {
+      "name": "Broad shovel 3",
+      "description": "収集半径 +25%.\nHeavy Strike base chance +3 percentage points (when learned)."
+    },
+    "1103": {
+      "name": "Deeper bag 3",
+      "description": "Bag capacity +150%."
+    },
+    "1415": {
+      "name": "Heaped blade 2",
+      "description": "Coins per pickup +18.41%."
+    },
+    "20501": {
+      "name": "High voltage",
+      "description": "Coins per pickup +29.06%."
+    },
+    "1316": {
+      "name": "Long reach 3",
+      "description": "ツール射程 +基本値の8%."
+    },
+    "UnlockShovel": {
+      "name": "Unlock shovel",
+      "description": "Equip Shovel with {Tool2} to scoop gold. Learned Heavy Strikes are stronger and trigger more often with this tool."
+    },
+    "1427": {
+      "name": "Broad shovel 6",
+      "description": "収集半径 +5.74%.\nHeavy Strike base chance +3 percentage points (when learned)."
+    },
+    "20401": {
+      "name": "Fault line",
+      "description": "Heavy Strike coins +31.95%."
+    },
+    "1201": {
+      "name": "Fast unloading 1",
+      "description": "換金速度 +80%."
+    },
+    "13115": {
+      "name": "Sweeping reach",
+      "description": "収集半径 +11.05%.\nツール射程 +基本値の6%."
+    },
+    "1011": {
+      "name": "ラッシュ 1",
+      "description": "ツール速度 +5.23%.\n素手のコイン回収量 +11.05%."
+    },
+    "1516": {
+      "name": "Conductive current 6",
+      "description": "Lightning coins per bounce +10%."
+    },
+    "HandTraining": {
+      "name": "二枚掴み",
+      "description": "素手で1回につかめるコインが1枚から2枚に増加します。"
+    },
+    "1121": {
+      "name": "Easy unloading 1",
+      "description": "Bag capacity +15%.\nUnload from 0.15 m farther away."
+    },
+    "11019": {
+      "name": "Reinforced lining",
+      "description": "Bag capacity +37.61%."
+    },
+    "1022": {
+      "name": "Steady hands",
+      "description": "Grip sweet spot lasts 0.015s longer."
+    },
+    "1217": {
+      "name": "Vault valet",
+      "description": "Automatic depositing near uncovered, unlocked stations. Keep using your tool while unloading.\n換金速度 +2.3%.\nUnload from 0.13 m farther away."
+    }
   }
 }
