@@ -12,14 +12,8 @@ namespace Doorstop
     {
         public static void Start()
         {
-            try
-            {
-                TranslationMod.Loader.EarlyInitialize();
-            }
-            catch (Exception ex)
-            {
-                File.AppendAllText("doorstop_err.log", "[Doorstop Error] " + ex.ToString() + Environment.NewLine);
-            }
+            try { TranslationMod.Loader.EarlyInitialize(); }
+            catch (Exception ex) { File.AppendAllText("doorstop_err.log", "[Doorstop Error] " + ex + Environment.NewLine); }
         }
     }
 }
@@ -57,7 +51,6 @@ namespace TranslationMod
             CurrentLanguage = "ja";
 
             AppDomain.CurrentDomain.AssemblyResolve += ResolveAssembly;
-
             try { File.WriteAllText(LogPath, string.Format("[{0:HH:mm:ss}] === 翻訳ローダー起動 ===" + Environment.NewLine, DateTime.Now)); } catch { }
 
             LoadConfigurations();
@@ -70,15 +63,13 @@ namespace TranslationMod
             {
                 if (asm.GetName().Name == "Assembly-CSharp") { SetupHooks(asm); break; }
             }
-
-            Log("初期化完了: ロード待機中...");
         }
 
         private static Assembly ResolveAssembly(object sender, ResolveEventArgs args)
         {
-            string assemblyName = new AssemblyName(args.Name).Name;
-            string candidate = Path.Combine(ModDir, assemblyName + ".dll");
-            return File.Exists(candidate) ? Assembly.LoadFrom(candidate) : null;
+            string name = new AssemblyName(args.Name).Name;
+            string p = Path.Combine(ModDir, name + ".dll");
+            return File.Exists(p) ? Assembly.LoadFrom(p) : null;
         }
 
         public static void Log(string message)
@@ -92,7 +83,6 @@ namespace TranslationMod
             {
                 string localesDir = Path.Combine(ModDir, "locales");
                 string configPath = Path.Combine(localesDir, "config.json");
-
                 if (File.Exists(configPath))
                 {
                     string cfg = File.ReadAllText(configPath);
@@ -105,14 +95,13 @@ namespace TranslationMod
                     }
                 }
 
-                Log("選択言語: " + CurrentLanguage);
                 string langFile = Path.Combine(localesDir, CurrentLanguage + ".json");
                 if (!File.Exists(langFile)) langFile = Path.Combine(localesDir, "ja.json");
 
                 if (File.Exists(langFile))
                 {
                     ParseDictionary(File.ReadAllText(langFile));
-                    Log(string.Format("辞書読込: アイテム({0}), スキル({1}), ブランチ({2}), UI({3})",
+                    Log(string.Format("辞書読込完了: アイテム({0}), スキル({1}), ブランチ({2}), UI({3})",
                         ItemNames.Count, SkillNames.Count, BranchNames.Count, UiTexts.Count));
                 }
             }
@@ -180,7 +169,13 @@ namespace TranslationMod
             int colon = line.IndexOf(':');
             int q1 = line.IndexOf('"', colon);
             int q2 = line.LastIndexOf('"');
-            return (q1 != -1 && q2 > q1) ? line.Substring(q1 + 1, q2 - q1 - 1).Replace("\\\"", "\"").Replace("\\\\", "\\") : null;
+            if (q1 != -1 && q2 > q1)
+            {
+                string s = line.Substring(q1 + 1, q2 - q1 - 1);
+                // 改行コード（\n）およびエスケープを完全に展開
+                return s.Replace("\\r\\n", "\n").Replace("\\n", "\n").Replace("\\r", "\r").Replace("\\\"", "\"").Replace("\\\\", "\\");
+            }
+            return null;
         }
 
         private static void SetupHooks(Assembly asm)
@@ -190,7 +185,6 @@ namespace TranslationMod
 
             try
             {
-                Log("Assembly-CSharp ロード検知。フックを適用中...");
                 Harmony harmony = new Harmony("com.translator.onemillioncoins");
 
                 Type mainUiType = asm.GetType("GoldDigger.MainMenuUI");
@@ -204,6 +198,28 @@ namespace TranslationMod
 
                     MethodInfo mButton = AccessTools.Method(mainUiType, "MenuButton", new Type[] { typeof(Rect), typeof(string), typeof(bool) });
                     if (mButton != null) harmony.Patch(mButton, new HarmonyMethod(AccessTools.Method(typeof(Loader), "MenuButton_Prefix")), null);
+                }
+
+                // VaultUI の ActionButton フック (Learn, Buy, Upgrade などのボタン)
+                Type vaultUiType = asm.GetType("GoldDigger.VaultUI");
+                if (vaultUiType != null)
+                {
+                    MethodInfo mEnsure = AccessTools.Method(vaultUiType, "Ensure");
+                    if (mEnsure != null) harmony.Patch(mEnsure, null, new HarmonyMethod(AccessTools.Method(typeof(Loader), "VaultUI_Ensure_Postfix")));
+
+                    MethodInfo mActionBtn = AccessTools.Method(vaultUiType, "ActionButton", new Type[] { typeof(Rect), typeof(string), typeof(GUIStyle), typeof(bool), typeof(bool) });
+                    if (mActionBtn != null) harmony.Patch(mActionBtn, new HarmonyMethod(AccessTools.Method(typeof(Loader), "ActionButton_Prefix")), null);
+                }
+
+                // SettingsPanel の WindowModeButton と Volume フック
+                Type settingsType = asm.GetType("GoldDigger.SettingsPanel");
+                if (settingsType != null)
+                {
+                    MethodInfo mWinBtn = AccessTools.Method(settingsType, "WindowModeButton");
+                    if (mWinBtn != null) harmony.Patch(mWinBtn, new HarmonyMethod(AccessTools.Method(typeof(Loader), "WindowModeButton_Prefix")), null);
+
+                    MethodInfo mVol = AccessTools.Method(settingsType, "Volume");
+                    if (mVol != null) harmony.Patch(mVol, new HarmonyMethod(AccessTools.Method(typeof(Loader), "Volume_Prefix")), null);
                 }
 
                 Type itemCatType = asm.GetType("GoldDigger.ItemCatalog");
@@ -220,15 +236,8 @@ namespace TranslationMod
                     if (mCreateDefaults != null) harmony.Patch(mCreateDefaults, null, new HarmonyMethod(AccessTools.Method(typeof(Loader), "UpgradeCatalog_CreateDefaults_Postfix")));
                 }
 
-                Type vaultUiType = asm.GetType("GoldDigger.VaultUI");
-                if (vaultUiType != null)
-                {
-                    MethodInfo mEnsure = AccessTools.Method(vaultUiType, "Ensure");
-                    if (mEnsure != null) harmony.Patch(mEnsure, null, new HarmonyMethod(AccessTools.Method(typeof(Loader), "VaultUI_Ensure_Postfix")));
-                }
-
                 TranslateSkillCatalog(asm);
-                Log("全フックおよびスキル翻訳の適用が完了しました。");
+                Log("全フックおよびスキル翻訳の登録完了");
             }
             catch (Exception ex) { Log("フック適用エラー: " + ex); }
         }
@@ -275,7 +284,6 @@ namespace TranslationMod
                     Array allSkills = fAll.GetValue(null) as Array;
                     if (allSkills != null)
                     {
-                        int count = 0;
                         foreach (var skill in allSkills)
                         {
                             if (skill == null) continue;
@@ -288,11 +296,14 @@ namespace TranslationMod
                             {
                                 string id = fId.GetValue(skill).ToString();
                                 string trN, trD;
-                                if (SkillNames.TryGetValue(id, out trN) && fName != null) { fName.SetValue(skill, trN); count++; }
-                                if (SkillDescriptions.TryGetValue(id, out trD) && fDesc != null) fDesc.SetValue(skill, trD);
+                                if (SkillNames.TryGetValue(id, out trN) && fName != null) fName.SetValue(skill, trN);
+                                if (SkillDescriptions.TryGetValue(id, out trD) && fDesc != null)
+                                {
+                                    // 改行コードを本物の改行に置換
+                                    fDesc.SetValue(skill, trD.Replace("\\n", "\n").Replace("\\r", ""));
+                                }
                             }
                         }
-                        Log(string.Format("SkillCatalog.All 翻訳完了: {0} 件置換", count));
                     }
                 }
             }
@@ -303,7 +314,7 @@ namespace TranslationMod
         {
             if (_engineInitialized) return;
             _engineInitialized = true;
-            try { InitializeFonts(); } catch (Exception ex) { Log("フォント初期化エラー: " + ex); }
+            try { InitializeFonts(); } catch { }
         }
 
         public static void MainMenuUI_OnGUI_Prefix(object __instance)
@@ -312,10 +323,7 @@ namespace TranslationMod
             {
                 if (CustomFontRegular != null)
                 {
-                    if (GUI.skin != null)
-                    {
-                        GUI.skin.font = CustomFontRegular;
-                    }
+                    if (GUI.skin != null) GUI.skin.font = CustomFontRegular;
                     if (__instance != null)
                     {
                         Type t = __instance.GetType();
@@ -324,11 +332,7 @@ namespace TranslationMod
                             if (f.FieldType == typeof(GUIStyle))
                             {
                                 GUIStyle s = f.GetValue(__instance) as GUIStyle;
-                                if (s != null)
-                                {
-                                    s.font = CustomFontRegular;
-                                    s.fontStyle = FontStyle.Bold;
-                                }
+                                if (s != null) { s.font = CustomFontRegular; s.fontStyle = FontStyle.Bold; }
                             }
                         }
                     }
@@ -338,6 +342,27 @@ namespace TranslationMod
         }
 
         public static void MenuButton_Prefix(ref string label)
+        {
+            if (string.IsNullOrEmpty(label)) return;
+            string tr;
+            if (UiTexts.TryGetValue(label.Trim(), out tr)) label = tr;
+        }
+
+        public static void ActionButton_Prefix(ref string label)
+        {
+            if (string.IsNullOrEmpty(label)) return;
+            string tr;
+            if (UiTexts.TryGetValue(label.Trim(), out tr)) label = tr;
+        }
+
+        public static void WindowModeButton_Prefix(ref string label)
+        {
+            if (string.IsNullOrEmpty(label)) return;
+            string tr;
+            if (UiTexts.TryGetValue(label.Trim(), out tr)) label = tr;
+        }
+
+        public static void Volume_Prefix(ref string label)
         {
             if (string.IsNullOrEmpty(label)) return;
             string tr;
@@ -357,26 +382,22 @@ namespace TranslationMod
                     foreach (var f in Directory.GetFiles(dir, "*.*"))
                     {
                         string ext = Path.GetExtension(f).ToLower();
-                        if (ext == ".ttf" || ext == ".otf")
+                        if ((ext == ".ttf" || ext == ".otf") && AddFontResourceEx(f, FR_PRIVATE, IntPtr.Zero) > 0)
                         {
-                            if (AddFontResourceEx(f, FR_PRIVATE, IntPtr.Zero) > 0)
-                            {
-                                string fname = Path.GetFileNameWithoutExtension(f);
-                                if (!candidates.Contains(fname)) candidates.Add(fname);
-                            }
+                            string fname = Path.GetFileNameWithoutExtension(f);
+                            if (!candidates.Contains(fname)) candidates.Add(fname);
                         }
                     }
                 }
             }
 
-            // Yu Gothic UI Bold を最優先に設定
             foreach (var s in new string[] { "Yu Gothic UI Bold", "Yu Gothic UI", "Yu Gothic", "Meiryo Bold", "Meiryo" })
             {
                 if (!candidates.Contains(s)) candidates.Add(s);
             }
 
             CustomFontRegular = Font.CreateDynamicFontFromOSFont(candidates.ToArray(), 18);
-            Log("フォント適用: " + ((CustomFontRegular != null) ? CustomFontRegular.name : "null") + " (FontStyle.Bold)");
+            Log("フォント適用: " + ((CustomFontRegular != null) ? CustomFontRegular.name : "null"));
         }
 
         public static void VaultUI_Ensure_Postfix(object __instance)
@@ -393,17 +414,12 @@ namespace TranslationMod
                 if (fBold != null) fBold.SetValue(__instance, CustomFontRegular);
                 if (fDisp != null) fDisp.SetValue(__instance, CustomFontRegular);
 
-                // VaultUI の各 GUIStyle も Bold に設定
                 foreach (var f in t.GetFields(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
                 {
                     if (f.FieldType == typeof(GUIStyle))
                     {
                         GUIStyle style = f.GetValue(__instance) as GUIStyle;
-                        if (style != null)
-                        {
-                            style.font = CustomFontRegular;
-                            style.fontStyle = FontStyle.Bold;
-                        }
+                        if (style != null) { style.font = CustomFontRegular; style.fontStyle = FontStyle.Bold; }
                     }
                 }
             }
@@ -431,7 +447,7 @@ namespace TranslationMod
                         string id = pId.GetValue(item, null).ToString();
                         string tr;
                         if (ItemNames.TryGetValue(id, out tr) && fName != null) fName.SetValue(item, tr);
-                        if (ItemDescriptions.TryGetValue(id, out tr) && fDesc != null) fDesc.SetValue(item, tr);
+                        if (ItemDescriptions.TryGetValue(id, out tr) && fDesc != null) fDesc.SetValue(item, tr.Replace("\\n", "\n"));
                     }
                 }
             }
@@ -457,7 +473,7 @@ namespace TranslationMod
                     {
                         string id = pId.GetValue(up, null).ToString();
                         string tr;
-                        if (UpgradeDescriptions.TryGetValue(id, out tr)) fDesc.SetValue(up, tr);
+                        if (UpgradeDescriptions.TryGetValue(id, out tr)) fDesc.SetValue(up, tr.Replace("\\n", "\n"));
                     }
                 }
             }
