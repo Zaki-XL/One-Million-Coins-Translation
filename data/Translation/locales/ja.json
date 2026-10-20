@@ -196,985 +196,985 @@
   "branches": {
     "0": {
       "name": "モメンタム",
-      "description": "あらゆるツールで勢いを加速させる。"
+      "description": "あらゆるツールで勢いをつけ、作業効率を跳ね上げます。"
     },
     "1": {
       "name": "バッグ",
-      "description": "歩く金庫を作り上げる。"
+      "description": "所持容量を拡大し、歩く金庫へと成長させます。"
     },
     "2": {
       "name": "換金",
-      "description": "一瞬でコインを納金する。"
+      "description": "金庫への入金速度を高め、一瞬で荷降ろしを完了します。"
     },
     "3": {
       "name": "サルベージ",
-      "description": "グローブ、収集範囲、自動納金を強化する。"
+      "description": "グローブの強化、回収範囲の拡大、自動荷降ろしを支援します。"
     },
     "4": {
       "name": "発掘",
-      "description": "すべてのツールにコイン山を粉砕する力を付与する。"
+      "description": "すべてのツールにコインの山を粉砕する力を付与します。"
     },
     "5": {
       "name": "吸引",
-      "description": "すべてのツールから連鎖雷を放てるようにする。"
+      "description": "すべてのツールから連鎖する稲妻を放てるようにします。"
     },
     "6": {
       "name": "シュート",
-      "description": "金庫への完全自動納金を実現する。"
+      "description": "壁面シュートによる完全自動入金パイプを構築します。"
     }
   },
   "skills": {
     "1325": {
-      "name": "Rapid pump",
-      "description": "Pump interval -3 seconds."
+      "name": "高速ポンプ",
+      "description": "ポンプ間隔 -3秒."
     },
     "1607": {
-      "name": "Flow regulator",
-      "description": "Chute drainage +25%."
+      "name": "流量レギュレーター",
+      "description": "シュート納入速度 +25%."
     },
     "1323": {
-      "name": "Quick pump",
-      "description": "Pump interval -3 seconds."
+      "name": "クイックポンプ",
+      "description": "ポンプ間隔 -3秒."
     },
     "30322": {
-      "name": "Rapid pump",
-      "description": "Pump interval -3s."
+      "name": "ラピッドポンプ",
+      "description": "ポンプ間隔 -3秒."
     },
     "30312": {
-      "name": "Full coverage",
-      "description": "収集半径 +35%. Reach +30% of base."
+      "name": "全面網羅",
+      "description": "回収範囲 +35%. 基本リーチ +30%."
     },
     "1226": {
-      "name": "Express counter",
-      "description": "Unload into Pocket Bank at 75% of normal station speed."
+      "name": "特急カウンター",
+      "description": "ポケットバンクへの荷降ろし速度が、通常の納入所の75%に達します。"
     },
     "30511": {
-      "name": "Live wire",
-      "description": "Lightning collects 50% more coins at each hit."
+      "name": "活線放電",
+      "description": "稲妻がヒットごとに回収するコイン量+50%。"
     },
     "1107": {
-      "name": "Deeper bag 7",
-      "description": "Bag capacity +21.5%."
+      "name": "大容量バッグ 7",
+      "description": "バッグ容量 +21.5%."
     },
     "30023": {
-      "name": "Master grip",
-      "description": "Perfect grips make later grips stronger and wider, but harder to time. A mistimed release resets the bonuses. Can overfill your bag to 150%; start below full."
+      "name": "マスターグリップ",
+      "description": "完璧なグリップを成功させるたびに、以降のグリップが強化され範囲も広がりますが、タイミングがシビアになります。\n失敗するとボーナスはリセット。\nバッグ容量の150%まで過積載可能（満杯未満から開始）。"
     },
     "30222": {
-      "name": "Branch manager",
-      "description": "Pocket Bank's automatic collection rate +100%, including its maximum rate. Bank radius: 9 → 12 m. Bag capacity +33.11%."
+      "name": "支店長",
+      "description": "ポケットバンクの自動回収速度および上限レート+100%。\n有効半径: 9m → 12m。\nバッグ容量+33.11%。"
     },
     "11219": {
-      "name": "Ready to unload",
-      "description": "Bag capacity +9.32%.\nUnload from 0.11 m farther away."
+      "name": "荷降ろし準備",
+      "description": "バッグ容量 +9.32%.\n納入可能距離 +0.11m."
     },
     "1208": {
-      "name": "Gold Rush",
-      "description": "Empty your bag at a station after depositing at least 10% of its capacity. During Gold Rush, uncovered, unlocked stations gather gold and chutes collect twice as fast."
+      "name": "ゴールドラッシュ",
+      "description": "バッグ容量の10%以上を納入した後にバッグを空にすると発動。\nゴールドラッシュ中は、露出・解放された納入所が自動でゴールドを吸引し、壁面シュートの回収速度が2倍になります。"
     },
     "1108": {
-      "name": "Walking vault",
-      "description": "Bag capacity +182.99%.\nDeposit speed -20%."
+      "name": "歩く金庫",
+      "description": "バッグ容量+182.99%。\n換金速度-20%。"
     },
     "1525": {
-      "name": "Wider field 3",
-      "description": "収集半径 +12%.\nツール射程 +基本値の15%."
+      "name": "広域フィールド 3",
+      "description": "回収範囲 +12%.\nツールの基本リーチ +15%."
     },
     "1024": {
-      "name": "Quick clasp",
-      "description": "Grip sweet spot starts 0.12s sooner."
+      "name": "クイッククラスプ",
+      "description": "グリップのスイートスポットが0.12秒早く訪れます。"
     },
     "10119": {
-      "name": "Golden touch",
-      "description": "ツール速度 +3.9%.\n素手のコイン回収量 +8.18%."
+      "name": "黄金のタッチ",
+      "description": "ツール速度 +3.9%.\n素手回収量 +8.18%."
     },
     "1526": {
-      "name": "Banked charge",
-      "description": "Heavy Strike and lightning cooldowns -7.84%. Empty your bag at a station after depositing at least 10% capacity: lightning cooldown is halved for 8s."
+      "name": "蓄電チャージ",
+      "description": "ヘビーストライクおよび稲妻のクールダウン-7.84%。\nバッグ容量の10%以上を納入した後に空にすると、8秒間稲妻のクールダウンが半減します。"
     },
     "11119": {
-      "name": "Packed for delivery",
-      "description": "Bag capacity +18.21%.\n換金速度 +7.5%."
+      "name": "運搬用梱包",
+      "description": "バッグ容量 +18.21%.\n換金速度 +7.5%."
     },
     "1203": {
-      "name": "Station upgrade I",
-      "description": "換金速度 +100%.\nUnload from 1.5 m farther away."
+      "name": "納入所改築 I",
+      "description": "換金速度 +100%.\n納入可能距離 +1.5m."
     },
     "1018": {
-      "name": "All hands on deck",
-      "description": "At full Flow, a sixth ghost hand joins in and the crew grabs faster. Keep holding {Primary} to collect."
+      "name": "総動員",
+      "description": "最大フロー到達時、6体目のゴーストハンドが加わり、全員の回収速度がさらに加速します。\n{Primary}長押しで継続回収。"
     },
     "30201": {
-      "name": "Longer rush",
-      "description": "換金速度 +15.61%.\nGold Rush duration +5 seconds."
+      "name": "ラッシュ延長",
+      "description": "換金速度+15.61%。\nゴールドラッシュ持続時間+5秒。"
     },
     "1224": {
-      "name": "Local branch",
-      "description": "Pocket Bank collects from farther away. Hold {Interact} within 3 m to unload at half normal speed."
+      "name": "出張窓口",
+      "description": "ポケットバンクの吸引距離が延長。\n3m以内で{Interact}を長押しすると、通常の半分の速度でバッグから納入できます。"
     },
     "30101": {
-      "name": "Vault liner",
-      "description": "Bag capacity +33.11%."
+      "name": "金庫ライナー",
+      "description": "バッグ容量 +33.11%."
     },
     "30522": {
-      "name": "Pulse overload",
-      "description": "Increase how much Magnetic Pulse can collect at each bounce. Its chains share the coin limit."
+      "name": "パルス過負荷",
+      "description": "磁気パルスがバウンスごとに回収できるコイン上限を増加させます。\n（連鎖間でコイン上限共有）"
     },
     "12115": {
-      "name": "Extended intake",
-      "description": "換金速度 +7.05%.\nUnload from 0.38 m farther away."
+      "name": "投入口拡張",
+      "description": "換金速度 +7.05%.\n納入可能距離 +0.38m."
     },
     "1113": {
-      "name": "Tight packing 3",
-      "description": "Bag capacity +30%.\n換金速度 +16%."
+      "name": "圧縮パッキング 3",
+      "description": "バッグ容量 +30%.\n換金速度 +16%."
     },
     "1402": {
-      "name": "Heavy strike",
-      "description": "Your pickups can trigger a strike that collects extra nearby gold. It triggers more often and collects more coins with the Shovel."
+      "name": "ヘビーストライク",
+      "description": "回収時に確率でストライクが発動し、周囲のゴールドを追加回収します。\nシャベル使用時は発動頻度と回収コイン量がさらに増加します。"
     },
     "1127": {
-      "name": "Easy unloading 7",
-      "description": "Bag capacity +9.32%.\nUnload from 0.11 m farther away."
+      "name": "スムーズな荷降ろし 7",
+      "description": "バッグ容量 +9.32%.\n納入可能距離 +0.11m."
     },
     "1012": {
       "name": "助けの手",
-      "description": "Hold {Primary} to collect with a ghost hand. Stronger and faster tools improve its grabs. It can trigger your learned Heavy Strike and lightning effects."
+      "description": "{Primary}長押しでゴーストハンドを召喚して回収します。\nより強力で素早いツールほど回収効率が向上し、習得済みのヘビーストライクや稲妻効果も発動可能です。"
     },
     "11015": {
-      "name": "Deep reserves",
-      "description": "Bag capacity +79.34%."
+      "name": "深層リザーブ",
+      "description": "バッグ容量 +79.34%."
     },
     "1026": {
-      "name": "Rhythm grip",
-      "description": "Collect 25% faster with Flow active and a bag at least half full. Grips become easier to time, and normal pickups resume sooner afterward."
+      "name": "リズムグリップ",
+      "description": "フロー発動中かつバッグが半分以上埋まっている場合、回収速度が25%向上。\nグリップのタイミングが合わせやすくなり、直後の通常回収への復帰も早くなります。"
     },
     "1422": {
-      "name": "Broad shovel 2",
-      "description": "収集半径 +25%.\nMaximum Shovel radius +0.05 m."
+      "name": "ワイドショベル 2",
+      "description": "回収範囲 +25%.\nシャベル最大半径 +0.05m."
     },
     "12215": {
-      "name": "Bulk delivery",
-      "description": "Bag capacity +6.26%.\n換金速度 +7.05%."
+      "name": "一括納入",
+      "description": "バッグ容量 +6.26%.\n換金速度 +7.05%."
     },
     "1008": {
       "name": "ゾーン突入",
-      "description": "Flow increases coins per pickup and pickup radius, reaching +100% coins and +20% radius at full Flow."
+      "description": "フローにより回収枚数と回収範囲が増加。\n最大フロー時に回収枚数+100%、回収範囲+20%に到達します。"
     },
     "13015": {
-      "name": "Fast reflexes",
+      "name": "素早い反射神経",
       "description": "ツール速度 +36.6%."
     },
     "10019": {
-      "name": "Perfect rhythm",
+      "name": "完璧なリズム",
       "description": "ツール速度 +6.81%."
     },
     "15115": {
-      "name": "Charged harvest",
-      "description": "Lightning coins per bounce +7.41%."
+      "name": "帯電ハーベスト",
+      "description": "稲妻バウンスごとの回収コイン +7.41%."
     },
     "12019": {
-      "name": "Rapid transfer",
+      "name": "急速送金",
       "description": "換金速度 +84.18%."
     },
     "13119": {
-      "name": "Open span",
-      "description": "収集半径 +21.75%.\nツール射程 +基本値の6%."
+      "name": "フルオープン",
+      "description": "回収範囲 +21.75%.\nツールの基本リーチ +6%."
     },
     "1322": {
-      "name": "Large pump chamber",
-      "description": "Each pump cycle transfers an extra 5% of bag capacity from your bag to the bank."
+      "name": "大型ポンプ室",
+      "description": "ポンプ1サイクルごとに、バッグから金庫へ転送するコイン量がバッグ容量の+5%追加されます。"
     },
     "1502": {
-      "name": "Static discharge",
-      "description": "Your pickups can release lightning that jumps between coin patches, collecting extra gold. It collects more gold with the Magnet."
+      "name": "静電放電",
+      "description": "回収時に確率で稲妻が放たれ、コインの山の間を飛び跳ねて追加のゴールドを回収します。\nマグネット使用時に回収量がさらに増加します。"
     },
     "14219": {
-      "name": "Full sweep",
-      "description": "収集半径 +18.22%.\nMaximum Shovel radius +0.1 m."
+      "name": "フルスイープ",
+      "description": "回収範囲 +18.22%.\nシャベル最大半径 +0.1m."
     },
     "20402": {
-      "name": "Earth mover",
-      "description": "Coins per pickup +41.15%.\nHeavy Strike coins +31.95%."
+      "name": "地殻変動",
+      "description": "回収ごとの獲得コイン +41.15%.\nヘビーストライク獲得コイン +31.95%."
     },
     "1312": {
-      "name": "Long reach 1",
-      "description": "ツール射程 +基本値の8%."
+      "name": "ロングリーチ 1",
+      "description": "ツールの基本リーチ +8%."
     },
     "1517": {
-      "name": "Conductive current 7",
-      "description": "Lightning base chance +8 percentage points (when learned).\nLightning coins per bounce +2.41%."
+      "name": "導電電流 7",
+      "description": "習得時稲妻の基本発動率+8%。\n稲妻バウンスごとの回収コイン+2.41%。"
     },
     "1424": {
-      "name": "Broad shovel 4",
-      "description": "収集半径 +25%.\nMaximum Shovel radius +0.1 m."
+      "name": "ワイドショベル 4",
+      "description": "回収範囲 +25%.\nシャベル最大半径 +0.1m."
     },
     "1122": {
-      "name": "Easy unloading 2",
-      "description": "Bag capacity +15%.\nUnload from 0.15 m farther away."
+      "name": "スムーズな荷降ろし 2",
+      "description": "バッグ容量 +15%.\n納入可能距離 +0.15m."
     },
     "1417": {
-      "name": "Heaped blade 3",
-      "description": "Coins per pickup +13.52%."
+      "name": "山盛りブレード 3",
+      "description": "回収ごとの獲得コイン +13.52%."
     },
     "1006": {
-      "name": "勢いを維持",
-      "description": "Keep Flow through missed grabs and pauses up to 1.5s after your tool is ready. ツール射程 +基本値の40%."
+      "name": "勢い持続",
+      "description": "回収ミスやツールの待機時間が1.5秒以内であればフロー状態を維持します。\nツールの基本リーチ+40%。"
     },
     "1621": {
-      "name": "Chute overdrive",
-      "description": "Permanent chute drainage +12.5%. Press [R] to triple drainage for 8s. Cooldown: 45s."
+      "name": "シュートオーバードライブ",
+      "description": "壁面シュートの納入速度が永続的に+12.5%。\n[R]キーを押すと8秒間納入速度が3倍になります（クールダウン: 45秒）。"
     },
     "1128": {
-      "name": "Express bag",
-      "description": "換金速度 +30.15%.\nUnload from 0.04 m farther away."
+      "name": "エクスプレスバッグ",
+      "description": "換金速度 +30.15%.\n納入可能距離 +0.04m."
     },
     "30311": {
-      "name": "Spacious grip",
-      "description": "収集半径 +20%. Reach +20% of base."
+      "name": "広域グリップ",
+      "description": "回収範囲 +20%. 基本リーチ +20%."
     },
     "30412": {
-      "name": "Seismic slam",
-      "description": "Jackhammer can collect 50% more coins, digs deeper and recharges faster. Limited by reachable gold and bag space."
+      "name": "サイズミックスラム",
+      "description": "ジャックハンマーの回収コイン量+50%、掘削深度が向上し、リチャージも加速します。\n（届く範囲のゴールドとバッグ空き容量に依存）"
     },
     "20502": {
-      "name": "Domino storm",
-      "description": "Lightning chains: 6 → 8, sharing +25% more coins per bounce. Chance to keep bouncing: 65% → 80%."
+      "name": "ドミノストーム",
+      "description": "稲妻の連鎖数: 6本 → 8本（バウンスごとのコイン上限共有+25%）。\n跳躍継続率: 65% → 80%。"
     },
     "1001": {
-      "name": "ハンドリングの基本",
-      "description": "ツール速度 +20.02%.\nツール射程 +基本値の15%."
+      "name": "基本の扱い",
+      "description": "ツール速度 +20.02%.\nツールの基本リーチ +15%."
     },
     "12119": {
-      "name": "Smooth handoff",
-      "description": "換金速度 +7.05%.\nUnload from 0.38 m farther away."
+      "name": "スムーズな受け渡し",
+      "description": "換金速度 +7.05%.\n納入可能距離 +0.38m."
     },
     "1106": {
-      "name": "Deeper bag 6",
-      "description": "Bag capacity +53.06%."
+      "name": "大容量バッグ 6",
+      "description": "バッグ容量 +53.06%."
     },
     "1515": {
-      "name": "Conductive current 5",
-      "description": "Lightning base chance +8 percentage points (when learned).\nLightning coins per bounce +10%."
+      "name": "導電電流 5",
+      "description": "習得時稲妻の基本発動率+8%。\n稲妻バウンスごとの回収コイン+10%。"
     },
     "1314": {
-      "name": "Long reach 2",
-      "description": "ツール射程 +基本値の8%."
+      "name": "ロングリーチ 2",
+      "description": "ツールの基本リーチ +8%."
     },
     "1016": {
-      "name": "Busy hands",
-      "description": "Five ghost hands search nearby gold, even when you are not aiming directly at it. Keep holding {Primary} to collect."
+      "name": "忙しない手",
+      "description": "直接狙いを定めていなくても、5体のゴーストハンドが周囲のゴールドを探索して自動回収します。\n{Primary}長押しで継続回収。"
     },
     "1608": {
-      "name": "Suction turbines",
-      "description": "Chute drainage +100%."
+      "name": "吸引タービン",
+      "description": "シュート納入速度 +100%."
     },
     "1408": {
-      "name": "World breaker",
-      "description": "Heavy Strikes collect more gold and reach at least 4 m around the impact. They also trigger more reliably and recharge faster."
+      "name": "ワールドブレイカー",
+      "description": "ヘビーストライクの回収量が増加し、着弾点から最低4mの範囲まで届くようになります。\n発動信頼性が高まり、リチャージも短縮されます。"
     },
     "12219": {
-      "name": "Streamlined cargo",
-      "description": "Bag capacity +6.26%.\n換金速度 +7.05%."
+      "name": "流線型カーゴ",
+      "description": "バッグ容量 +6.26%.\n換金速度 +7.05%."
     },
     "1025": {
-      "name": "Wide grip",
-      "description": "Grip collection radius +50%."
+      "name": "ワイドグリップ",
+      "description": "グリップの回収範囲+50%。"
     },
     "30121": {
-      "name": "Quick release",
-      "description": "Bag capacity +20.89%.\n換金速度 +24.45%."
+      "name": "クイックリリース",
+      "description": "バッグ容量 +20.89%.\n換金速度 +24.45%."
     },
     "20002": {
-      "name": "A handful of gold",
-      "description": "素手のコイン回収量 +30.89%."
+      "name": "一掴みの金",
+      "description": "素手回収量 +30.89%."
     },
     "UnlockMagnet": {
-      "name": "Unlock magnet",
-      "description": "Magnet [3]: pull up to 3 surface coins every 0.7s, within 5.5 m."
+      "name": "マグネット解放",
+      "description": "マグネット[3]を解放: 5.5m以内の地表コインを0.7秒ごとに最大3枚引き寄せます。"
     },
     "30102": {
-      "name": "Bottomless hold",
-      "description": "Bag capacity +49.11%."
+      "name": "底なしの容量",
+      "description": "バッグ容量 +49.11%."
     },
     "1104": {
-      "name": "Deeper bag 4",
-      "description": "Bag capacity +53.06%."
+      "name": "大容量バッグ 4",
+      "description": "バッグ容量 +53.06%."
     },
     "1508": {
-      "name": "Chain storm",
-      "description": "Lightning spreads through six chains, with more bounces and faster recharge. It triggers more reliably. The chains share each bounce's coin limit."
+      "name": "チェーンストーム",
+      "description": "稲妻が6つの連鎖に拡散し、跳躍回数増加とリチャージ加速を獲得。\n発動の安定性も大幅に向上します（コイン上限共有）。"
     },
     "30122": {
-      "name": "Rapid unloading",
+      "name": "高速荷降ろし",
       "description": "換金速度 +35.73%."
     },
     "1112": {
-      "name": "Tight packing 2",
-      "description": "Bag capacity +30%.\n換金速度 +16%."
+      "name": "圧縮パッキング 2",
+      "description": "バッグ容量 +30%.\n換金速度 +16%."
     },
     "1403": {
-      "name": "Impact spread 1",
-      "description": "Coins per pickup +16.76%.\nHeavy Strike radius +15%."
+      "name": "衝撃波拡大 1",
+      "description": "回収ごとの獲得コイン +16.76%.\nヘビーストライク範囲 +15%."
     },
     "1406": {
-      "name": "Deep impact",
-      "description": "Heavy Strikes collect more gold across a larger area, with a higher minimum coin limit."
+      "name": "ディープインパクト",
+      "description": "ヘビーストライクがより広範囲から多量のゴールドを回収し、最低獲得コイン保証も引き上げられます。"
     },
     "1506": {
-      "name": "Superconductor",
-      "description": "Lightning splits into three chains and collects more gold over a wider area. The chains share each bounce's coin limit."
+      "name": "超伝導",
+      "description": "稲妻が3つの連鎖に分裂し、より広範囲から多量のゴールドを回収します。\n各連鎖でバウンスごとのコイン上限を共有します。"
     },
     "1027": {
-      "name": "Heavy haul",
-      "description": "Increase how much a perfect grip can collect. The haul still depends on nearby gold and available bag space."
+      "name": "豪快な掴み取り",
+      "description": "完璧なグリップ（パーフェクト）時の回収上限を増加させます。\n※実際の回収量は周囲のゴールド量とバッグの空き容量に依存します。"
     },
     "30021": {
-      "name": "Goldbreaker",
-      "description": "Increase how much a perfect grip can collect. The haul still depends on nearby gold and available bag space."
+      "name": "ゴールドブレイカー",
+      "description": "完璧なグリップ（パーフェクト）時の回収上限を増加させます。\n※実際の回収量は周囲のゴールド量とバッグの空き容量に依存します。"
     },
     "1007": {
       "name": "素早い指先 3",
       "description": "ツール速度 +8.55%."
     },
     "1425": {
-      "name": "Broad shovel 5",
-      "description": "収集半径 +25%.\nHeavy Strike base chance +3 percentage points (when learned)."
+      "name": "ワイドショベル 5",
+      "description": "回収範囲+25%。\n習得時ヘビーストライク基本発動率+3%。"
     },
     "1017": {
-      "name": "ラッシュ 4",
-      "description": "ツール速度 +5.23%.\n素手のコイン回収量 +11.05%."
+      "name": "連打 4",
+      "description": "ツール速度 +5.23%.\n素手回収量 +11.05%."
     },
     "14015": {
-      "name": "Weight behind it",
-      "description": "Coins per pickup +23.92%.\nHeavy Strike radius +11.05%."
+      "name": "重量を乗せた一撃",
+      "description": "回収ごとの獲得コイン +23.92%.\nヘビーストライク範囲 +11.05%."
     },
     "14215": {
-      "name": "Wide arc",
-      "description": "収集半径 +18.22%.\nMaximum Shovel radius +0.1 m."
+      "name": "広角アーク",
+      "description": "回収範囲 +18.22%.\nシャベル最大半径 +0.1m."
     },
     "1501": {
-      "name": "Coil tuning",
+      "name": "コイルチューニング",
       "description": "ツール速度 +8.55%."
     },
     "14119": {
-      "name": "Bountiful haul",
-      "description": "Coins per pickup +13.52%."
+      "name": "大収穫",
+      "description": "回収ごとの獲得コイン +13.52%."
     },
     "1326": {
-      "name": "High-capacity pump",
-      "description": "Each pump cycle transfers an extra 10% of bag capacity from your bag to the bank."
+      "name": "大容量ポンプ",
+      "description": "ポンプ1サイクルごとに、バッグから金庫へ転送するコイン量がバッグ容量の+10%追加されます。"
     },
     "1324": {
-      "name": "Deep pump chamber",
-      "description": "Each pump cycle transfers an extra 5% of bag capacity from your bag to the bank."
+      "name": "深層ポンプ室",
+      "description": "ポンプ1サイクルごとに、バッグから金庫へ転送するコイン量がバッグ容量の+5%追加されます。"
     },
     "16015": {
-      "name": "Overdrive boost",
-      "description": "Chute overdrive drains five times the normal rate."
+      "name": "オーバードライブ強化",
+      "description": "シュートオーバードライブ中の納入速度が通常の5倍になります。"
     },
     "11215": {
-      "name": "Room to spare",
-      "description": "Bag capacity +9.32%.\nUnload from 0.11 m farther away."
+      "name": "余裕のスペース",
+      "description": "バッグ容量 +9.32%.\n納入可能距離 +0.11m."
     },
     "30022": {
-      "name": "Perfect form",
-      "description": "Master grip can reach six bonus levels. Its sweet spot arrives sooner, but becomes slightly shorter. A mistimed release still resets the bonuses."
+      "name": "完璧なフォーム",
+      "description": "マスターグリップのボーナス段階が最大6段階まで到達可能になります。\nスイートスポットが早く訪れるようになりますが、受付時間はわずかに短くなります。（タイミングを誤るとボーナスリセット）"
     },
     "1401": {
-      "name": "Scoop rhythm",
+      "name": "すくいリズム",
       "description": "ツール速度 +8.55%."
     },
     "13215": {
-      "name": "Short cycle",
-      "description": "Pump interval -2.25 seconds."
+      "name": "短縮サイクル",
+      "description": "ポンプ間隔 -2.25秒."
     },
     "1212": {
-      "name": "Hopper access",
-      "description": "換金速度 +15%.\nUnload from 0.5 m farther away."
+      "name": "ホッパーアクセス",
+      "description": "換金速度 +15%.\n納入可能距離 +0.5m."
     },
     "1513": {
-      "name": "Conductive current 3",
-      "description": "Lightning base chance +8 percentage points (when learned).\nLightning coins per bounce +10%."
+      "name": "導電電流 3",
+      "description": "習得時稲妻の基本発動率+8%。\n稲妻バウンスごとの回収コイン+10%。"
     },
     "1123": {
-      "name": "Easy unloading 3",
-      "description": "Bag capacity +15%.\nUnload from 0.15 m farther away."
+      "name": "スムーズな荷降ろし 3",
+      "description": "バッグ容量 +15%.\n納入可能距離 +0.15m."
     },
     "1414": {
-      "name": "Heavy piston",
-      "description": "Jackhammer collects more gold, digs deeper and recharges faster. Limited by reachable gold and bag space."
+      "name": "重量ピストン",
+      "description": "ジャックハンマーの回収量が増加し、より深く掘り進み、リチャージも短縮されます。\n（届く範囲のゴールドとバッグ空き容量に依存）"
     },
     "BagTraining": {
-      "name": "Your first bag",
-      "description": "Bag capacity +100%."
+      "name": "最初のバッグ",
+      "description": "バッグ容量+100%。"
     },
     "1005": {
       "name": "素早い指先 2",
       "description": "ツール速度 +8.55%."
     },
     "1327": {
-      "name": "Fast pump cycle",
-      "description": "Pump interval -0.75 seconds."
+      "name": "高速ポンプサイクル",
+      "description": "ポンプ間隔 -0.75秒."
     },
     "1211": {
-      "name": "Lower hopper 01",
-      "description": "Unlock the deposit station on floor 01. Use it once you uncover the area.\n換金速度 +15%.\nUnload from 0.5 m farther away."
+      "name": "下層ホッパー 01",
+      "description": "地下01階の納入所を解放します（露出させると利用可能）。\n換金速度+15%、納入可能距離+0.5m。"
     },
     "1321": {
-      "name": "Bag pump",
-      "description": "Automatically transfer carried coins to your bank: 5% of bag capacity every 20s (minimum 1 coin). Transfer takes 1s. Does not trigger station bonuses."
+      "name": "バッグポンプ",
+      "description": "所持コインを金庫へ自動転送します。\n20秒ごとにバッグ容量の5%を転送（最低1コイン、所要1秒）。\n※納入所のボーナスは発動しません。"
     },
     "1416": {
-      "name": "Hammer sweep",
-      "description": "Increase Jackhammer's collection radius. Heavy Strike builds benefit too. The total radius cannot exceed 15 m, including falls."
+      "name": "ハンマースイープ",
+      "description": "ジャックハンマーの回収範囲を拡大します。\nヘビーストライクのビルド効果も適用されます（落下時を含め最大半径15m上限）。"
     },
     "1305": {
-      "name": "Reinforced gloves",
-      "description": "Coins per pickup +12.61%.\nThen +1 coin per pickup."
+      "name": "強化グローブ",
+      "description": "回収ごとの獲得コイン+12.61%。\nさらに回収ごとに+1コイン追加。"
     },
     "30411": {
-      "name": "Pile driver",
-      "description": "Jackhammer can collect twice as many coins and digs deeper. Limited by reachable gold and bag space."
+      "name": "パイルドライバー",
+      "description": "ジャックハンマーの回収コイン量が2倍になり、より深く掘り進めるようになります。\n（届く範囲のゴールドとバッグ空き容量に依存）"
     },
     "30011": {
-      "name": "Helping crew",
-      "description": "Ghost hands collect 25% more coins."
+      "name": "お手伝いクルー",
+      "description": "ゴーストハンドのコイン回収枚数+25%。"
     },
     "1105": {
-      "name": "Deeper bag 5",
-      "description": "Bag capacity +117.9%."
+      "name": "大容量バッグ 5",
+      "description": "バッグ容量 +117.9%."
     },
     "1514": {
-      "name": "Conductive current 4",
-      "description": "Lightning coins per bounce +10%."
+      "name": "導電電流 4",
+      "description": "稲妻バウンスごとの回収コイン +10%."
     },
     "1205": {
-      "name": "Fast unloading 4",
+      "name": "高速納入 4",
       "description": "換金速度 +86.09%."
     },
     "1118": {
-      "name": "Tight packing 8",
-      "description": "Bag capacity +18.21%.\n換金速度 +7.5%."
+      "name": "圧縮パッキング 8",
+      "description": "バッグ容量 +18.21%.\n換金速度 +7.5%."
     },
     "30012": {
-      "name": "Golden helpers",
-      "description": "Ghost hands collect 40% more coins."
+      "name": "黄金の助っ人",
+      "description": "ゴーストハンドのコイン回収枚数+40%。"
     },
     "1003": {
       "name": "素早い指先 1",
       "description": "ツール速度 +8.55%."
     },
     "1522": {
-      "name": "Magnetic Pulse",
-      "description": "With Magnet, press {Secondary} to launch lightning through nearby gold. Stronger pickups and lightning upgrades improve the haul. The chains share each bounce's coin limit."
+      "name": "磁気パルス",
+      "description": "マグネット装備中、{Secondary}を押すことで周囲のゴールドに向けて稲妻を一斉放出します。\n通常回収力や稲妻アップグレードで威力が向上（コイン上限共有）。"
     },
     "1218": {
-      "name": "Hopper mastery",
-      "description": "換金速度 +7.05%.\nUnload from 0.38 m farther away."
+      "name": "ホッパーマスタリー",
+      "description": "換金速度 +7.05%.\n納入可能距離 +0.38m."
     },
     "10215": {
-      "name": "Palm brace",
-      "description": "Increase how much a perfect grip can collect. The haul still depends on nearby gold and available bag space."
+      "name": "掌の補強",
+      "description": "完璧なグリップ（パーフェクト）時の回収上限を増加させます。\n※実際の回収量は周囲のゴールド量とバッグの空き容量に依存します。"
     },
     "14019": {
-      "name": "Crushing force",
-      "description": "Heavy Strike coins +12.12%."
+      "name": "粉砕の威力",
+      "description": "ヘビーストライク獲得コイン +12.12%."
     },
     "30212": {
-      "name": "Hopper express",
-      "description": "換金速度 +35.73%.\nUnload from 1 m farther away."
+      "name": "ホッパー急行",
+      "description": "換金速度 +35.73%.\n納入可能距離 +1m."
     },
     "30601": {
-      "name": "Heavy flow",
-      "description": "Chute drainage +60%."
+      "name": "大流量",
+      "description": "シュート納入速度 +60%."
     },
     "1307": {
-      "name": "Swift gloves",
+      "name": "疾風のグローブ",
       "description": "ツール速度 +10.96%."
     },
     "1222": {
-      "name": "Pocket Bank",
-      "description": "Equip Pocket Bank with {Tool4}. Hold and release {Primary} to place it; hold {Relocate} nearby to pack it. Automatically banks visible nearby gold. A bigger bag improves its rate."
+      "name": "ポケットバンク",
+      "description": "{Tool4}でポケットバンクを装備。\n{Primary}長押し＆リリースで設置、付近で{Relocate}長押しで回収。\n視界内の周囲のゴールドを自動換金します（バッグ容量が大きいほど換金レート向上）。"
     },
     "30221": {
-      "name": "Double returns",
-      "description": "Pocket Bank's automatic collection rate +100%, including its maximum rate. Limited by visible gold within range."
+      "name": "倍増リターン",
+      "description": "ポケットバンクの自動回収速度および上限レート+100%。\n（範囲内の視界にあるゴールドにのみ有効）"
     },
     "1311": {
-      "name": "Wider grip 1",
-      "description": "収集半径 +15%.\nツール射程 +基本値の8%."
+      "name": "広角グリップ 1",
+      "description": "回収範囲 +15%.\nツールの基本リーチ +8%."
     },
     "1507": {
-      "name": "Arcing current 3",
-      "description": "Coins per pickup +10.5%.\nLightning jump distance +3.56%."
+      "name": "アーク放電 3",
+      "description": "回収ごとの獲得コイン +10.5%.\n稲妻の跳躍距離 +3.56%."
     },
     "1207": {
-      "name": "Fast unloading 5",
+      "name": "高速納入 5",
       "description": "換金速度 +22.58%."
     },
     "1111": {
-      "name": "Tight packing 1",
-      "description": "Bag capacity +30%.\n換金速度 +16%."
+      "name": "圧縮パッキング 1",
+      "description": "バッグ容量 +30%.\n換金速度 +16%."
     },
     "1116": {
-      "name": "Tight packing 6",
-      "description": "Bag capacity +24.98%.\n換金速度 +10.13%."
+      "name": "圧縮パッキング 6",
+      "description": "バッグ容量 +24.98%.\n換金速度 +10.13%."
     },
     "1407": {
-      "name": "Impact spread 3",
-      "description": "Coins per pickup +7.41%.\nHeavy Strike radius +3.56%."
+      "name": "衝撃波拡大 3",
+      "description": "回収ごとの獲得コイン +7.41%.\nヘビーストライク範囲 +3.56%."
     },
     "1028": {
-      "name": "Locked grip",
-      "description": "Increase how much a perfect grip can collect. The haul still depends on nearby gold and available bag space."
+      "name": "確固たる握り",
+      "description": "完璧なグリップ（パーフェクト）時の回収上限を増加させます。\n※実際の回収量は周囲のゴールド量とバッグの空き容量に依存します。"
     },
     "10115": {
-      "name": "Practiced grip",
-      "description": "ツール速度 +3.9%.\n素手のコイン回収量 +8.18%."
+      "name": "熟練の握力",
+      "description": "ツール速度 +3.9%.\n素手回収量 +8.18%."
     },
     "1204": {
-      "name": "Fast unloading 3",
+      "name": "高速納入 3",
       "description": "換金速度 +71.84%."
     },
     "1125": {
-      "name": "Easy unloading 5",
-      "description": "Bag capacity +12.61%.\nUnload from 0.15 m farther away."
+      "name": "スムーズな荷降ろし 5",
+      "description": "バッグ容量 +12.61%.\n納入可能距離 +0.15m."
     },
     "1412": {
-      "name": "Jackhammer",
-      "description": "With Shovel, hold {Secondary} for 0.65s to leap toward your aim and slam on landing. Bigger falls strengthen the impact. Replaces Power scoop. Maximum radius: 15 m, including falls."
+      "name": "ジャックハンマー",
+      "description": "シャベル装備中、{Secondary}を0.65秒長押しすると狙った場所へ跳躍し、着地時に強烈な衝撃波を放ちます。\n高所からの落下ほど威力が上昇（パワースクープを置換、最大半径15m）。"
     },
     "1418": {
-      "name": "Excavator",
-      "description": "Tool speed -22.78%.\nCoins per pickup +88.03%."
+      "name": "エクスカベーター",
+      "description": "ツール速度-22.78%。\n回収ごとの獲得コイン+88.03%。"
     },
     "30512": {
-      "name": "Overcharged chain",
-      "description": "Lightning collects 75% more coins at each hit."
+      "name": "過充電連鎖",
+      "description": "稲妻がヒットごとに回収するコイン量+75%。"
     },
     "DepositTraining": {
-      "name": "Quick deposit",
-      "description": "換金速度 +100%."
+      "name": "クイック換金",
+      "description": "換金速度+100%。"
     },
     "1101": {
-      "name": "Deeper bag 1",
-      "description": "Bag capacity +65%."
+      "name": "大容量バッグ 1",
+      "description": "バッグ容量 +65%."
     },
     "1228": {
-      "name": "Efficient delivery 4",
-      "description": "Bag capacity +6.26%.\n換金速度 +7.05%."
+      "name": "効率的納入 4",
+      "description": "バッグ容量 +6.26%.\n換金速度 +7.05%."
     },
     "1313": {
-      "name": "Wider grip 2",
-      "description": "収集半径 +15%.\nツール射程 +基本値の8%."
+      "name": "広角グリップ 2",
+      "description": "回収範囲 +15%.\nツールの基本リーチ +8%."
     },
     "1505": {
-      "name": "Arcing current 2",
-      "description": "Coins per pickup +33.11%.\nLightning jump distance +15%."
+      "name": "アーク放電 2",
+      "description": "回収ごとの獲得コイン +33.11%.\n稲妻の跳躍距離 +15%."
     },
     "1213": {
-      "name": "Lower hopper 02",
-      "description": "換金速度 +15%.\nUnload from 0.5 m farther away.\nUnlock the deposit station on floor 02. Usable once uncovered."
+      "name": "下層ホッパー 02",
+      "description": "地下02階の納入所を解放します（露出させると利用可能）。\n換金速度+15%、納入可能距離+0.5m。"
     },
     "1405": {
-      "name": "Impact spread 2",
-      "description": "Coins per pickup +24.98%.\nHeavy Strike radius +15%."
+      "name": "衝撃波拡大 2",
+      "description": "回収ごとの獲得コイン +24.98%.\nヘビーストライク範囲 +15%."
     },
     "1603": {
-      "name": "Smooth lining",
-      "description": "Chute drainage +25%."
+      "name": "滑面ライニング",
+      "description": "シュート納入速度 +25%."
     },
     "1004": {
-      "name": "Lucky touch",
-      "description": "ツール速度 +5%. Learned Heavy Strike and lightning: base chance +4 percentage points."
+      "name": "幸運のタッチ",
+      "description": "ツール速度+5%。\n習得済みのヘビーストライクおよび稲妻の基本発動率+4%。"
     },
     "1426": {
-      "name": "Heavy load scoop",
-      "description": "Learned Heavy Strikes collect 7.92% more coins, including their minimum. Another +50% while your bag is at least half full."
+      "name": "高負荷スクープ",
+      "description": "習得済みヘビーストライクの回収コイン量+7.92%（最低保証を含む）。\nバッグが半分以上埋まっている場合、さらに+50%増加。"
     },
     "1521": {
-      "name": "Wider field 1",
-      "description": "ツール射程 +基本値の15%; pickup radius +12%."
+      "name": "広域フィールド 1",
+      "description": "ツールの基本リーチ +15%\npickup radius +12%."
     },
     "12015": {
-      "name": "Open floodgates",
+      "name": "水門開放",
       "description": "換金速度 +84.18%."
     },
     "30602": {
-      "name": "Gold river",
-      "description": "Chute drainage +100%."
+      "name": "黄金の河",
+      "description": "シュート納入速度 +100%."
     },
     "14115": {
-      "name": "Loaded scoop",
-      "description": "Coins per pickup +13.52%."
+      "name": "てんこ盛りスクープ",
+      "description": "回収ごとの獲得コイン +13.52%."
     },
     "11115": {
-      "name": "Neat stacks",
-      "description": "Bag capacity +18.21%.\n換金速度 +7.5%."
+      "name": "整然たる積み重ね",
+      "description": "バッグ容量 +18.21%.\n換金速度 +7.5%."
     },
     "1304": {
-      "name": "Quick gloves",
+      "name": "俊敏のグローブ",
       "description": "ツール速度 +39.9%."
     },
     "1512": {
-      "name": "Conductive current 2",
-      "description": "Lightning coins per bounce +10%."
+      "name": "導電電流 2",
+      "description": "稲妻バウンスごとの回収コイン +10%."
     },
     "1301": {
-      "name": "Light gloves",
+      "name": "軽量グローブ",
       "description": "ツール速度 +27.54%."
     },
     "1223": {
-      "name": "Efficient delivery 2",
-      "description": "Bag capacity +10%.\n換金速度 +15%."
+      "name": "効率的納入 2",
+      "description": "バッグ容量 +10%.\n換金速度 +15%."
     },
     "1206": {
-      "name": "Station upgrade II",
-      "description": "換金速度 +104.23%.\nUnload from 1.5 m farther away."
+      "name": "納入所改築 II",
+      "description": "換金速度 +104.23%.\n納入可能距離 +1.5m."
     },
     "1117": {
-      "name": "Tight packing 7",
-      "description": "Bag capacity +18.21%.\n換金速度 +7.5%."
+      "name": "圧縮パッキング 7",
+      "description": "バッグ容量 +18.21%.\n換金速度 +7.5%."
     },
     "15015": {
-      "name": "Spreading current",
-      "description": "Coins per pickup +34.94%.\nLightning jump distance +11.05%."
+      "name": "拡散電流",
+      "description": "回収ごとの獲得コイン +34.94%.\n稲妻の跳躍距離 +11.05%."
     },
     "1002": {
-      "name": "リズムを掴む",
-      "description": "Collect steadily to build Flow: up to +60% Hands speed or +30% with other tools. ツール速度 +20.02%; 素手のコイン回収量 +108.14%."
+      "name": "リズムに乗る",
+      "description": "リズミカルに回収することでフローを蓄積します。\n最大で「手」の動作速度+60%（他ツールは+30%）。\nツール速度+20.02%、素手回収量+108.14%。"
     },
     "1428": {
-      "name": "Broad shovel 7",
-      "description": "収集半径 +5.74%.\nMaximum Shovel radius +0.05 m."
+      "name": "ワイドショベル 7",
+      "description": "回収範囲 +5.74%.\nシャベル最大半径 +0.05m."
     },
     "15219": {
-      "name": "Far attraction",
-      "description": "ツール射程 +基本値の11.25%."
+      "name": "遠隔吸引",
+      "description": "ツールの基本リーチ +11.25%."
     },
     "30211": {
-      "name": "Fast hoppers",
-      "description": "換金速度 +24.45%.\nUnload from 1 m farther away."
+      "name": "高速ホッパー",
+      "description": "換金速度 +24.45%.\n納入可能距離 +1m."
     },
     "1528": {
-      "name": "Maelstrom",
-      "description": "収集半径 +100%. Tool reach gains +3.75% of base, then total reach is reduced by 35%."
+      "name": "メイルストロム",
+      "description": "回収範囲+100%。\nツールの基本リーチが一旦+3.75%された後、合計リーチが35%減少します。"
     },
     "30111": {
-      "name": "Perfect packing",
-      "description": "Bag capacity +49.11%.\n換金速度 +15.61%."
+      "name": "完璧な詰め込み",
+      "description": "バッグ容量 +49.11%.\n換金速度 +15.61%."
     },
     "13019": {
-      "name": "Light touch",
+      "name": "軽やかな手つき",
       "description": "ツール速度 +9.18%."
     },
     "10015": {
-      "name": "Quick wrists",
+      "name": "俊敏な手首",
       "description": "ツール速度 +6.35%."
     },
     "15119": {
-      "name": "Concentrated charge",
-      "description": "Lightning coins per bounce +7.41%."
+      "name": "集中荷電",
+      "description": "稲妻バウンスごとの回収コイン +7.41%."
     },
     "1221": {
-      "name": "Efficient delivery 1",
-      "description": "換金速度 +15%.\nBag capacity +10%."
+      "name": "効率的納入 1",
+      "description": "換金速度 +15%.\nバッグ容量 +10%."
     },
     "1306": {
-      "name": "Fortune gloves",
-      "description": "ツール速度 +5%. Learned Heavy Strike and lightning: base chance +3 percentage points."
+      "name": "豪運のグローブ",
+      "description": "ツール速度+5%。\n習得済みのヘビーストライクおよび稲妻の基本発動率+3%。"
     },
     "1315": {
-      "name": "Wider grip 3",
-      "description": "収集半径 +15%.\nツール射程 +基本値の8%."
+      "name": "広角グリップ 3",
+      "description": "回収範囲 +15%.\nツールの基本リーチ +8%."
     },
     "1523": {
-      "name": "Wider field 2",
-      "description": "収集半径 +12%.\nツール射程 +基本値の15%."
+      "name": "広域フィールド 2",
+      "description": "回収範囲 +12%.\nツールの基本リーチ +15%."
     },
     "1115": {
-      "name": "Tight packing 5",
-      "description": "Bag capacity +24.98%.\n換金速度 +10.13%."
+      "name": "圧縮パッキング 5",
+      "description": "バッグ容量 +24.98%.\n換金速度 +10.13%."
     },
     "1404": {
-      "name": "Aftershock",
-      "description": "Heavy strikes hit a second coin patch.\nHeavy Strike radius +10%."
+      "name": "余震",
+      "description": "ヘビーストライクが2箇所目のコインの山にも連鎖ヒットします。\nヘビーストライク範囲+10%。"
     },
     "1318": {
-      "name": "Wide coverage",
-      "description": "収集半径 +15%.\nツール射程 +基本値の8%."
+      "name": "ワイドカバレッジ",
+      "description": "回収範囲 +15%.\nツールの基本リーチ +8%."
     },
     "1215": {
-      "name": "Lower hopper 04",
-      "description": "Unlock the deposit station on floor 04, usable once uncovered.\n換金速度 +9.51%.\nUnload from 0.5 m farther away."
+      "name": "下層ホッパー 04",
+      "description": "地下04階の納入所を解放します（露出させると利用可能）。\n換金速度+9.51%、納入可能距離+0.5m。"
     },
     "1303": {
-      "name": "Lucky gloves",
-      "description": "ツール速度 +5%. Learned Heavy Strike and lightning: base chance +3 percentage points."
+      "name": "幸運のグローブ",
+      "description": "ツール速度+5%。\n習得済みのヘビーストライクおよび稲妻の基本発動率+3%。"
     },
     "30202": {
-      "name": "Lasting rush",
-      "description": "換金速度 +30.15%.\nGold Rush duration +5 seconds."
+      "name": "持続するラッシュ",
+      "description": "換金速度+30.15%。\nゴールドラッシュ持続時間+5秒。"
     },
     "1126": {
-      "name": "Easy unloading 6",
-      "description": "Bag capacity +12.61%.\nUnload from 0.15 m farther away."
+      "name": "スムーズな荷降ろし 6",
+      "description": "バッグ容量 +12.61%.\n納入可能距離 +0.15m."
     },
     "1413": {
-      "name": "Heaped blade 1",
-      "description": "Coins per pickup +18.41%."
+      "name": "山盛りブレード 1",
+      "description": "回収ごとの獲得コイン +18.41%."
     },
     "30112": {
-      "name": "Every inch counts",
-      "description": "Bag capacity +80.25%.\n換金速度 +15.61%."
+      "name": "隙間なき収納",
+      "description": "バッグ容量 +80.25%.\n換金速度 +15.61%."
     },
     "20001": {
-      "name": "Golden grip",
-      "description": "素手のコイン回収量 +19.54%."
+      "name": "黄金の握力",
+      "description": "素手回収量 +19.54%."
     },
     "15215": {
-      "name": "Field expansion",
-      "description": "収集半径 +8.87%.\nツール射程 +基本値の11.25%."
+      "name": "フィールド展開",
+      "description": "回収範囲 +8.87%.\nツールの基本リーチ +11.25%."
     },
     "1308": {
-      "name": "Magnetic footsteps",
-      "description": "Walking over gold adds 20% of your tool's coin collection rate. Goes into your bag every 0.75s (minimum 1 coin). Stops when stationary or full."
+      "name": "磁気フットステップ",
+      "description": "ゴールドの上を歩くと、ツールのコイン回収レートの20%がバッグに蓄積されます。\n0.75秒ごとに入庫（最低1コイン）。停止中や満杯時は停止。"
     },
     "13219": {
-      "name": "Primed pump",
-      "description": "Pump interval -1.5 seconds."
+      "name": "即応ポンプ",
+      "description": "ポンプ間隔 -1.5秒."
     },
     "1504": {
-      "name": "Longer chain",
-      "description": "Lightning bounces: 5 → 7. Chance to keep bouncing: 25% → 45%. Jump distance +10%."
+      "name": "ロングチェーン",
+      "description": "稲妻の跳躍回数: 5回 → 7回。\n跳躍継続率: 25% → 45%。\n跳躍距離+10%。"
     },
     "1317": {
-      "name": "Wider grip 4",
-      "description": "収集半径 +11.05%.\nツール射程 +基本値の6%."
+      "name": "広角グリップ 4",
+      "description": "回収範囲 +11.05%.\nツールの基本リーチ +6%."
     },
     "1606": {
-      "name": "Powered pumps",
-      "description": "Chute drainage +80%."
+      "name": "電動ポンプ",
+      "description": "シュート納入速度 +80%."
     },
     "1124": {
-      "name": "Easy unloading 4",
-      "description": "Bag capacity +12.61%.\nUnload from 0.15 m farther away."
+      "name": "スムーズな荷降ろし 4",
+      "description": "バッグ容量 +12.61%.\n納入可能距離 +0.15m."
     },
     "1102": {
-      "name": "Deeper bag 2",
-      "description": "Bag capacity +65%."
+      "name": "大容量バッグ 2",
+      "description": "バッグ容量 +65%."
     },
     "1511": {
-      "name": "Conductive current 1",
-      "description": "Lightning base chance +8 percentage points (when learned).\nLightning coins per bounce +10%."
+      "name": "導電電流 1",
+      "description": "習得時稲妻の基本発動率+8%。\n稲妻バウンスごとの回収コイン+10%。"
     },
     "1503": {
-      "name": "Arcing current 1",
-      "description": "Coins per pickup +20.89%.\nLightning jump distance +15%."
+      "name": "アーク放電 1",
+      "description": "回収ごとの獲得コイン +20.89%.\n稲妻の跳躍距離 +15%."
     },
     "10219": {
-      "name": "Knuckle lock",
-      "description": "Increase how much a perfect grip can collect. The haul still depends on nearby gold and available bag space."
+      "name": "ナックルロック",
+      "description": "完璧なグリップ（パーフェクト）時の回収上限を増加させます。\n※実際の回収量は周囲のゴールド量とバッグの空き容量に依存します。"
     },
     "1411": {
-      "name": "Power scoop",
-      "description": "With Shovel, hold {Secondary} for 0.65s, then release a stronger, wider scoop. Limited by nearby gold and bag space."
+      "name": "パワースクープ",
+      "description": "シャベル装備中、{Secondary}を0.65秒長押しした後に離すと、強力かつ広範囲のすくい取りを放ちます。\n（周囲のゴールド量とバッグ空き容量に依存）"
     },
     "30321": {
-      "name": "Deep pump",
-      "description": "Each pump cycle transfers an extra 5% of bag capacity from your bag to the bank."
+      "name": "ディープポンプ",
+      "description": "ポンプ1サイクルごとに、バッグから金庫へ転送するコイン量がバッグ容量の+5%追加されます。"
     },
     "1021": {
-      "name": "Two-handed technique",
-      "description": "With Hands, hold {Secondary} and release in the sweet spot for a large haul. Stronger grabs and a bigger bag increase the coin limit. Needs nearby gold and bag space."
+      "name": "両手の極意",
+      "description": "「手」を装備中、{Secondary}を長押ししてスイートスポットで離すと大量のコインを一気に掴み取ります。\n掴み取り量の上限は握力やバッグ容量に依存します。"
     },
     "30423": {
-      "name": "Rolling thunder",
-      "description": "収集半径 +25%.\nHeavy Strike coins +14.41%."
+      "name": "地鳴りの轟き",
+      "description": "回収範囲 +25%.\nヘビーストライク獲得コイン +14.41%."
     },
     "30301": {
-      "name": "Expert gloves",
+      "name": "熟練の手袋",
       "description": "ツール速度 +14.33%."
     },
     "1227": {
-      "name": "Efficient delivery 3",
-      "description": "Bag capacity +6.26%.\n換金速度 +7.05%."
+      "name": "効率的納入 3",
+      "description": "バッグ容量 +6.26%.\n換金速度 +7.05%."
     },
     "1328": {
-      "name": "Overflow pump",
-      "description": "A full bag triggers an extra pump cycle. Cooldown: 60 seconds."
+      "name": "オーバーフローポンプ",
+      "description": "バッグが満杯になると追加のポンプサイクルが即座に誘発されます。\nクールダウン: 60秒。"
     },
     "1202": {
-      "name": "Fast unloading 2",
+      "name": "高速納入 2",
       "description": "換金速度 +80%."
     },
     "30422": {
-      "name": "Crushing sweep",
-      "description": "Heavy Strike base chance +4 percentage points (when learned).\nHeavy Strike coins +9.34%."
+      "name": "豪快な薙ぎ払い",
+      "description": "習得時ヘビーストライク基本発動率+4%。\nヘビーストライク獲得コイン+9.34%。"
     },
     "30302": {
-      "name": "Masterwork gloves",
+      "name": "名工の手袋",
       "description": "ツール速度 +22.37%."
     },
     "1214": {
-      "name": "Lower hopper 03",
-      "description": "Unlock the deposit station on floor 03, usable once uncovered.\n換金速度 +9.51%.\nUnload from 0.5 m farther away."
+      "name": "下層ホッパー 03",
+      "description": "地下03階の納入所を解放します（露出させると利用可能）。\n換金速度+9.51%、納入可能距離+0.5m。"
     },
     "30421": {
-      "name": "Wider swing",
-      "description": "収集半径 +20%.\nMaximum Shovel radius +0.1 m."
+      "name": "ワイドスイング",
+      "description": "回収範囲 +20%.\nシャベル最大半径 +0.1m."
     },
     "1602": {
-      "name": "Wider intakes",
-      "description": "Chute drainage +50%."
+      "name": "投入口拡大",
+      "description": "シュート納入速度 +50%."
     },
     "1524": {
-      "name": "Powerful pulse",
-      "description": "Magnetic Pulse collects more gold and hits a wider area. Its chains share each bounce's coin limit."
+      "name": "パワフルパルス",
+      "description": "磁気パルスの回収コイン量が増加し、より広い範囲にヒットします。\n（連鎖間でコイン上限共有）"
     },
     "1023": {
-      "name": "Deep grip",
-      "description": "Increase how much a perfect grip can collect. The haul still depends on nearby gold and available bag space."
+      "name": "ディープグリップ",
+      "description": "完璧なグリップ（パーフェクト）時の回収上限を増加させます。\n※実際の回収量は周囲のゴールド量とバッグの空き容量に依存します。"
     },
     "1421": {
-      "name": "Broad shovel 1",
-      "description": "収集半径 +25%. Heavy strikes also inherit the wider pickup area.\nHeavy Strike base chance +3 percentage points (when learned)."
+      "name": "ワイドショベル 1",
+      "description": "回収範囲+25%。ヘビーストライクもこの広い回収範囲を継承します。\n習得時ヘビーストライク基本発動率+3%。"
     },
     "MovementTraining": {
-      "name": "Work gloves",
-      "description": "ツール速度 +5.89%."
+      "name": "作業用グローブ",
+      "description": "ツール速度+5.89%。"
     },
     "1600": {
-      "name": "Wall chutes",
-      "description": "Automatically drain 1 coin per second into your bank, shared across all wall chutes."
+      "name": "壁面シュート",
+      "description": "すべての壁面シュートを通じて、毎秒1枚のコインが金庫へ自動的に納入されます。"
     },
     "1302": {
-      "name": "Grippy gloves",
-      "description": "Coins per pickup +12.61%.\nThen +1 coin per pickup."
+      "name": "グリップグローブ",
+      "description": "回収ごとの獲得コイン+12.61%。\nさらに回収ごとに+1コイン追加。"
     },
     "1518": {
-      "name": "Gold lance",
-      "description": "Lightning coins per bounce +53.62%. ツール射程 +70%; pickup radius -55%."
+      "name": "ゴールドランス",
+      "description": "稲妻バウンスごとの回収コイン+53.62%。\nツールリーチ+70%、回収範囲-55%。"
     },
     "1601": {
-      "name": "Flow channels",
-      "description": "Chute drainage +20%."
+      "name": "流動チャネル",
+      "description": "シュート納入速度 +20%."
     },
     "1225": {
-      "name": "Cash flow",
-      "description": "Manually empty a bag with at least 25% capacity, capped at 10,000 coins, to boost Pocket Bank collection by 50% for 8 seconds."
+      "name": "キャッシュフロー",
+      "description": "バッグ容量の25%以上（最大10,000コイン上限）を手動で空にすると、8秒間ポケットバンクの回収速度が50%向上します。"
     },
     "1605": {
-      "name": "Pressure valves",
-      "description": "Chute drainage +40%."
+      "name": "圧力弁",
+      "description": "シュート納入速度 +40%."
     },
     "1527": {
-      "name": "Rapid recharge",
-      "description": "Magnetic Pulse cooldown: 4s instead of 6s.\n収集半径 +2.87%.\nツール射程 +基本値の3.75%."
+      "name": "高速リチャージ",
+      "description": "磁気パルスのクールダウン: 6秒 → 4秒に短縮。\n回収範囲+2.87%、ツールの基本リーチ+3.75%。"
     },
     "1114": {
-      "name": "Tight packing 4",
-      "description": "Bag capacity +24.98%.\n換金速度 +10.13%."
+      "name": "圧縮パッキング 4",
+      "description": "バッグ容量 +24.98%.\n換金速度 +10.13%."
     },
     "1014": {
-      "name": "追加の手",
-      "description": "Three ghost hands take turns gathering gold while you hold {Primary} to collect."
+      "name": "もう一組の手",
+      "description": "{Primary}長押し中に3体のゴーストハンドが交代でゴールドを回収します。"
     },
     "1015": {
-      "name": "ラッシュ 3",
-      "description": "ツール速度 +5.23%.\n素手のコイン回収量 +11.05%."
+      "name": "連打 3",
+      "description": "ツール速度 +5.23%.\n素手回収量 +11.05%."
     },
     "1216": {
-      "name": "Lower hopper 05",
-      "description": "Unlock the deposit station on floor 05, usable once uncovered.\n換金速度 +9.51%.\nUnload from 0.5 m farther away."
+      "name": "下層ホッパー 05",
+      "description": "地下05階の納入所を解放します（露出させると利用可能）。\n換金速度+9.51%、納入可能距離+0.5m。"
     },
     "30523": {
-      "name": "Magnetic surge",
-      "description": "Magnetic Pulse collects more gold at each bounce and recharges faster. Its chains share the coin limit."
+      "name": "磁気サージ",
+      "description": "磁気パルスのバウンスごとの回収コイン量が増加し、リチャージも短縮されます。\n（連鎖間でコイン上限共有）"
     },
     "30521": {
-      "name": "Pulse spread",
-      "description": "Magnetic Pulse radius +25%. Its final radius cap rises from 4.5 m to 5.625 m."
+      "name": "パルス拡散",
+      "description": "磁気パルスの半径+25%。\n最大半径の上限が4.5mから5.625mに拡大します。"
     },
     "1013": {
-      "name": "ラッシュ 2",
-      "description": "ツール速度 +5.23%.\n素手のコイン回収量 +11.05%."
+      "name": "連打 2",
+      "description": "ツール速度 +5.23%.\n素手回収量 +11.05%."
     },
     "1604": {
-      "name": "Reinforced ducts",
-      "description": "Chute drainage +80%."
+      "name": "強化ダクト",
+      "description": "シュート納入速度 +80%."
     },
     "15019": {
-      "name": "Surge capacity",
-      "description": "Lightning coins per bounce +25.97%."
+      "name": "サージキャパシティ",
+      "description": "稲妻バウンスごとの回収コイン +25.97%."
     },
     "1423": {
-      "name": "Broad shovel 3",
-      "description": "収集半径 +25%.\nHeavy Strike base chance +3 percentage points (when learned)."
+      "name": "ワイドショベル 3",
+      "description": "回収範囲+25%。\n習得時ヘビーストライク基本発動率+3%。"
     },
     "1103": {
-      "name": "Deeper bag 3",
-      "description": "Bag capacity +150%."
+      "name": "大容量バッグ 3",
+      "description": "バッグ容量 +150%."
     },
     "1415": {
-      "name": "Heaped blade 2",
-      "description": "Coins per pickup +18.41%."
+      "name": "山盛りブレード 2",
+      "description": "回収ごとの獲得コイン +18.41%."
     },
     "20501": {
-      "name": "High voltage",
-      "description": "Coins per pickup +29.06%."
+      "name": "高電圧",
+      "description": "回収ごとの獲得コイン +29.06%."
     },
     "1316": {
-      "name": "Long reach 3",
-      "description": "ツール射程 +基本値の8%."
+      "name": "ロングリーチ 3",
+      "description": "ツールの基本リーチ +8%."
     },
     "UnlockShovel": {
-      "name": "Unlock shovel",
-      "description": "Equip Shovel with {Tool2} to scoop gold. Learned Heavy Strikes are stronger and trigger more often with this tool."
+      "name": "ショベル解放",
+      "description": "{Tool2}でシャベルを装備してゴールドをすくい取ります。\nこのツールを使用中、習得済みのヘビーストライクがより強力になり、発動確率も上昇します。"
     },
     "1427": {
-      "name": "Broad shovel 6",
-      "description": "収集半径 +5.74%.\nHeavy Strike base chance +3 percentage points (when learned)."
+      "name": "ワイドショベル 6",
+      "description": "回収範囲+5.74%。\n習得時ヘビーストライク基本発動率+3%。"
     },
     "20401": {
-      "name": "Fault line",
-      "description": "Heavy Strike coins +31.95%."
+      "name": "断層破砕",
+      "description": "ヘビーストライク獲得コイン +31.95%."
     },
     "1201": {
-      "name": "Fast unloading 1",
+      "name": "高速納入 1",
       "description": "換金速度 +80%."
     },
     "13115": {
-      "name": "Sweeping reach",
-      "description": "収集半径 +11.05%.\nツール射程 +基本値の6%."
+      "name": "広域リーチ",
+      "description": "回収範囲 +11.05%.\nツールの基本リーチ +6%."
     },
     "1011": {
-      "name": "ラッシュ 1",
-      "description": "ツール速度 +5.23%.\n素手のコイン回収量 +11.05%."
+      "name": "連打 1",
+      "description": "ツール速度 +5.23%.\n素手回収量 +11.05%."
     },
     "1516": {
-      "name": "Conductive current 6",
-      "description": "Lightning coins per bounce +10%."
+      "name": "導電電流 6",
+      "description": "稲妻バウンスごとの回収コイン +10%."
     },
     "HandTraining": {
       "name": "二枚掴み",
-      "description": "素手で1回につかめるコインが1枚から2枚に増加します。"
+      "description": "「手」による回収枚数が1枚から2枚へと倍増します。"
     },
     "1121": {
-      "name": "Easy unloading 1",
-      "description": "Bag capacity +15%.\nUnload from 0.15 m farther away."
+      "name": "スムーズな荷降ろし 1",
+      "description": "バッグ容量 +15%.\n納入可能距離 +0.15m."
     },
     "11019": {
-      "name": "Reinforced lining",
-      "description": "Bag capacity +37.61%."
+      "name": "補強ライナー",
+      "description": "バッグ容量 +37.61%."
     },
     "1022": {
-      "name": "Steady hands",
-      "description": "Grip sweet spot lasts 0.015s longer."
+      "name": "安定した両手",
+      "description": "グリップのスイートスポットの受付時間が0.015秒延長されます。"
     },
     "1217": {
-      "name": "Vault valet",
-      "description": "Automatic depositing near uncovered, unlocked stations. Keep using your tool while unloading.\n換金速度 +2.3%.\nUnload from 0.13 m farther away."
+      "name": "金庫バレット",
+      "description": "露出・解放された納入所の付近で自動的に納入が行われます。\n荷降ろし中もツールの使用が可能です。\n換金速度+2.3%、納入可能距離+0.13m。"
     }
   }
 }
